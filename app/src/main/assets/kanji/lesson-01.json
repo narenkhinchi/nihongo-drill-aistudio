@@ -1,0 +1,452 @@
+{
+  "schema_version": "1.0",
+  "lesson": 1,
+  "title": "Lesson 1 — Basic Kanji",
+  "source": "Basic Kanji Book, Lesson 1; user-provided page images",
+  "kanji": [
+    {
+      "number": 1,
+      "kanji": "日",
+      "meaning": "sun; day",
+      "kun_readings": [
+        "ひ",
+        "-び",
+        "-か"
+      ],
+      "on_readings": [
+        "ニチ",
+        "ニ",
+        "（-ジツ）"
+      ],
+      "stroke_count": 4,
+      "examples": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "the sun; a day"
+        },
+        {
+          "word": "日曜日",
+          "reading": "にちようび",
+          "meaning": "Sunday"
+        },
+        {
+          "word": "3日",
+          "reading": "みっか",
+          "meaning": "the 3rd day"
+        },
+        {
+          "word": "日本",
+          "reading": "にほん / にっぽん",
+          "meaning": "Japan"
+        }
+      ],
+      "additional_examples": [
+        {
+          "word": "毎日",
+          "reading": "まいにち",
+          "meaning": "every day"
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "meaning": "today"
+        },
+        {
+          "word": "明日",
+          "reading": "あした",
+          "meaning": "tomorrow"
+        },
+        {
+          "word": "昨日",
+          "reading": "きのう",
+          "meaning": "yesterday"
+        },
+        {
+          "word": "日記",
+          "reading": "にっき",
+          "meaning": "diary"
+        }
+      ],
+      "additional_examples_source": "Supplementary examples cross-checked with JLPT Sensei and JapaneseJLPT.",
+      "vocabulary": [
+        {
+          "word": "ひび",
+          "reading": "ひび",
+          "meaning": "sun, day"
+        },
+        {
+          "word": "にちようび",
+          "reading": "にちようび",
+          "meaning": "Sunday"
+        },
+        {
+          "word": "ひる",
+          "reading": "ひる",
+          "meaning": "noon"
+        },
+        {
+          "word": "あさひ",
+          "reading": "あさひ",
+          "meaning": "morning sun"
+        },
+        {
+          "word": "ひかり",
+          "reading": "ひかり",
+          "meaning": "light"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "kanji": "月",
+      "meaning": "moon; month",
+      "kun_readings": [
+        "つき"
+      ],
+      "on_readings": [
+        "ゲツ",
+        "-ガツ"
+      ],
+      "stroke_count": 4,
+      "examples": [
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "the moon; a month"
+        },
+        {
+          "word": "月曜日",
+          "reading": "げつようび",
+          "meaning": "Monday"
+        },
+        {
+          "word": "1月",
+          "reading": "いちがつ",
+          "meaning": "January"
+        },
+        {
+          "word": "1か月",
+          "reading": "いっかげつ",
+          "meaning": "one month"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "kanji": "木",
+      "meaning": "tree",
+      "kun_readings": [
+        "き"
+      ],
+      "on_readings": [
+        "モク",
+        "ボク"
+      ],
+      "stroke_count": 4,
+      "examples": [
+        {
+          "word": "木",
+          "reading": "き",
+          "meaning": "a tree"
+        },
+        {
+          "word": "木曜日",
+          "reading": "もくようび",
+          "meaning": "Thursday"
+        },
+        {
+          "word": "木村",
+          "reading": "きむら",
+          "meaning": "Japanese name"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "kanji": "山",
+      "meaning": "mountain",
+      "kun_readings": [
+        "やま"
+      ],
+      "on_readings": [
+        "サン"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "a mountain"
+        },
+        {
+          "word": "富士山",
+          "reading": "ふじさん",
+          "meaning": "Mt. Fuji"
+        },
+        {
+          "word": "山下",
+          "reading": "やました",
+          "meaning": "Japanese name"
+        },
+        {
+          "word": "火山",
+          "reading": "かざん",
+          "meaning": "a volcano"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "kanji": "川",
+      "meaning": "river",
+      "kun_readings": [
+        "かわ",
+        "-がわ"
+      ],
+      "on_readings": [
+        "（セン）"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "川",
+          "reading": "かわ",
+          "meaning": "a river"
+        },
+        {
+          "word": "ナイル川",
+          "reading": "ナイルがわ",
+          "meaning": "the Nile River"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "kanji": "田",
+      "meaning": "rice field",
+      "kun_readings": [
+        "た",
+        "-だ"
+      ],
+      "on_readings": [
+        "デン"
+      ],
+      "stroke_count": 5,
+      "examples": [
+        {
+          "word": "田んぼ",
+          "reading": "たんぼ",
+          "meaning": "a rice field"
+        },
+        {
+          "word": "山田",
+          "reading": "やまだ",
+          "meaning": "Japanese name"
+        },
+        {
+          "word": "田中",
+          "reading": "たなか",
+          "meaning": "Japanese name"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "kanji": "人",
+      "meaning": "man; person",
+      "kun_readings": [
+        "ひと"
+      ],
+      "on_readings": [
+        "ジン",
+        "ニン"
+      ],
+      "stroke_count": 2,
+      "examples": [
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "man; a person"
+        },
+        {
+          "word": "3人",
+          "reading": "さんにん",
+          "meaning": "three people"
+        },
+        {
+          "word": "日本人",
+          "reading": "にほんじん",
+          "meaning": "a Japanese person"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "kanji": "口",
+      "meaning": "mouth",
+      "kun_readings": [
+        "くち",
+        "-ぐち"
+      ],
+      "on_readings": [
+        "コウ"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "口",
+          "reading": "くち",
+          "meaning": "a mouth"
+        },
+        {
+          "word": "入口",
+          "reading": "いりぐち",
+          "meaning": "an entrance"
+        },
+        {
+          "word": "出口",
+          "reading": "でぐち",
+          "meaning": "an exit"
+        },
+        {
+          "word": "人口",
+          "reading": "じんこう",
+          "meaning": "population"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "kanji": "車",
+      "meaning": "car",
+      "kun_readings": [
+        "くるま"
+      ],
+      "on_readings": [
+        "シャ"
+      ],
+      "stroke_count": 7,
+      "examples": [
+        {
+          "word": "車",
+          "reading": "くるま",
+          "meaning": "a car"
+        },
+        {
+          "word": "自動車",
+          "reading": "じどうしゃ",
+          "meaning": "a car; an automobile"
+        },
+        {
+          "word": "電車",
+          "reading": "でんしゃ",
+          "meaning": "a train"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "kanji": "門",
+      "meaning": "gate",
+      "kun_readings": [
+        "（かど）"
+      ],
+      "on_readings": [
+        "モン"
+      ],
+      "stroke_count": 8,
+      "examples": [
+        {
+          "word": "門",
+          "reading": "もん",
+          "meaning": "a gate"
+        },
+        {
+          "word": "専門",
+          "reading": "せんもん",
+          "meaning": "a speciality"
+        }
+      ]
+    }
+  ],
+  "reading_exercises": [
+    {
+      "question_no": 1,
+      "type": "kanji_phrase_reading",
+      "prompt": "日曜日",
+      "expected_reading": "にちようび",
+      "translation": "Sunday"
+    },
+    {
+      "question_no": 2,
+      "type": "kanji_phrase_reading",
+      "prompt": "月曜日",
+      "expected_reading": "げつようび",
+      "translation": "Monday"
+    },
+    {
+      "question_no": 3,
+      "type": "kanji_phrase_reading",
+      "prompt": "木曜日",
+      "expected_reading": "もくようび",
+      "translation": "Thursday"
+    },
+    {
+      "question_no": 4,
+      "type": "kanji_phrase_reading",
+      "prompt": "日本",
+      "expected_reading": "にほん",
+      "translation": "Japan"
+    },
+    {
+      "question_no": 5,
+      "type": "sentence_reading",
+      "prompt": "きょうは３月１５日です。",
+      "expected_reading": "きょうはさんがつじゅうごにちです。",
+      "translation": "Today is the 15th of March."
+    },
+    {
+      "question_no": 6,
+      "type": "sentence_reading",
+      "prompt": "あの人は山川さんです。",
+      "expected_reading": "あのひとはやまかわさんです。",
+      "translation": "That man over there is Mr. Yamakawa."
+    },
+    {
+      "question_no": 7,
+      "type": "sentence_reading",
+      "prompt": "山川さんは日本人です。",
+      "expected_reading": "やまかわさんはにほんじんです。",
+      "translation": "Mr. Yamakawa is a Japanese person."
+    },
+    {
+      "question_no": 8,
+      "type": "sentence_reading",
+      "prompt": "あの山は筑波山です。",
+      "expected_reading": "あのやまはつくばさんです。",
+      "translation": "That mountain over there is Mt. Tsukuba."
+    },
+    {
+      "question_no": 9,
+      "type": "sentence_reading",
+      "prompt": "この川は利根川です。",
+      "expected_reading": "このかわはとねがわです。",
+      "translation": "This river is the Tone River."
+    },
+    {
+      "question_no": 10,
+      "type": "sentence_reading",
+      "prompt": "川田さんの専門は車です。",
+      "expected_reading": "かわださんのせんもんはくるまです。",
+      "translation": "Mr. Kawada’s speciality is cars."
+    }
+  ],
+  "verification_notes": [
+    "Kanji order, meanings, readings, examples, and stroke counts are transcribed from the user-provided Basic Kanji Book Lesson 1 pages.",
+    "Hyphens in readings (for example -び and -がわ) indicate suffix readings as printed in the book; parentheses are preserved for readings printed in parentheses.",
+    "The full-sentence kana answers for reading exercises 5–10 are assembled from the exercise text, printed furigana, and English name clues; they are not presented as a separately printed answer key.",
+    "Stroke counts are transcribed from the printed lesson. The writing canvas is freehand practice, not a stroke-order animation.",
+    "The unclear handwritten note beside item 6 (田) is intentionally excluded."
+  ]
+}

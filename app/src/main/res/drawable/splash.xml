@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Gradient background disc -->
+    <path android:pathData="M100,100m-90,0a90,90 0 1,1 180,0a90,90 0 1,1 -180,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="20"
+                android:startY="20"
+                android:endX="180"
+                android:endY="180"
+                android:type="linear">
+                <item android:color="#1E3A8A" android:offset="0.0" />
+                <item android:color="#2563EB" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Inner glowing circle -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M100,85m-30,0a30,30 0 1,1 60,0a30,30 0 1,1 -60,0" />
+    <!-- Torii Gate Lintel -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,85 C70,82 130,82 150,85 L148,91 C130,88.5 70,88.5 52,91 Z" />
+    <!-- Torii Gate Second Beam -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,98 L144,98 L144,103 L56,103 Z" />
+    <!-- Torii Left Pillar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,98 L73,98 L71,145 L64,145 Z" />
+    <!-- Torii Right Pillar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M127,98 L134,98 L136,145 L129,145 Z" />
+</vector>

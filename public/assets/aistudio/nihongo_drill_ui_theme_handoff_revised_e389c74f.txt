@@ -1,0 +1,110 @@
+NIHONGO DRILL — UI THEME & DESIGN HANDOFF
+For use with Gemini when designing or extending app screens
+Updated: 12 November 2026
+
+============================================================
+1. BRAND IDENTITY
+============================================================
+
+App name: Nihongo Drill
+Platform: Android app (Kotlin + Jetpack Compose + Material 3)
+Related product: The project also contains a PWA/web version, but this document focuses on the Android app UI.
+
+Primary brand color:
+Purple: #5034FF
+RGB: 80, 52, 255
+
+The purple is the main brand/action color. Keep it consistent across new screens.
+
+============================================================
+2. BASE COLOR PALETTE
+============================================================
+
+Primary / brand purple:  #5034FF
+Main background:         #F7F7FB
+Card / surface:           #FFFFFF
+Primary text:             #171717
+Secondary text:           #777783
+Border / outline:         #E8E8EF
+
+Important:
+- #5034FF is the confirmed existing primary brand color.
+- The other values above are the current handoff palette for consistency; verify exact source values in the Android theme files before changing global theme tokens.
+- Do not introduce a new dominant accent color without a clear product reason.
+- Use the primary purple for important actions and selected/highlighted states, not for every piece of text or decoration.
+
+============================================================
+3. EXISTING VISUAL STYLE
+============================================================
+
+The established visual direction is:
+- Clean, minimal, modern educational app.
+- Light theme.
+- Light, quiet page background.
+- White cards/surfaces.
+- Subtle, thin outlines around cards and controls.
+- Rounded cards; the established card corner style is approximately 18dp.
+- Purple filled primary action buttons.
+- Outlined secondary action buttons.
+- Clear hierarchy and comfortable spacing.
+- Avoid visual clutter, heavy shadows, excessive gradients, and unnecessary decoration.
+
+The app uses Jetpack Compose and Material 3 on Android.
+
+Do not assume exact typography family, font sizes, icon pack, spacing scale, or every component dimension from this brief. Inspect the existing Android source/theme and reuse the actual values when implementing.
+
+============================================================
+4. DESIGN RULES FOR NEW SCREENS
+============================================================
+
+When creating additional screens:
+1. Follow the existing light theme and visual language.
+2. Use #5034FF as the primary action/brand color.
+3. Use white surfaces/cards on a light background.
+4. Use subtle borders and rounded corners.
+5. Keep primary and secondary actions visually distinct.
+6. Maintain consistent spacing, alignment, button proportions, and corner radii.
+7. Keep layouts readable and uncluttered.
+8. Respect Android navigation and back behaviour.
+9. Reuse existing components and theme tokens wherever possible.
+10. Do not change existing screens just to make a new screen fit a different design.
+
+============================================================
+5. IMPORTANT INSTRUCTIONS FOR GEMINI
+============================================================
+
+You are helping extend an existing app called Nihongo Drill. This is not a request to invent a new app design from scratch.
+
+Before proposing or coding a UI change:
+- Treat the existing app screens and source code as the source of truth.
+- Preserve the current brand identity and established component styles.
+- Inspect the relevant existing screen and theme implementation first, if source code is available.
+- Reuse existing buttons, cards, typography, spacing, colors, and navigation patterns.
+- Make only the requested change.
+- Do not redesign unrelated screens.
+- Do not change the primary brand color.
+- Do not invent new navigation flows without discussing them.
+- Ensure new screens look like they belong to the same app.
+- If a detail is not specified in this brief, inspect the existing code rather than guessing.
+
+============================================================
+6. SOURCE OF TRUTH / VERIFICATION
+============================================================
+
+Android source repository:
+https://github.com/narenkhinchi/Nihongo-Drill
+
+Android UI is implemented with Kotlin, Jetpack Compose, and Material 3.
+
+The exact implementation should be checked in the repository before changing:
+- Theme color definitions
+- Typography
+- Component dimensions
+- Spacing values
+- Card and button shapes
+- Icons
+- Screen-specific layouts
+
+This document is a practical design handoff. It records the known brand and UI decisions, but it does not replace inspecting the latest app source.
+
+END OF HANDOFF

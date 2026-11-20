@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 2,
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Lesson 1",
+      "version": 1,
+      "wordCount": 40,
+      "path": "lessons/lesson-01.json",
+      "sha256": "edfa9fa17545866c9cd0c9071e6c97641200b58961fa972df1c63fab2836ad86",
+      "sizeBytes": 5305
+    },
+    {
+      "lessonNumber": 2,
+      "title": "Lesson 2",
+      "version": 1,
+      "wordCount": 52,
+      "path": "lessons/lesson-02.json",
+      "sha256": "523722e0a15fa3b4b7d2f9ed1e1b5cc9a0443af5d415c262a87c6b9d4b4eab16",
+      "sizeBytes": 6911
+    },
+    {
+      "lessonNumber": 3,
+      "title": "Lesson 3",
+      "version": 1,
+      "wordCount": 50,
+      "path": "lessons/lesson-03.json",
+      "sha256": "eb7aed30a94c69a2b5bc63c3a0a7f59c5b3ff76d68951bef84e0b425b36a02da",
+      "sizeBytes": 6508
+    },
+    {
+      "lessonNumber": 4,
+      "title": "Lesson 4",
+      "version": 1,
+      "wordCount": 56,
+      "path": "lessons/lesson-04.json",
+      "sha256": "1f2026dfdca8c8ace3dfc3c6534c2ff0fd9b1663360453d729541a29d13856bd",
+      "sizeBytes": 7323
+    },
+    {
+      "lessonNumber": 5,
+      "title": "Lesson 5",
+      "version": 1,
+      "wordCount": 55,
+      "path": "lessons/lesson-05.json",
+      "sha256": "425f9a0f3dcc18987f382efb3e2eb4d3328c2268472967efbf6787d1a8ed7437",
+      "sizeBytes": 7096
+    },
+    {
+      "lessonNumber": 6,
+      "title": "Lesson 6",
+      "version": 1,
+      "wordCount": 52,
+      "path": "lessons/lesson-06.json",
+      "sha256": "503317672ca534bc6413d5622df8b1fa6b87b0f54589e51d64f24c3432a08ed8",
+      "sizeBytes": 6543
+    },
+    {
+      "lessonNumber": 7,
+      "title": "Lesson 7",
+      "version": 1,
+      "wordCount": 48,
+      "path": "lessons/lesson-07.json",
+      "sha256": "352194b0f251a1332818f4d76a1926b44d2a7aac0f22ed64ad07f41fa5bfbe93",
+      "sizeBytes": 6438
+    },
+    {
+      "lessonNumber": 8,
+      "title": "Lesson 8",
+      "version": 1,
+      "wordCount": 58,
+      "path": "lessons/lesson-08.json",
+      "sha256": "6b673d31ea6ec46bfa2d5a3a67ed345d80f49a3162350168d414a562e5b2e986",
+      "sizeBytes": 7775
+    },
+    {
+      "lessonNumber": 9,
+      "title": "Lesson 9",
+      "version": 1,
+      "wordCount": 50,
+      "path": "lessons/lesson-09.json",
+      "sha256": "884f21ee215bc2f61aabf23207c52013f2b1dbf0a6465663dcb2c1f3faf351e9",
+      "sizeBytes": 6771
+    },
+    {
+      "lessonNumber": 10,
+      "title": "Lesson 10",
+      "version": 1,
+      "wordCount": 49,
+      "path": "lessons/lesson-10.json",
+      "sha256": "b74417a9528c4671d3b56b9f8ef925ad9af9a08b8f7472aa89c467751bc4f17c",
+      "sizeBytes": 6313
+    },
+    {
+      "lessonNumber": 11,
+      "title": "Lesson 11",
+      "version": 1,
+      "wordCount": 61,
+      "path": "lessons/lesson-11.json",
+      "sha256": "d79826ed51c2e6864e889c0fb982affc798e1e62cfd9ed6ea285cab6f189bed7",
+      "sizeBytes": 8232
+    },
+    {
+      "lessonNumber": 12,
+      "title": "Lesson 12",
+      "version": 1,
+      "wordCount": 45,
+      "path": "lessons/lesson-12.json",
+      "sha256": "3319056ddf0ae28cdf66aa8f3918128a0145709e96845d27cabd10d9c38574a7",
+      "sizeBytes": 5766
+    },
+    {
+      "lessonNumber": 13,
+      "title": "Lesson 13",
+      "version": 1,
+      "wordCount": 40,
+      "path": "lessons/lesson-13.json",
+      "sha256": "7bfd6ec9fa497aa8a9312577a0fe3a25ab860c50cece84666fc303d0953ca1c7",
+      "sizeBytes": 5605
+    },
+    {
+      "lessonNumber": 14,
+      "title": "Lesson 14",
+      "version": 1,
+      "wordCount": 41,
+      "path": "lessons/lesson-14.json",
+      "sha256": "2160695c39c1cf4ee60d4527c419a4b3f424bcaf846d31baf067041718341d1b",
+      "sizeBytes": 5443
+    },
+    {
+      "lessonNumber": 15,
+      "title": "Lesson 15",
+      "version": 1,
+      "wordCount": 28,
+      "path": "lessons/lesson-15.json",
+      "sha256": "8733a8ee9e2e341bc96f0f776dc6cc5baebbb9ed1e9fcb0bd8882933c87ec7e7",
+      "sizeBytes": 3805
+    },
+    {
+      "lessonNumber": 16,
+      "title": "Lesson 16",
+      "version": 1,
+      "wordCount": 49,
+      "path": "lessons/lesson-16.json",
+      "sha256": "27608e57d7d686f003ac160646abcaba2a502531c08e00063445a24bdc132ad2",
+      "sizeBytes": 6433
+    },
+    {
+      "lessonNumber": 17,
+      "title": "Lesson 17",
+      "version": 1,
+      "wordCount": 38,
+      "path": "lessons/lesson-17.json",
+      "sha256": "656d71e947b0dedf518855fa9145691574f6af3c4f692e68f6e8c8b28bbcbc61",
+      "sizeBytes": 5282
+    },
+    {
+      "lessonNumber": 18,
+      "title": "Lesson 18",
+      "version": 1,
+      "wordCount": 28,
+      "path": "lessons/lesson-18.json",
+      "sha256": "101e131055e0e3abdaedeed464cc554f326cfcb578bf72486c1f4f6eeee97e92",
+      "sizeBytes": 3796
+    },
+    {
+      "lessonNumber": 19,
+      "title": "Lesson 19",
+      "version": 1,
+      "wordCount": 30,
+      "path": "lessons/lesson-19.json",
+      "sha256": "ed3099b713c038dae188ec1523fe536188cc9a65cca132ca93c0693ca4d64892",
+      "sizeBytes": 4050
+    },
+    {
+      "lessonNumber": 20,
+      "title": "Lesson 20",
+      "version": 1,
+      "wordCount": 29,
+      "path": "lessons/lesson-20.json",
+      "sha256": "5ad9676ba19211a5c0f60212a32ee21141390a911dae6e5a99dcdce01b84557c",
+      "sizeBytes": 4294
+    },
+    {
+      "lessonNumber": 21,
+      "title": "Lesson 21",
+      "version": 1,
+      "wordCount": 37,
+      "path": "lessons/lesson-21.json",
+      "sha256": "8556a919d1c38310d5b1203b05c03729bd7f03e1615bc7f097c8941ce9c19b92",
+      "sizeBytes": 5179
+    },
+    {
+      "lessonNumber": 22,
+      "title": "Lesson 22",
+      "version": 1,
+      "wordCount": 21,
+      "path": "lessons/lesson-22.json",
+      "sha256": "4b22c2b1cc474281ee110a0a318e726d2ddea9e483be381af5dae5217d2dedbd",
+      "sizeBytes": 2890
+    },
+    {
+      "lessonNumber": 23,
+      "title": "Lesson 23",
+      "version": 1,
+      "wordCount": 31,
+      "path": "lessons/lesson-23.json",
+      "sha256": "a54db3402a48c14f6c4a808eb72db6e4e93cf941f22d9970489e642a05ae69c7",
+      "sizeBytes": 4258
+    },
+    {
+      "lessonNumber": 24,
+      "title": "Lesson 24",
+      "version": 1,
+      "wordCount": 19,
+      "path": "lessons/lesson-24.json",
+      "sha256": "b10c4c057ad3f293c0203c09f55628072edc273c09b1f16451cbe37da20414d3",
+      "sizeBytes": 2676
+    },
+    {
+      "lessonNumber": 25,
+      "title": "Lesson 25",
+      "version": 1,
+      "wordCount": 17,
+      "path": "lessons/lesson-25.json",
+      "sha256": "cf22bf9b41d254c0e0aade4e2e8a257353ccd3ca05c73cf4850ad607c2251d19",
+      "sizeBytes": 2520
+    },
+    {
+      "lessonNumber": 26,
+      "title": "Lesson 26",
+      "version": 1,
+      "wordCount": 49,
+      "path": "lessons/lesson-26.json",
+      "sha256": "c60d5de4700c40bc8e426c1869a986001abf4a56bd1954b3db07df73bbbefed0",
+      "sizeBytes": 6883
+    }
+  ]
+}

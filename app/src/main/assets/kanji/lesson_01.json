@@ -1,0 +1,65 @@
+{
+  "dataset": "Nihongo Drill - Basic Kanji Book",
+  "lesson": 1,
+  "source": "User-provided photos of Basic Kanji Book, Lesson 1",
+  "notes": [
+    "Readings retain the book's parentheses where shown.",
+    "Vocabulary readings preserve the book's dot-separated segmentation where visible.",
+    "Handwritten annotation near 田水 was excluded from the printed vocabulary list."
+  ],
+  "kanji": [
+    {"number": 1, "character": "日", "meaning": "Sun / Day", "kunReadings": ["ひ", "び", "か"], "onReadings": ["ニチ", "ニ", "（ジツ）"], "strokeCount": 4},
+    {"number": 2, "character": "月", "meaning": "Moon / Month", "kunReadings": ["つき"], "onReadings": ["ゲツ", "（ガツ）"], "strokeCount": 4},
+    {"number": 3, "character": "木", "meaning": "Tree", "kunReadings": ["き"], "onReadings": ["モク", "ボク"], "strokeCount": 4},
+    {"number": 4, "character": "山", "meaning": "Mountain", "kunReadings": ["やま"], "onReadings": ["サン"], "strokeCount": 3},
+    {"number": 5, "character": "川", "meaning": "River", "kunReadings": ["かわ", "（がわ）"], "onReadings": ["セン"], "strokeCount": 3},
+    {"number": 6, "character": "田", "meaning": "Rice field", "kunReadings": ["た", "（だ）"], "onReadings": ["デン"], "strokeCount": 5},
+    {"number": 7, "character": "人", "meaning": "Man / Person", "kunReadings": ["ひと"], "onReadings": ["ジン", "ニン"], "strokeCount": 2},
+    {"number": 8, "character": "口", "meaning": "Mouth", "kunReadings": ["くち", "（ぐち）"], "onReadings": ["コウ"], "strokeCount": 3},
+    {"number": 9, "character": "車", "meaning": "Car", "kunReadings": ["くるま"], "onReadings": ["シャ"], "strokeCount": 7},
+    {"number": 10, "character": "門", "meaning": "Gate", "kunReadings": ["（かど）"], "onReadings": ["モン"], "strokeCount": 8}
+  ],
+  "vocabulary": [
+    {"kanjiNumber": 1, "word": "日", "reading": "ひ", "meaning": "the sun, a day"},
+    {"kanjiNumber": 1, "word": "日本", "reading": "に・ほん／にっ・ぽん", "meaning": "Japan"},
+    {"kanjiNumber": 1, "word": "日曜日", "reading": "にち・よう・び", "meaning": "Sunday"},
+    {"kanjiNumber": 1, "word": "３日", "reading": "みっ・か", "meaning": "the 3rd day"},
+
+    {"kanjiNumber": 2, "word": "月", "reading": "つき", "meaning": "the moon, a month"},
+    {"kanjiNumber": 2, "word": "月曜日", "reading": "げつ・よう・び", "meaning": "Monday"},
+    {"kanjiNumber": 2, "word": "１月", "reading": "いち・がつ", "meaning": "January"},
+    {"kanjiNumber": 2, "word": "１か月", "reading": "いっ・か・げつ", "meaning": "one month"},
+
+    {"kanjiNumber": 3, "word": "木", "reading": "き", "meaning": "a tree"},
+    {"kanjiNumber": 3, "word": "木曜日", "reading": "もく・よう・び", "meaning": "Thursday"},
+    {"kanjiNumber": 3, "word": "木村", "reading": "き・むら", "meaning": "Japanese name"},
+
+    {"kanjiNumber": 4, "word": "山", "reading": "やま", "meaning": "a mountain"},
+    {"kanjiNumber": 4, "word": "富士山", "reading": "ふ・じ・さん", "meaning": "Mt. Fuji"},
+    {"kanjiNumber": 4, "word": "山下", "reading": "やま・した", "meaning": "Japanese name"},
+    {"kanjiNumber": 4, "word": "火山", "reading": "か・ざん", "meaning": "a volcano"},
+
+    {"kanjiNumber": 5, "word": "川", "reading": "かわ", "meaning": "a river"},
+    {"kanjiNumber": 5, "word": "ナイル川", "reading": "ないる・がわ", "meaning": "the Nile River"},
+
+    {"kanjiNumber": 6, "word": "田んぼ", "reading": "たんぼ", "meaning": "a rice field"},
+    {"kanjiNumber": 6, "word": "山田", "reading": "やま・だ", "meaning": "Japanese name"},
+    {"kanjiNumber": 6, "word": "田中", "reading": "た・なか", "meaning": "Japanese name"},
+
+    {"kanjiNumber": 7, "word": "人", "reading": "ひと", "meaning": "man, a person"},
+    {"kanjiNumber": 7, "word": "３人", "reading": "さん・にん", "meaning": "three people"},
+    {"kanjiNumber": 7, "word": "日本人", "reading": "に・ほん・じん", "meaning": "a Japanese person"},
+
+    {"kanjiNumber": 8, "word": "口", "reading": "くち", "meaning": "a mouth"},
+    {"kanjiNumber": 8, "word": "入口", "reading": "いり・ぐち", "meaning": "an entrance"},
+    {"kanjiNumber": 8, "word": "出口", "reading": "で・ぐち", "meaning": "an exit"},
+    {"kanjiNumber": 8, "word": "人口", "reading": "じん・こう", "meaning": "population"},
+
+    {"kanjiNumber": 9, "word": "車", "reading": "くるま", "meaning": "a car"},
+    {"kanjiNumber": 9, "word": "自動車", "reading": "じ・どう・しゃ", "meaning": "a car, an automobile"},
+    {"kanjiNumber": 9, "word": "電車", "reading": "でん・しゃ", "meaning": "a train"},
+
+    {"kanjiNumber": 10, "word": "門", "reading": "もん", "meaning": "a gate"},
+    {"kanjiNumber": 10, "word": "専門", "reading": "せん・もん", "meaning": "a speciality"}
+  ]
+}
