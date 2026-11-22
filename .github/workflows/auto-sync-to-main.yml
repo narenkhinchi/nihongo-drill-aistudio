@@ -30,15 +30,15 @@ jobs:
         run: |
           if [ -d "aistudio-repo/app/src/main/java/com/example" ]; then
             mkdir -p main-repo/android/app/src/main/java/com/example
-            rsync -a --delete aistudio-repo/app/src/main/java/com/example/ main-repo/android/app/src/main/java/com/example/
+            rsync -ac --delete aistudio-repo/app/src/main/java/com/example/ main-repo/android/app/src/main/java/com/example/
           fi
           if [ -d "aistudio-repo/app/src/main/java/com/nihongo/vocabdrill" ]; then
             mkdir -p main-repo/android/app/src/main/java/com/nihongo/vocabdrill
-            rsync -a aistudio-repo/app/src/main/java/com/nihongo/vocabdrill/ main-repo/android/app/src/main/java/com/nihongo/vocabdrill/
+            rsync -ac aistudio-repo/app/src/main/java/com/nihongo/vocabdrill/ main-repo/android/app/src/main/java/com/nihongo/vocabdrill/
           fi
           if [ -d "aistudio-repo/hosting/kanji" ]; then
             mkdir -p main-repo/pwa/public/kanji
-            rsync -a --delete aistudio-repo/hosting/kanji/ main-repo/pwa/public/kanji/
+            rsync -ac --delete aistudio-repo/hosting/kanji/ main-repo/pwa/public/kanji/
           fi
 
       - name: Commit & Push to Nihongo-Drill main (Auto-triggers APK Release and/or Firebase Hosting)

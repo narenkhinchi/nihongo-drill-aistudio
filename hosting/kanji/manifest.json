@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 4,
+  "contentVersion": 5,
   "lessons": [
     {
       "id": "N5_L1",
@@ -37,6 +37,15 @@
       "subtitle": "Position, Size & Basics",
       "version": 2,
       "path": "kanji/lesson-04.json"
+    },
+    {
+      "id": "N5_L5",
+      "level": "N5",
+      "lessonNumber": 5,
+      "title": "Lesson 5",
+      "subtitle": "Combined Meanings & Nature",
+      "version": 1,
+      "path": "kanji/lesson-05.json"
     }
   ],
   "storiesPath": "kanji/stories.json",

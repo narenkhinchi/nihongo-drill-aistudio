@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.0",
+  "level": "N5",
+  "lesson": 5,
+  "title": "Lesson 5",
+  "subtitle": "Combined Meanings & Nature",
+  "source": "Basic Kanji Book, Lesson 5 (#46–#55); user-provided page images",
+  "kanji": [
+    {
+      "number": 46,
+      "kanji": "明",
+      "meaning": "Bright; Light",
+      "kun_readings": ["あか-るい", "あ-ける"],
+      "on_readings": ["メイ"],
+      "on_readings_display": ["めい"],
+      "stroke_count": 8,
+      "stroke_descriptions": [
+        "1. Left 日: left vertical side",
+        "2. Left 日: top and right sides",
+        "3. Left 日: middle bar",
+        "4. Left 日: bottom closing bar",
+        "5. Right 月: curved left sweep",
+        "6. Right 月: top, right pillar & bottom hook",
+        "7. Right 月: upper inner bar",
+        "8. Right 月: lower inner bar"
+      ],
+      "examples": [
+        { "word": "明るい", "reading": "あか・るい", "meaning": "bright, cheerful" },
+        { "word": "明ける", "reading": "あ・ける", "meaning": "to dawn, to break (day)" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Left 日 left side", "points": [[16, 24], [16, 72]] },
+        { "step": 2, "arrow": "↴", "description": "Left 日 top & right", "points": [[16, 24], [42, 24], [42, 72]] },
+        { "step": 3, "arrow": "→", "description": "Left 日 middle bar", "points": [[16, 47], [42, 47]] },
+        { "step": 4, "arrow": "→", "description": "Left 日 bottom bar", "points": [[16, 70], [42, 70]] },
+        { "step": 5, "arrow": "↙", "description": "Right 月 left curve", "points": [[56, 18], [56, 56], [48, 84]] },
+        { "step": 6, "arrow": "↴", "description": "Right 月 top & hook", "points": [[56, 18], [84, 18], [84, 84], [75, 76]] },
+        { "step": 7, "arrow": "→", "description": "Right 月 upper bar", "points": [[56, 40], [84, 40]] },
+        { "step": 8, "arrow": "→", "description": "Right 月 lower bar", "points": [[55, 60], [84, 60]] }
+      ],
+      "guidance": {
+        "rule": "Sun (日) on the left + Moon (月) on the right = Bright",
+        "tips": ["1-4. Complete 日 on left", "5-8. Complete 月 on right"]
+      }
+    },
+    {
+      "number": 47,
+      "kanji": "休",
+      "meaning": "Rest",
+      "kun_readings": ["やす-む"],
+      "on_readings": ["キュウ"],
+      "on_readings_display": ["きゅう"],
+      "stroke_count": 6,
+      "stroke_descriptions": [
+        "1. Left 亻: diagonal sweep down-left",
+        "2. Left 亻: vertical stem down",
+        "3. Right 木: horizontal branch",
+        "4. Right 木: central vertical trunk",
+        "5. Right 木: left diagonal sweep",
+        "6. Right 木: right diagonal sweep"
+      ],
+      "examples": [
+        { "word": "休む", "reading": "やす・む", "meaning": "to rest, to be absent" },
+        { "word": "休み", "reading": "やす・み", "meaning": "a break, a holiday" },
+        { "word": "休日", "reading": "きゅう・じつ", "meaning": "a holiday" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Left 亻 sweep", "points": [[34, 16], [24, 38], [14, 52]] },
+        { "step": 2, "arrow": "↓", "description": "Left 亻 vertical", "points": [[26, 38], [26, 86]] },
+        { "step": 3, "arrow": "→", "description": "Right 木 horizontal", "points": [[40, 38], [86, 38]] },
+        { "step": 4, "arrow": "↓", "description": "Right 木 vertical", "points": [[62, 14], [62, 86]] },
+        { "step": 5, "arrow": "↙", "description": "Right 木 left leg", "points": [[62, 38], [48, 62], [36, 78]] },
+        { "step": 6, "arrow": "↘", "description": "Right 木 right leg", "points": [[62, 38], [74, 62], [88, 78]] }
+      ],
+      "guidance": {
+        "rule": "Person (亻) leaning beside a Tree (木) = Rest",
+        "tips": ["1-2. Left 亻 radical", "3-6. Right 木 tree"]
+      }
+    },
+    {
+      "number": 48,
+      "kanji": "体",
+      "meaning": "Body",
+      "kun_readings": ["からだ"],
+      "on_readings": ["タイ"],
+      "on_readings_display": ["たい"],
+      "stroke_count": 7,
+      "stroke_descriptions": [
+        "1. Left 亻: diagonal sweep down-left",
+        "2. Left 亻: vertical stem down",
+        "3. Right 本: horizontal branch",
+        "4. Right 本: central vertical trunk",
+        "5. Right 本: left diagonal sweep",
+        "6. Right 本: right diagonal sweep",
+        "7. Right 本: lower horizontal root bar"
+      ],
+      "examples": [
+        { "word": "体", "reading": "からだ", "meaning": "a body" },
+        { "word": "体育", "reading": "たい・いく", "meaning": "physical exercises" },
+        { "word": "体力", "reading": "たい・りょく", "meaning": "physical strength" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Left 亻 sweep", "points": [[34, 16], [24, 38], [14, 52]] },
+        { "step": 2, "arrow": "↓", "description": "Left 亻 vertical", "points": [[26, 38], [26, 86]] },
+        { "step": 3, "arrow": "→", "description": "Right 本 horizontal", "points": [[40, 36], [86, 36]] },
+        { "step": 4, "arrow": "↓", "description": "Right 本 vertical", "points": [[62, 14], [62, 86]] },
+        { "step": 5, "arrow": "↙", "description": "Right 本 left leg", "points": [[62, 36], [48, 60], [36, 76]] },
+        { "step": 6, "arrow": "↘", "description": "Right 本 right leg", "points": [[62, 36], [74, 60], [88, 76]] },
+        { "step": 7, "arrow": "→", "description": "Right 本 lower bar", "points": [[46, 70], [78, 70]] }
+      ],
+      "guidance": {
+        "rule": "Person (亻) + Origin/Base (本) = Body",
+        "tips": ["1-2. Left 亻 radical", "3-7. Right 本 (draw 木 then bottom bar)"]
+      }
+    },
+    {
+      "number": 49,
+      "kanji": "好",
+      "meaning": "Love, Like; Favorite",
+      "kun_readings": ["す-きな", "す-く"],
+      "on_readings": ["コウ"],
+      "on_readings_display": ["こう"],
+      "stroke_count": 6,
+      "stroke_descriptions": [
+        "1. Left 女: bent stroke down-left then down-right",
+        "2. Left 女: sweeping diagonal from right to left",
+        "3. Left 女: horizontal crossbar",
+        "4. Right 子: top horizontal turning inward-left",
+        "5. Right 子: curved vertical stem with hook",
+        "6. Right 子: wide horizontal crossbar"
+      ],
+      "examples": [
+        { "word": "好きな", "reading": "す・きな", "meaning": "favorite, liked" },
+        { "word": "好かれる", "reading": "す・かれる", "meaning": "to be liked, to be loved" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Left 女 bent stroke", "points": [[30, 18], [20, 52], [34, 64], [46, 76]] },
+        { "step": 2, "arrow": "↙", "description": "Left 女 diagonal sweep", "points": [[42, 36], [36, 62], [18, 82]] },
+        { "step": 3, "arrow": "→", "description": "Left 女 crossbar", "points": [[12, 46], [48, 40]] },
+        { "step": 4, "arrow": "↴", "description": "Right 子 top turn", "points": [[54, 22], [82, 22], [68, 38]] },
+        { "step": 5, "arrow": "↓", "description": "Right 子 stem & hook", "points": [[68, 38], [70, 62], [68, 86], [58, 78]] },
+        { "step": 6, "arrow": "→", "description": "Right 子 crossbar", "points": [[48, 54], [88, 54]] }
+      ],
+      "guidance": {
+        "rule": "Woman (女) on left + Child (子) on right = Love/Like",
+        "tips": ["1-3. Compact 女 on left", "4-6. Complete 子 on right"]
+      }
+    },
+    {
+      "number": 50,
+      "kanji": "男",
+      "meaning": "Man; Male",
+      "kun_readings": ["おとこ"],
+      "on_readings": ["ダン", "ナン"],
+      "on_readings_display": ["だん", "なん"],
+      "stroke_count": 7,
+      "stroke_descriptions": [
+        "1. Top 田: left border down",
+        "2. Top 田: top and right border",
+        "3. Top 田: center vertical",
+        "4. Top 田: center horizontal",
+        "5. Top 田: bottom closing bar",
+        "6. Bottom 力: horizontal turning down with hook",
+        "7. Bottom 力: tall curved sweep down-left"
+      ],
+      "examples": [
+        { "word": "男", "reading": "おとこ", "meaning": "a man" },
+        { "word": "男の子", "reading": "おとこ・の・こ", "meaning": "a boy" },
+        { "word": "男子学生", "reading": "だん・し・がく・せい", "meaning": "a boy student" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Top 田 left border", "points": [[24, 16], [26, 48]] },
+        { "step": 2, "arrow": "↴", "description": "Top 田 top & right", "points": [[24, 16], [76, 16], [74, 48]] },
+        { "step": 3, "arrow": "↓", "description": "Top 田 center vertical", "points": [[50, 16], [50, 46]] },
+        { "step": 4, "arrow": "→", "description": "Top 田 middle bar", "points": [[25, 31], [75, 31]] },
+        { "step": 5, "arrow": "→", "description": "Top 田 bottom bar", "points": [[26, 46], [74, 46]] },
+        { "step": 6, "arrow": "↴", "description": "Bottom 力 across & hook", "points": [[20, 62], [78, 62], [72, 86], [62, 80]] },
+        { "step": 7, "arrow": "↙", "description": "Bottom 力 curved sweep", "points": [[50, 50], [42, 70], [20, 86]] }
+      ],
+      "guidance": {
+        "rule": "Rice field (田) on top + Power (力) below = Man",
+        "tips": ["1-5. Complete 田 on top", "6-7. Draw 力 below (hooked turn then sweep)"]
+      }
+    },
+    {
+      "number": 51,
+      "kanji": "林",
+      "meaning": "Wood; Grove",
+      "kun_readings": ["はやし"],
+      "on_readings": ["リン"],
+      "on_readings_display": ["りん"],
+      "stroke_count": 8,
+      "stroke_descriptions": [
+        "1. Left 木: horizontal branch",
+        "2. Left 木: vertical trunk",
+        "3. Left 木: left diagonal sweep",
+        "4. Left 木: short right dot",
+        "5. Right 木: horizontal branch",
+        "6. Right 木: vertical trunk",
+        "7. Right 木: left diagonal sweep",
+        "8. Right 木: wide right diagonal sweep"
+      ],
+      "examples": [
+        { "word": "林", "reading": "はやし", "meaning": "a wood" },
+        { "word": "小林", "reading": "こ・ばやし", "meaning": "Japanese name" },
+        { "word": "林業", "reading": "りん・ぎょう", "meaning": "forestry" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Left 木 horizontal", "points": [[14, 38], [44, 38]] },
+        { "step": 2, "arrow": "↓", "description": "Left 木 vertical", "points": [[30, 16], [30, 84]] },
+        { "step": 3, "arrow": "↙", "description": "Left 木 left sweep", "points": [[30, 38], [22, 60], [12, 76]] },
+        { "step": 4, "arrow": "↘", "description": "Left 木 short dot", "points": [[32, 48], [44, 60]] },
+        { "step": 5, "arrow": "→", "description": "Right 木 horizontal", "points": [[50, 38], [86, 38]] },
+        { "step": 6, "arrow": "↓", "description": "Right 木 vertical", "points": [[66, 14], [66, 86]] },
+        { "step": 7, "arrow": "↙", "description": "Right 木 left sweep", "points": [[66, 38], [56, 62], [44, 78]] },
+        { "step": 8, "arrow": "↘", "description": "Right 木 right sweep", "points": [[66, 38], [76, 62], [88, 78]] }
+      ],
+      "guidance": {
+        "rule": "Two trees (木 + 木) side by side = Grove/Wood",
+        "tips": ["1-4. Slimmer left 木 (stroke 4 becomes a short dot)", "5-8. Full right 木"]
+      }
+    },
+    {
+      "number": 52,
+      "kanji": "森",
+      "meaning": "Forest; Jungle",
+      "kun_readings": ["もり"],
+      "on_readings": ["シン"],
+      "on_readings_display": ["しん"],
+      "stroke_count": 12,
+      "stroke_descriptions": [
+        "1. Top 木: horizontal branch",
+        "2. Top 木: vertical trunk",
+        "3. Top 木: left diagonal sweep",
+        "4. Top 木: right diagonal sweep",
+        "5. Bottom-left 木: horizontal branch",
+        "6. Bottom-left 木: vertical trunk",
+        "7. Bottom-left 木: left diagonal sweep",
+        "8. Bottom-left 木: short right dot",
+        "9. Bottom-right 木: horizontal branch",
+        "10. Bottom-right 木: vertical trunk",
+        "11. Bottom-right 木: left diagonal sweep",
+        "12. Bottom-right 木: right diagonal sweep"
+      ],
+      "examples": [
+        { "word": "森", "reading": "もり", "meaning": "a forest" },
+        { "word": "森田", "reading": "もり・た", "meaning": "Japanese name" },
+        { "word": "森林", "reading": "しん・りん", "meaning": "woods and forests" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Top 木 horizontal", "points": [[24, 24], [76, 24]] },
+        { "step": 2, "arrow": "↓", "description": "Top 木 vertical", "points": [[50, 12], [50, 48]] },
+        { "step": 3, "arrow": "↙", "description": "Top 木 left sweep", "points": [[50, 24], [36, 36], [20, 46]] },
+        { "step": 4, "arrow": "↘", "description": "Top 木 right sweep", "points": [[50, 24], [64, 36], [80, 46]] },
+        { "step": 5, "arrow": "→", "description": "Lower-left 木 horizontal", "points": [[14, 62], [44, 62]] },
+        { "step": 6, "arrow": "↓", "description": "Lower-left 木 vertical", "points": [[30, 50], [30, 88]] },
+        { "step": 7, "arrow": "↙", "description": "Lower-left 木 left sweep", "points": [[30, 62], [20, 76], [12, 84]] },
+        { "step": 8, "arrow": "↘", "description": "Lower-left 木 short dot", "points": [[32, 68], [44, 76]] },
+        { "step": 9, "arrow": "→", "description": "Lower-right 木 horizontal", "points": [[52, 62], [86, 62]] },
+        { "step": 10, "arrow": "↓", "description": "Lower-right 木 vertical", "points": [[68, 50], [68, 88]] },
+        { "step": 11, "arrow": "↙", "description": "Lower-right 木 left sweep", "points": [[68, 62], [58, 76], [48, 84]] },
+        { "step": 12, "arrow": "↘", "description": "Lower-right 木 right sweep", "points": [[68, 62], [78, 76], [88, 84]] }
+      ],
+      "guidance": {
+        "rule": "Three trees: Top 木 first, then bottom-left 木, then bottom-right 木",
+        "tips": ["1-4. Top 木", "5-8. Bottom-left 木", "9-12. Bottom-right 木"]
+      }
+    },
+    {
+      "number": 53,
+      "kanji": "間",
+      "meaning": "Between; Interval",
+      "kun_readings": ["あいだ", "ま"],
+      "on_readings": ["カン"],
+      "on_readings_display": ["かん"],
+      "stroke_count": 12,
+      "stroke_descriptions": [
+        "1. Left gate pillar down",
+        "2. Left upper gate top and right wall",
+        "3. Left gate middle horizontal bar",
+        "4. Left gate lower horizontal bar",
+        "5. Right gate inner vertical wall",
+        "6. Right gate top, outer pillar, and hook",
+        "7. Right gate middle horizontal bar",
+        "8. Right gate lower horizontal bar",
+        "9. Inner 日: left vertical wall",
+        "10. Inner 日: top and right wall",
+        "11. Inner 日: middle horizontal bar",
+        "12. Inner 日: bottom closing bar"
+      ],
+      "examples": [
+        { "word": "間", "reading": "あいだ", "meaning": "between" },
+        { "word": "間に合う", "reading": "ま・に・あ・う", "meaning": "to be on time" },
+        { "word": "一年間", "reading": "いち・ねん・かん", "meaning": "for one year" },
+        { "word": "時間", "reading": "じ・かん", "meaning": "time" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Left gate pillar", "points": [[18, 16], [18, 86]] },
+        { "step": 2, "arrow": "↴", "description": "Left upper box", "points": [[18, 16], [42, 16], [42, 42]] },
+        { "step": 3, "arrow": "→", "description": "Left mid bar", "points": [[18, 29], [42, 29]] },
+        { "step": 4, "arrow": "→", "description": "Left low bar", "points": [[18, 42], [42, 42]] },
+        { "step": 5, "arrow": "↓", "description": "Right inner side", "points": [[58, 16], [58, 42]] },
+        { "step": 6, "arrow": "↴", "description": "Right pillar & hook", "points": [[58, 16], [82, 16], [82, 86], [73, 79]] },
+        { "step": 7, "arrow": "→", "description": "Right mid bar", "points": [[58, 29], [82, 29]] },
+        { "step": 8, "arrow": "→", "description": "Right low bar", "points": [[58, 42], [82, 42]] },
+        { "step": 9, "arrow": "↓", "description": "Inner 日 left side", "points": [[36, 52], [36, 80]] },
+        { "step": 10, "arrow": "↴", "description": "Inner 日 top & right", "points": [[36, 52], [64, 52], [64, 80]] },
+        { "step": 11, "arrow": "→", "description": "Inner 日 middle bar", "points": [[36, 65], [64, 65]] },
+        { "step": 12, "arrow": "→", "description": "Inner 日 bottom bar", "points": [[36, 78], [64, 78]] }
+      ],
+      "guidance": {
+        "rule": "Complete outer Gate (門) first, then place Sun (日) inside",
+        "tips": ["1-8. Outer 門 gate frame", "9-12. Centered 日 inside"]
+      }
+    },
+    {
+      "number": 54,
+      "kanji": "畑",
+      "meaning": "Cultivated field",
+      "kun_readings": ["はたけ", "はた"],
+      "on_readings": [],
+      "on_readings_display": [],
+      "stroke_count": 9,
+      "stroke_descriptions": [
+        "1. Left 火: small left dot",
+        "2. Left 火: short right flick",
+        "3. Left 火: tall center curve sweeping left",
+        "4. Left 火: short right dot",
+        "5. Right 田: left vertical wall",
+        "6. Right 田: top horizontal and right wall",
+        "7. Right 田: center vertical divider",
+        "8. Right 田: center horizontal divider",
+        "9. Right 田: bottom closing horizontal"
+      ],
+      "examples": [
+        { "word": "畑", "reading": "はたけ", "meaning": "cultivated field" },
+        { "word": "田畑", "reading": "た・はた", "meaning": "fields of rice and crops" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↘", "description": "Left 火 left dot", "points": [[14, 38], [18, 50]] },
+        { "step": 2, "arrow": "↙", "description": "Left 火 right flick", "points": [[42, 34], [35, 48]] },
+        { "step": 3, "arrow": "↙", "description": "Left 火 center sweep", "points": [[28, 16], [27, 52], [14, 82]] },
+        { "step": 4, "arrow": "↘", "description": "Left 火 right dot", "points": [[29, 54], [42, 68]] },
+        { "step": 5, "arrow": "↓", "description": "Right 田 left wall", "points": [[48, 28], [48, 78]] },
+        { "step": 6, "arrow": "↴", "description": "Right 田 top & right", "points": [[48, 28], [86, 28], [86, 78]] },
+        { "step": 7, "arrow": "↓", "description": "Right 田 center vertical", "points": [[67, 28], [67, 76]] },
+        { "step": 8, "arrow": "→", "description": "Right 田 center horizontal", "points": [[48, 52], [86, 52]] },
+        { "step": 9, "arrow": "→", "description": "Right 田 bottom closing", "points": [[48, 76], [86, 76]] }
+      ],
+      "guidance": {
+        "rule": "Fire (火) on left + Field (田) on right = Dry/cultivated field",
+        "tips": ["1-4. Compact 火 on left", "5-9. Complete 田 on right"]
+      }
+    },
+    {
+      "number": 55,
+      "kanji": "岩",
+      "meaning": "Rock",
+      "kun_readings": ["いわ"],
+      "on_readings": ["ガン"],
+      "on_readings_display": ["がん"],
+      "stroke_count": 8,
+      "stroke_descriptions": [
+        "1. Top 山: center vertical peak",
+        "2. Top 山: left peak down and across base",
+        "3. Top 山: right vertical peak",
+        "4. Lower 石: wide horizontal cliff line",
+        "5. Lower 石: diagonal sweep down-left",
+        "6. Lower 口: left vertical wall",
+        "7. Lower 口: top horizontal and right wall",
+        "8. Lower 口: bottom closing horizontal"
+      ],
+      "examples": [
+        { "word": "岩", "reading": "いわ", "meaning": "a rock" },
+        { "word": "岩山", "reading": "いわ・やま", "meaning": "a rocky mountain" },
+        { "word": "岩石", "reading": "がん・せき", "meaning": "rocks and stones" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Top 山 center peak", "points": [[50, 12], [50, 34]] },
+        { "step": 2, "arrow": "↳", "description": "Top 山 left & base", "points": [[24, 20], [24, 34], [76, 34]] },
+        { "step": 3, "arrow": "↓", "description": "Top 山 right peak", "points": [[76, 20], [76, 38]] },
+        { "step": 4, "arrow": "→", "description": "Lower 石 top cliff", "points": [[18, 48], [82, 48]] },
+        { "step": 5, "arrow": "↙", "description": "Lower 石 left sweep", "points": [[42, 48], [32, 66], [16, 80]] },
+        { "step": 6, "arrow": "↓", "description": "Lower 口 left side", "points": [[36, 62], [38, 86]] },
+        { "step": 7, "arrow": "↴", "description": "Lower 口 top & right", "points": [[36, 62], [74, 62], [72, 86]] },
+        { "step": 8, "arrow": "→", "description": "Lower 口 bottom bar", "points": [[38, 84], [72, 84]] }
+      ],
+      "guidance": {
+        "rule": "Mountain (山) on top + Stone (石) below = Rock",
+        "tips": ["1-3. Compact 山 on top", "4-5. Cliff line & left sweep of 石", "6-8. Complete 口 box at bottom"]
+      }
+    }
+  ]
+}
