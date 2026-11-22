@@ -1176,7 +1176,9 @@ fun KanjiReadingScreen(
                     }
 
                     IconButton(
-                      onClick = { onPlayAudio(exercise.sentenceWithKanji) },
+                      onClick = {
+                        onPlayAudio(exercise.readingHiragana.ifBlank { exercise.sentenceWithKanji })
+                      },
                       modifier = Modifier.size(36.dp)
                     ) {
                       Icon(

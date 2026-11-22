@@ -495,7 +495,7 @@ fun KanjiLearningScreen(
           VocabularyCard(
             vocabList = uiState.currentVocabulary,
             currentlyPlaying = uiState.currentlyPlayingText,
-            onPlayVocab = { word -> viewModel.playAudio(word) }
+            onPlayVocab = { vocab -> viewModel.playVocabAudio(vocab) }
           )
         }
 
@@ -992,7 +992,7 @@ fun ReadingsCard(
 fun VocabularyCard(
   vocabList: List<Vocabulary>,
   currentlyPlaying: String?,
-  onPlayVocab: (String) -> Unit
+  onPlayVocab: (Vocabulary) -> Unit
 ) {
   Card(
     modifier = Modifier
@@ -1037,7 +1037,7 @@ fun VocabularyCard(
             .fillMaxWidth()
             .clip(RoundedCornerShape(8.dp))
             .background(rowBg)
-            .clickable { onPlayVocab(vocab.word) }
+            .clickable { onPlayVocab(vocab) }
             .padding(horizontal = 4.dp, vertical = 7.dp),
           verticalAlignment = Alignment.CenterVertically
         ) {

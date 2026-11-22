@@ -421,25 +421,50 @@ class KanjiViewModel(application: Application) : AndroidViewModel(application) {
     _uiState.update { it.copy(showKanjiSelectorSheet = visible) }
   }
 
-  fun playAudio(text: String) {
-    ttsHelper.speak(text)
+  fun playAudio(text: String, highlightKey: String = text) {
+    val trimmed = text.trim()
+    if (trimmed.isBlank()) return
+    val resolvedSpeech = if (trimmed.length == 1) {
+      val matchedKanji = KanjiRepository.allKanjiAcrossLevels.find { it.character == trimmed }
+      matchedKanji?.let { resolvePrimaryReading(it) } ?: trimmed
+    } else {
+      trimmed
+    }
+    ttsHelper.speak(resolvedSpeech)
     viewModelScope.launch {
-      _uiState.update { it.copy(currentlyPlayingText = text) }
+      _uiState.update { it.copy(currentlyPlayingText = highlightKey) }
       delay(1200)
       _uiState.update {
-        if (it.currentlyPlayingText == text) it.copy(currentlyPlayingText = null) else it
+        if (it.currentlyPlayingText == highlightKey) it.copy(currentlyPlayingText = null) else it
       }
     }
   }
 
+  fun playVocabAudio(vocab: Vocabulary) {
+    val speech = vocab.reading.ifBlank { vocab.word }
+    playAudio(text = speech, highlightKey = vocab.word)
+  }
+
+  private fun resolvePrimaryReading(kanji: Kanji): String {
+    val primaryKun = kanji.kunReadings.firstOrNull { r ->
+      val t = r.trim()
+      t.isNotEmpty() && !t.startsWith("（") && !t.startsWith("(")
+    }
+    val primaryOn = kanji.onReadingsDisplay.firstOrNull { it.isNotBlank() }
+    val fallbackKun = kanji.kunReadings.firstOrNull { it.isNotBlank() }
+    return primaryKun ?: primaryOn ?: fallbackKun ?: kanji.character
+  }
+
   fun playAllKunReadings() {
     val kanji = _uiState.value.currentKanji
+    if (kanji.kunReadings.isEmpty()) return
     val text = kanji.kunReadings.joinToString("、")
     playAudio(text)
   }
 
   fun playAllOnReadings() {
     val kanji = _uiState.value.currentKanji
+    if (kanji.onReadingsDisplay.isEmpty()) return
     val text = kanji.onReadingsDisplay.joinToString("、")
     playAudio(text)
   }

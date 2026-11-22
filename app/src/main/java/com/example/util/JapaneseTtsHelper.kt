@@ -12,7 +12,12 @@ class JapaneseTtsHelper(context: Context) {
   init {
     tts = TextToSpeech(context.applicationContext) { status ->
       if (status == TextToSpeech.SUCCESS) {
-        val result = tts?.setLanguage(Locale.JAPANESE)
+        val japanResult = tts?.setLanguage(Locale.JAPAN)
+        val result = if (japanResult == TextToSpeech.LANG_MISSING_DATA || japanResult == TextToSpeech.LANG_NOT_SUPPORTED) {
+          tts?.setLanguage(Locale.JAPANESE)
+        } else {
+          japanResult
+        }
         if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
           Log.w("JapaneseTtsHelper", "Japanese language is not supported or missing data")
           // Fallback to default locale if Japanese is missing
@@ -29,8 +34,9 @@ class JapaneseTtsHelper(context: Context) {
   }
 
   fun speak(text: String) {
-    if (text.isBlank()) return
-    tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "nihongo_drill_${System.currentTimeMillis()}")
+    val clean = sanitizeForSpeech(text)
+    if (clean.isBlank()) return
+    tts?.speak(clean, TextToSpeech.QUEUE_FLUSH, null, "nihongo_drill_${System.currentTimeMillis()}")
   }
 
   fun shutdown() {
@@ -38,5 +44,38 @@ class JapaneseTtsHelper(context: Context) {
     tts?.shutdown()
     tts = null
     isInitialized = false
+  }
+
+  companion object {
+    /**
+     * Cleans textbook formatting symbols before passing to Android Japanese TTS:
+     * - Strips okurigana/prefix/suffix hyphens (-, –, —), brackets (（, ）, (, )), wave dash (〜),
+     *   and furigana middle dots (・) so TTS never pronounces "mainasu" / "haifun" or chops syllables.
+     * - Preserves katakana long-vowel mark ー (U+30FC).
+     * - Converts alternative separators (／, /, ＝, =) into a natural Japanese pause (、).
+     */
+    fun sanitizeForSpeech(raw: String): String {
+      return raw
+        .replace("／", "、")
+        .replace("/", "、")
+        .replace("＝", "、")
+        .replace("=", "、")
+        .replace("・", "")
+        .replace("（", "")
+        .replace("）", "")
+        .replace("(", "")
+        .replace(")", "")
+        .replace("[", "")
+        .replace("]", "")
+        .replace("-", "")
+        .replace("–", "")
+        .replace("—", "")
+        .replace("〜", "")
+        .replace("~", "")
+        .replace(Regex("、{2,}"), "、")
+        .replace(Regex("\\s+"), " ")
+        .trim()
+        .trim('、')
+    }
   }
 }
