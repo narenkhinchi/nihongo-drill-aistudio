@@ -1,0 +1,11 @@
+number,level,lesson,kanji,meaning,kun_readings,on_readings,stroke_count,examples
+11,N5,2,火,"fire","ひ","カ",4,"火(ひ): fire | 火山(か・ざん): a volcano | 火曜日(か・よう・び): Tuesday"
+12,N5,2,水,"water","みず","スイ",4,"水(みず): water | 水田(すい・でん): a rice field | 水曜日(すい・よう・び): Wednesday"
+13,N5,2,金,"gold, money; metal","かね","キン",8,"お金(お・かね): money | 金田(かね・だ): Japanese name | 金(きん): gold | 金曜日(きん・よう・び): Friday"
+14,N5,2,土,"ground; earth, soil","つち","ド",3,"土(つち): the ground | 土木(ど・ぼく): civil engineering | 土曜日(ど・よう・び): Saturday"
+15,N5,2,子,"child","こ","シ",3,"子ども(こ・ども): a child | 女の子(おんな・の・こ): a girl | 女子学生(じょ・し・がく・せい): a girl student"
+16,N5,2,女,"woman; female","おんな","ジョ",3,"女(おんな): a woman | 女の人(おんな・の・ひと): a woman | 彼女(かの・じょ): she"
+17,N5,2,学,"study","（まな-ぶ）","ガク; ガッ-",8,"学生(がく・せい): a student | 大学(だい・がく): a university | 学校(がっ・こう): a school"
+18,N5,2,生,"live; birth","い-きる; う-まれる","セイ",5,"生きる(い・きる): to live | 生まれる(う・まれる): to be born | 先生(せん・せい): a teacher | 学生(がく・せい): a student"
+19,N5,2,先,"previous; foregoing","さき","セン",6,"先(さき): ahead | 先月(せん・げつ): last month | 先生(せん・せい): a teacher"
+20,N5,2,私,"private","わたし; わたくし","シ",7,"私(わたし／わたくし): I | 私立大学(し・りつ・だい・がく): a private university"

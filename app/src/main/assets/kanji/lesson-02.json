@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "level": "N5",
+  "lesson": 2,
+  "title": "Lesson 2 — Elements & People",
+  "source": "Basic Kanji Book, Lesson 2; user-provided page images",
+  "kanji": [
+    {
+      "number": 11,
+      "kanji": "火",
+      "meaning": "fire",
+      "kun_readings": [
+        "ひ"
+      ],
+      "on_readings": [
+        "カ"
+      ],
+      "stroke_count": 4,
+      "examples": [
+        {
+          "word": "火",
+          "reading": "ひ",
+          "meaning": "fire"
+        },
+        {
+          "word": "火山",
+          "reading": "か・ざん",
+          "meaning": "a volcano"
+        },
+        {
+          "word": "火曜日",
+          "reading": "か・よう・び",
+          "meaning": "Tuesday"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "kanji": "水",
+      "meaning": "water",
+      "kun_readings": [
+        "みず"
+      ],
+      "on_readings": [
+        "スイ"
+      ],
+      "stroke_count": 4,
+      "examples": [
+        {
+          "word": "水",
+          "reading": "みず",
+          "meaning": "water"
+        },
+        {
+          "word": "水田",
+          "reading": "すい・でん",
+          "meaning": "a rice field"
+        },
+        {
+          "word": "水曜日",
+          "reading": "すい・よう・び",
+          "meaning": "Wednesday"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "kanji": "金",
+      "meaning": "gold, money; metal",
+      "kun_readings": [
+        "かね"
+      ],
+      "on_readings": [
+        "キン"
+      ],
+      "stroke_count": 8,
+      "examples": [
+        {
+          "word": "お金",
+          "reading": "お・かね",
+          "meaning": "money"
+        },
+        {
+          "word": "金田",
+          "reading": "かね・だ",
+          "meaning": "Japanese name"
+        },
+        {
+          "word": "金",
+          "reading": "きん",
+          "meaning": "gold"
+        },
+        {
+          "word": "金曜日",
+          "reading": "きん・よう・び",
+          "meaning": "Friday"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "kanji": "土",
+      "meaning": "ground; earth, soil",
+      "kun_readings": [
+        "つち"
+      ],
+      "on_readings": [
+        "ド"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "土",
+          "reading": "つち",
+          "meaning": "the ground"
+        },
+        {
+          "word": "土木",
+          "reading": "ど・ぼく",
+          "meaning": "civil engineering"
+        },
+        {
+          "word": "土曜日",
+          "reading": "ど・よう・び",
+          "meaning": "Saturday"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "kanji": "子",
+      "meaning": "child",
+      "kun_readings": [
+        "こ"
+      ],
+      "on_readings": [
+        "シ"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "子ども",
+          "reading": "こ・ども",
+          "meaning": "a child"
+        },
+        {
+          "word": "女の子",
+          "reading": "おんな・の・こ",
+          "meaning": "a girl"
+        },
+        {
+          "word": "女子学生",
+          "reading": "じょ・し・がく・せい",
+          "meaning": "a girl student"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "kanji": "女",
+      "meaning": "woman; female",
+      "kun_readings": [
+        "おんな"
+      ],
+      "on_readings": [
+        "ジョ"
+      ],
+      "stroke_count": 3,
+      "examples": [
+        {
+          "word": "女",
+          "reading": "おんな",
+          "meaning": "a woman"
+        },
+        {
+          "word": "女の人",
+          "reading": "おんな・の・ひと",
+          "meaning": "a woman"
+        },
+        {
+          "word": "彼女",
+          "reading": "かの・じょ",
+          "meaning": "she"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "kanji": "学",
+      "meaning": "study",
+      "kun_readings": [
+        "（まな-ぶ）"
+      ],
+      "on_readings": [
+        "ガク",
+        "ガッ-"
+      ],
+      "stroke_count": 8,
+      "examples": [
+        {
+          "word": "学生",
+          "reading": "がく・せい",
+          "meaning": "a student"
+        },
+        {
+          "word": "大学",
+          "reading": "だい・がく",
+          "meaning": "a university"
+        },
+        {
+          "word": "学校",
+          "reading": "がっ・こう",
+          "meaning": "a school"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "kanji": "生",
+      "meaning": "live; birth",
+      "kun_readings": [
+        "い-きる",
+        "う-まれる"
+      ],
+      "on_readings": [
+        "セイ"
+      ],
+      "stroke_count": 5,
+      "examples": [
+        {
+          "word": "生きる",
+          "reading": "い・きる",
+          "meaning": "to live"
+        },
+        {
+          "word": "生まれる",
+          "reading": "う・まれる",
+          "meaning": "to be born"
+        },
+        {
+          "word": "先生",
+          "reading": "せん・せい",
+          "meaning": "a teacher"
+        },
+        {
+          "word": "学生",
+          "reading": "がく・せい",
+          "meaning": "a student"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "kanji": "先",
+      "meaning": "previous; foregoing",
+      "kun_readings": [
+        "さき"
+      ],
+      "on_readings": [
+        "セン"
+      ],
+      "stroke_count": 6,
+      "examples": [
+        {
+          "word": "先",
+          "reading": "さき",
+          "meaning": "ahead"
+        },
+        {
+          "word": "先月",
+          "reading": "せん・げつ",
+          "meaning": "last month"
+        },
+        {
+          "word": "先生",
+          "reading": "せん・せい",
+          "meaning": "a teacher"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "kanji": "私",
+      "meaning": "private",
+      "kun_readings": [
+        "わたし",
+        "わたくし"
+      ],
+      "on_readings": [
+        "シ"
+      ],
+      "stroke_count": 7,
+      "examples": [
+        {
+          "word": "私",
+          "reading": "わたし／わたくし",
+          "meaning": "I"
+        },
+        {
+          "word": "私立大学",
+          "reading": "し・りつ・だい・がく",
+          "meaning": "a private university"
+        }
+      ]
+    }
+  ],
+  "verification_notes": [
+    "Kanji order, meanings, readings, examples, and stroke counts are transcribed directly from the user-provided Basic Kanji Book Lesson 2 pages (#11–#20).",
+    "Handwritten pencil notes beside #19 (先) and #20 (私) are intentionally excluded."
+  ]
+}

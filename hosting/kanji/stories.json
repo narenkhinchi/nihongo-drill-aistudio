@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "stories": [
+    {
+      "id": "N5_L5_STORY_1",
+      "level": "N5",
+      "lessonNumber": 5,
+      "title": "プラニーさんのはなし",
+      "fullPlainParagraphs": [
+        "私は日本大学の学生です。専門は体育です。\n十月九日にタイからきました。",
+        "月曜日から金曜日まで日本語のクラスで\nべんきょうします。私は日本語が好きです。",
+        "先週の土曜日に私たちは田中先生と山へ\nいきました。いろいろな学生がいっしょに\nきました。男子学生と女子学生が三人ずつ\nでした。私たちは岩田さんの車でいきました。",
+        "岩田さんは日本人の男の人です。一時間ぐらい\nあるいて大きい森へいきました。そして、\n小さい川のちかくで休みました。その川の水は\nとてもきれいでした。"
+      ],
+      "pages": [
+        {
+          "pageNumber": 1,
+          "plainParagraphs": [
+            "私は日本大学の学生です。専門は体育です。\n十月九日にタイからきました。",
+            "月曜日から金曜日まで日本語のクラスで\nべんきょうします。私は日本語が好きです。"
+          ],
+          "englishLines": [
+            "I am a student at a Japanese university.",
+            "My specialty is physical education.",
+            "I came from Thailand on October 9.",
+            "From Monday to Friday, I study Japanese in a class.",
+            "I like Japanese."
+          ]
+        },
+        {
+          "pageNumber": 2,
+          "plainParagraphs": [
+            "先週の土曜日に私たちは田中先生と山へ\nいきました。いろいろな学生がいっしょに\nきました。男子学生と女子学生が三人ずつ\nでした。私たちは岩田さんの車でいきました。",
+            "岩田さんは日本人の男の人です。一時間ぐらい\nあるいて大きい森へいきました。そして、\n小さい川のちかくで休みました。その川の水は\nとてもきれいでした。"
+          ],
+          "englishLines": [
+            "Last Saturday, we went to the mountains with Mr. Tanaka.",
+            "Various students came together.",
+            "There were three male students and three female students each.",
+            "We went in Mr. Iwata's car.",
+            "Mr. Iwata is a Japanese man.",
+            "We walked for about one hour and went to a big forest.",
+            "Then, we rested near a small river.",
+            "The water of that river was very clean."
+          ]
+        }
+      ],
+      "vocabulary": [
+        { "wordWithReading": "専門（せんもん）", "meaning": "speciality", "audioText": "せんもん" },
+        { "wordWithReading": "体育（たいいく）", "meaning": "physical exercises", "audioText": "たいいく" },
+        { "wordWithReading": "曜日（ようび）", "meaning": "day of the week", "audioText": "ようび" },
+        { "wordWithReading": "〜語（〜ご）", "meaning": "a language", "audioText": "ご" },
+        { "wordWithReading": "〜が好きです", "meaning": "I like ~", "audioText": "がすきです" },
+        { "wordWithReading": "先週（せんしゅう）", "meaning": "last week", "audioText": "せんしゅう" },
+        { "wordWithReading": "私たち", "meaning": "We", "audioText": "わたしたち" },
+        { "wordWithReading": "いろいろな", "meaning": "various", "audioText": "いろいろな" },
+        { "wordWithReading": "〜ずつ", "meaning": "~ for each", "audioText": "ずつ" },
+        { "wordWithReading": "一時間（いちじかん）", "meaning": "for one hour", "audioText": "いちじかん" },
+        { "wordWithReading": "〜のちかくで", "meaning": "near ~", "audioText": "のちかくで" }
+      ]
+    }
+  ]
+}

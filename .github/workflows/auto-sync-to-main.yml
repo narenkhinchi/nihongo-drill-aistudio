@@ -5,6 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'app/src/main/java/**'
+      - 'hosting/kanji/**'
       - '.github/workflows/auto-sync-to-main.yml'
   workflow_dispatch:
 
@@ -25,7 +26,7 @@ jobs:
           path: main-repo
           token: ${{ secrets.SYNC_PAT }}
 
-      - name: Copy Updated Android Kotlin Files
+      - name: Copy Updated Android Kotlin & Firebase Hosting Kanji Files
         run: |
           if [ -d "aistudio-repo/app/src/main/java/com/example" ]; then
             mkdir -p main-repo/android/app/src/main/java/com/example
@@ -35,16 +36,20 @@ jobs:
             mkdir -p main-repo/android/app/src/main/java/com/nihongo/vocabdrill
             rsync -a aistudio-repo/app/src/main/java/com/nihongo/vocabdrill/ main-repo/android/app/src/main/java/com/nihongo/vocabdrill/
           fi
+          if [ -d "aistudio-repo/hosting/kanji" ]; then
+            mkdir -p main-repo/pwa/public/kanji
+            rsync -a --delete aistudio-repo/hosting/kanji/ main-repo/pwa/public/kanji/
+          fi
 
-      - name: Commit & Push to Nihongo-Drill main (Auto-triggers APK Release)
+      - name: Commit & Push to Nihongo-Drill main (Auto-triggers APK Release and/or Firebase Hosting)
         working-directory: main-repo
         run: |
           git config user.name "narenkhinchi"
           git config user.email "narendrakhinchi20@gmail.com"
-          git add android/app/src/main/java
+          git add android/app/src/main/java pwa/public/kanji
           if git diff --cached --quiet; then
             echo "No new changes to sync."
           else
-            git commit -m "Auto-sync Android updates from AI Studio"
+            git commit -m "Auto-sync updates from AI Studio"
             git push origin main
           fi

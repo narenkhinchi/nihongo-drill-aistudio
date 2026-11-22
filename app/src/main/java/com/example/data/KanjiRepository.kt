@@ -234,16 +234,177 @@ object KanjiRepository {
   )
 
   val lesson2Kanji: List<Kanji> = listOf(
-    Kanji(11, "火", "Fire · Tuesday", "N5", listOf("ひ", "び"), listOf("カ"), listOf("か"), 4),
-    Kanji(12, "水", "Water · Wednesday", "N5", listOf("みず"), listOf("スイ"), listOf("すい"), 4),
-    Kanji(13, "金", "Gold · Money · Friday", "N5", listOf("かね"), listOf("キン", "コン"), listOf("きん", "こん"), 8),
-    Kanji(14, "土", "Earth · Soil · Saturday", "N5", listOf("つち"), listOf("ド", "ト"), listOf("ど", "と"), 3),
-    Kanji(15, "子", "Child · Kid", "N5", listOf("こ"), listOf("シ", "ス"), listOf("し", "す"), 3),
-    Kanji(16, "女", "Woman · Female", "N5", listOf("おんな", "め"), listOf("ジョ", "ニョ"), listOf("じょ", "にょ"), 3),
-    Kanji(17, "学", "Study · Learning", "N5", listOf("まな・ぶ"), listOf("ガク"), listOf("がく"), 8),
-    Kanji(18, "生", "Life · Birth · Student", "N5", listOf("い・きる", "う・まれる", "なま"), listOf("セイ", "ショウ"), listOf("せい", "しょう"), 5),
-    Kanji(19, "先", "Ahead · Previous · Teacher", "N5", listOf("さき"), listOf("セン"), listOf("せん"), 6),
-    Kanji(20, "私", "I · Private", "N5", listOf("わたし", "わたくし"), listOf("シ"), listOf("し"), 7)
+    Kanji(
+      number = 11,
+      character = "火",
+      meaning = "Fire",
+      level = "N5",
+      kunReadings = listOf("ひ"),
+      onReadings = listOf("カ"),
+      onReadingsDisplay = listOf("か"),
+      strokeCount = 4,
+      strokeDescriptions = listOf(
+        "1. Left short downward dot",
+        "2. Right short inward diagonal stroke",
+        "3. Center long curved stroke sweeping down-left",
+        "4. Right diagonal leg sweeping down-right from center"
+      )
+    ),
+    Kanji(
+      number = 12,
+      character = "水",
+      meaning = "Water",
+      level = "N5",
+      kunReadings = listOf("みず"),
+      onReadings = listOf("スイ"),
+      onReadingsDisplay = listOf("すい"),
+      strokeCount = 4,
+      strokeDescriptions = listOf(
+        "1. Central vertical stroke going down with a small left hook",
+        "2. Left horizontal stroke turning sharply down-left",
+        "3. Upper-right short diagonal inward flick",
+        "4. Lower-right diagonal stroke sweeping down-right"
+      )
+    ),
+    Kanji(
+      number = 13,
+      character = "金",
+      meaning = "Gold · Money · Metal",
+      level = "N5",
+      kunReadings = listOf("かね"),
+      onReadings = listOf("キン"),
+      onReadingsDisplay = listOf("きん"),
+      strokeCount = 8,
+      strokeDescriptions = listOf(
+        "1. Top-left sweeping roof stroke",
+        "2. Top-right diagonal roof stroke",
+        "3. Upper short horizontal stroke inside roof",
+        "4. Middle horizontal crossbar",
+        "5. Central vertical stem going straight down",
+        "6. Left small dot",
+        "7. Right small inward flick",
+        "8. Bottom long horizontal closing stroke"
+      )
+    ),
+    Kanji(
+      number = 14,
+      character = "土",
+      meaning = "Ground · Earth · Soil",
+      level = "N5",
+      kunReadings = listOf("つち"),
+      onReadings = listOf("ド"),
+      onReadingsDisplay = listOf("ど"),
+      strokeCount = 3,
+      strokeDescriptions = listOf(
+        "1. Upper shorter horizontal stroke",
+        "2. Central vertical stroke going straight down",
+        "3. Bottom longer horizontal base stroke"
+      )
+    ),
+    Kanji(
+      number = 15,
+      character = "子",
+      meaning = "Child",
+      level = "N5",
+      kunReadings = listOf("こ"),
+      onReadings = listOf("シ"),
+      onReadingsDisplay = listOf("し"),
+      strokeCount = 3,
+      strokeDescriptions = listOf(
+        "1. Top horizontal stroke turning sharply inward-left",
+        "2. Curved vertical body stroke ending with an upward-left hook",
+        "3. Horizontal arm stroke crossing through the middle"
+      )
+    ),
+    Kanji(
+      number = 16,
+      character = "女",
+      meaning = "Woman · Female",
+      level = "N5",
+      kunReadings = listOf("おんな"),
+      onReadings = listOf("ジョ"),
+      onReadingsDisplay = listOf("じょ"),
+      strokeCount = 3,
+      strokeDescriptions = listOf(
+        "1. Sweeping stroke curving down-left then angled down-right",
+        "2. Curved diagonal stroke sweeping from top-right to bottom-left",
+        "3. Long horizontal stroke crossing through the top"
+      )
+    ),
+    Kanji(
+      number = 17,
+      character = "学",
+      meaning = "Study",
+      level = "N5",
+      kunReadings = listOf("（まな-ぶ）"),
+      onReadings = listOf("ガク", "ガッ-"),
+      onReadingsDisplay = listOf("がく", "がっ-"),
+      strokeCount = 8,
+      strokeDescriptions = listOf(
+        "1. Top-left small downward dot",
+        "2. Top-center small downward dot",
+        "3. Top-right small inward flick",
+        "4. Left vertical corner drop of the crown",
+        "5. Top horizontal crown turning down-left on the right",
+        "6. Top horizontal-angled stroke of 子 inside",
+        "7. Curved vertical stem with a hook at the bottom",
+        "8. Long horizontal crossbar across the bottom"
+      )
+    ),
+    Kanji(
+      number = 18,
+      character = "生",
+      meaning = "Live · Birth",
+      level = "N5",
+      kunReadings = listOf("い-きる", "う-まれる"),
+      onReadings = listOf("セイ"),
+      onReadingsDisplay = listOf("せい"),
+      strokeCount = 5,
+      strokeDescriptions = listOf(
+        "1. Upper-left short diagonal sweep down-left",
+        "2. Top horizontal stroke",
+        "3. Central vertical stroke going straight down",
+        "4. Middle shorter horizontal stroke",
+        "5. Bottom long horizontal base stroke"
+      )
+    ),
+    Kanji(
+      number = 19,
+      character = "先",
+      meaning = "Previous · Foregoing",
+      level = "N5",
+      kunReadings = listOf("さき"),
+      onReadings = listOf("セン"),
+      onReadingsDisplay = listOf("せん"),
+      strokeCount = 6,
+      strokeDescriptions = listOf(
+        "1. Top-left short diagonal sweep",
+        "2. Upper horizontal stroke",
+        "3. Central vertical stroke going down",
+        "4. Long middle horizontal base stroke",
+        "5. Lower-left curved leg sweeping down-left",
+        "6. Lower-right leg going down, curving right, and hooking upward"
+      )
+    ),
+    Kanji(
+      number = 20,
+      character = "私",
+      meaning = "Private",
+      level = "N5",
+      kunReadings = listOf("わたし", "わたくし"),
+      onReadings = listOf("シ"),
+      onReadingsDisplay = listOf("し"),
+      strokeCount = 7,
+      strokeDescriptions = listOf(
+        "1. Left-side top short diagonal sweep right to left",
+        "2. Left-side horizontal crossbar",
+        "3. Left-side vertical stem going down",
+        "4. Left-side downward-left diagonal leaf",
+        "5. Left-side small dot to the right",
+        "6. Right-side angled stroke curving down-left then sweeping right",
+        "7. Right-side closing dot at bottom-right"
+      )
+    )
   )
 
   val lesson3Kanji: List<Kanji> = listOf(
@@ -296,7 +457,7 @@ object KanjiRepository {
     Kanji(55, "譲", "Yield · Hand over", "N1", listOf("ゆず・る"), listOf("ジョウ"), listOf("じょう"), 20)
   )
 
-  val allLessons: List<KanjiLesson> = listOf(
+  private val builtInLessons: List<KanjiLesson> = listOf(
     KanjiLesson(
       id = "N5_L1",
       lessonNumber = 1,
@@ -355,7 +516,65 @@ object KanjiRepository {
     )
   )
 
-  val allKanjiAcrossLevels: List<Kanji> = allLessons.flatMap { it.kanjiList }
+  @Volatile
+  private var remoteLessons: List<KanjiLesson> = emptyList()
+
+  @Volatile
+  private var remoteVocabularyByKanji: Map<Int, List<Vocabulary>> = emptyMap()
+
+  @Volatile
+  private var remoteStories: List<KanjiStory>? = null
+
+  @Volatile
+  private var remoteReadingExercises: List<KanjiReadingExercise>? = null
+
+  fun applyRemoteSnapshot(snapshot: KanjiRemoteSnapshot) {
+    if (snapshot.lessons.isNotEmpty()) {
+      remoteLessons = snapshot.lessons
+    }
+    if (snapshot.vocabulary.isNotEmpty()) {
+      remoteVocabularyByKanji = snapshot.vocabulary.groupBy { it.kanjiNumber }
+    }
+    if (snapshot.stories != null) {
+      remoteStories = snapshot.stories
+    }
+    if (snapshot.readingExercises != null) {
+      remoteReadingExercises = snapshot.readingExercises
+    }
+    if (snapshot.strokesByCharacter.isNotEmpty() || snapshot.guidanceByCharacter.isNotEmpty()) {
+      com.example.ui.components.StrokeDataProvider.applyRemoteStrokeData(
+        snapshot.strokesByCharacter,
+        snapshot.guidanceByCharacter
+      )
+    }
+  }
+
+  val allLessons: List<KanjiLesson>
+    get() {
+      if (remoteLessons.isEmpty()) return builtInLessons
+      val mergedById = LinkedHashMap<String, KanjiLesson>()
+      builtInLessons.forEach { mergedById[it.id] = it }
+      remoteLessons.forEach { remote ->
+        val existing = mergedById[remote.id]
+        // Preserve built-in stroke descriptions when remote JSON omits them
+        val enrichedKanji = remote.kanjiList.map { rk ->
+          if (rk.strokeDescriptions.isNotEmpty()) {
+            rk
+          } else {
+            val fallbackDesc = existing?.kanjiList?.find { it.number == rk.number }?.strokeDescriptions.orEmpty()
+            rk.copy(strokeDescriptions = fallbackDesc)
+          }
+        }
+        mergedById[remote.id] = remote.copy(kanjiList = enrichedKanji)
+      }
+      val levelOrder = mapOf("N5" to 1, "N4" to 2, "N3" to 3, "N2" to 4, "N1" to 5)
+      return mergedById.values.sortedWith(
+        compareBy<KanjiLesson> { levelOrder[it.level] ?: 99 }.thenBy { it.lessonNumber }
+      )
+    }
+
+  val allKanjiAcrossLevels: List<Kanji>
+    get() = allLessons.flatMap { it.kanjiList }
 
   val lesson1Vocabulary: List<Vocabulary> = listOf(
     // Kanji 1: 日
@@ -410,22 +629,57 @@ object KanjiRepository {
     Vocabulary(10, "門", "もん", "a gate"),
     Vocabulary(10, "専門", "せん・もん", "a speciality"),
 
-    // Lesson 2 Vocabulary
-    Vocabulary(11, "火曜日", "か・よう・び", "Tuesday"),
+    // Lesson 2 Vocabulary (Basic Kanji Book Lesson 2 — exact book examples)
+    // Kanji 11: 火
     Vocabulary(11, "火", "ひ", "fire"),
-    Vocabulary(12, "水曜日", "すい・よう・び", "Wednesday"),
+    Vocabulary(11, "火山", "か・ざん", "a volcano"),
+    Vocabulary(11, "火曜日", "か・よう・び", "Tuesday"),
+
+    // Kanji 12: 水
     Vocabulary(12, "水", "みず", "water"),
-    Vocabulary(13, "金曜日", "きん・よう・び", "Friday"),
+    Vocabulary(12, "水田", "すい・でん", "a rice field"),
+    Vocabulary(12, "水曜日", "すい・よう・び", "Wednesday"),
+
+    // Kanji 13: 金
     Vocabulary(13, "お金", "お・かね", "money"),
+    Vocabulary(13, "金田", "かね・だ", "Japanese name"),
+    Vocabulary(13, "金", "きん", "gold"),
+    Vocabulary(13, "金曜日", "きん・よう・び", "Friday"),
+
+    // Kanji 14: 土
+    Vocabulary(14, "土", "つち", "the ground"),
+    Vocabulary(14, "土木", "ど・ぼく", "civil engineering"),
     Vocabulary(14, "土曜日", "ど・よう・び", "Saturday"),
-    Vocabulary(14, "土", "つち", "soil, earth"),
-    Vocabulary(15, "子ども", "こ・ども", "child"),
-    Vocabulary(16, "女の人", "おんな・の・ひと", "woman"),
-    Vocabulary(17, "大学", "だい・がく", "university"),
-    Vocabulary(17, "学生", "がく・せい", "student"),
-    Vocabulary(18, "先生", "せん・せい", "teacher"),
+
+    // Kanji 15: 子
+    Vocabulary(15, "子ども", "こ・ども", "a child"),
+    Vocabulary(15, "女の子", "おんな・の・こ", "a girl"),
+    Vocabulary(15, "女子学生", "じょ・し・がく・せい", "a girl student"),
+
+    // Kanji 16: 女
+    Vocabulary(16, "女", "おんな", "a woman"),
+    Vocabulary(16, "女の人", "おんな・の・ひと", "a woman"),
+    Vocabulary(16, "彼女", "かの・じょ", "she"),
+
+    // Kanji 17: 学
+    Vocabulary(17, "学生", "がく・せい", "a student"),
+    Vocabulary(17, "大学", "だい・がく", "a university"),
+    Vocabulary(17, "学校", "がっ・こう", "a school"),
+
+    // Kanji 18: 生
+    Vocabulary(18, "生きる", "い・きる", "to live"),
+    Vocabulary(18, "生まれる", "う・まれる", "to be born"),
+    Vocabulary(18, "先生", "せん・せい", "a teacher"),
+    Vocabulary(18, "学生", "がく・せい", "a student"),
+
+    // Kanji 19: 先
+    Vocabulary(19, "先", "さき", "ahead"),
     Vocabulary(19, "先月", "せん・げつ", "last month"),
-    Vocabulary(20, "私", "わたし", "I, myself"),
+    Vocabulary(19, "先生", "せん・せい", "a teacher"),
+
+    // Kanji 20: 私
+    Vocabulary(20, "私", "わたし／わたくし", "I"),
+    Vocabulary(20, "私立大学", "し・りつ・だい・がく", "a private university"),
 
     // Lesson 3 Vocabulary
     Vocabulary(21, "一つ", "ひと・つ", "one thing"),
@@ -441,6 +695,8 @@ object KanjiRepository {
   )
 
   fun getVocabularyForKanji(kanjiNumber: Int): List<Vocabulary> {
+    val remoteFound = remoteVocabularyByKanji[kanjiNumber]
+    if (!remoteFound.isNullOrEmpty()) return remoteFound
     val found = lesson1Vocabulary.filter { it.kanjiNumber == kanjiNumber }
     if (found.isNotEmpty()) return found
     val k = allKanjiAcrossLevels.find { it.number == kanjiNumber } ?: return emptyList()
@@ -452,11 +708,14 @@ object KanjiRepository {
     return allLessons.filter { it.level == level }
   }
 
-  // Sentence reading material will be added later when provided by the user
-  val readingExercises: List<KanjiReadingExercise> = emptyList()
+  // Sentence reading material will be added later when provided by the user (or synced via Firebase Hosting)
+  private val builtInReadingExercises: List<KanjiReadingExercise> = emptyList()
+
+  val readingExercises: List<KanjiReadingExercise>
+    get() = remoteReadingExercises ?: builtInReadingExercises
 
   // Authentic book story from Basic Kanji Book Lesson 5: プラニーさんのはなし
-  val stories: List<KanjiStory> = listOf(
+  private val builtInStories: List<KanjiStory> = listOf(
     KanjiStory(
       id = "N5_L5_STORY_1",
       level = "N5",
@@ -581,6 +840,9 @@ object KanjiRepository {
       )
     )
   )
+
+  val stories: List<KanjiStory>
+    get() = remoteStories?.takeIf { it.isNotEmpty() } ?: builtInStories
 
   fun getReadingExercisesForLevel(level: String): List<KanjiReadingExercise> {
     return readingExercises.filter { it.level == level }

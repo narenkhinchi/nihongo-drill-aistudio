@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.data.Kanji
 import com.example.data.KanjiLesson
+import com.example.data.KanjiRemoteSync
 import com.example.data.KanjiRepository
 import com.example.data.Vocabulary
 import com.example.util.JapaneseTtsHelper
@@ -38,7 +39,10 @@ data class KanjiUiState(
   val isPracticeWritingScreenOpen: Boolean = false,
   val isReadingScreenOpen: Boolean = false,
   val isQuizScreenOpen: Boolean = false,
-  val showKanjiSelectorSheet: Boolean = false
+  val showKanjiSelectorSheet: Boolean = false,
+  val isSyncingFromServer: Boolean = false,
+  val syncMessage: String? = null,
+  val contentVersion: Int = 0
 ) {
   val currentLesson: KanjiLesson
     get() = KanjiRepository.allLessons.find { it.id == currentLessonId } ?: KanjiRepository.allLessons.first()
@@ -105,6 +109,45 @@ class KanjiViewModel(application: Application) : AndroidViewModel(application) {
   val uiState: StateFlow<KanjiUiState> = _uiState.asStateFlow()
 
   private val ttsHelper = JapaneseTtsHelper(application)
+
+  init {
+    val cached = KanjiRemoteSync.loadCached(application)
+    if (cached.lessons.isNotEmpty() || cached.stories != null || cached.readingExercises != null) {
+      KanjiRepository.applyRemoteSnapshot(cached)
+      _uiState.update { state ->
+        val updatedLesson = KanjiRepository.allLessons.find { it.id == state.currentLessonId }
+        state.copy(
+          allKanji = updatedLesson?.kanjiList ?: state.allKanji,
+          contentVersion = state.contentVersion + 1
+        )
+      }
+    }
+    syncFromServer(userTriggered = false)
+  }
+
+  fun syncFromServer(userTriggered: Boolean = true) {
+    if (_uiState.value.isSyncingFromServer) return
+    viewModelScope.launch {
+      _uiState.update { it.copy(isSyncingFromServer = true) }
+      val result = KanjiRemoteSync.syncFromServer(getApplication())
+      if (result.success) {
+        KanjiRepository.applyRemoteSnapshot(result.snapshot)
+      }
+      _uiState.update { state ->
+        val updatedLesson = KanjiRepository.allLessons.find { it.id == state.currentLessonId }
+        state.copy(
+          allKanji = updatedLesson?.kanjiList ?: state.allKanji,
+          isSyncingFromServer = false,
+          syncMessage = if (userTriggered) result.message else null,
+          contentVersion = if (result.success) state.contentVersion + 1 else state.contentVersion
+        )
+      }
+    }
+  }
+
+  fun clearSyncMessage() {
+    _uiState.update { it.copy(syncMessage = null) }
+  }
 
   fun toggleHideOtherLessons() {
     val next = !_uiState.value.hideOtherLessons

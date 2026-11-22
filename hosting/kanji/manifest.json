@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "lessons": [
+    {
+      "id": "N5_L1",
+      "level": "N5",
+      "lessonNumber": 1,
+      "title": "Lesson 1",
+      "subtitle": "Nature & Pictographs",
+      "version": 1,
+      "path": "kanji/lesson-01.json"
+    },
+    {
+      "id": "N5_L2",
+      "level": "N5",
+      "lessonNumber": 2,
+      "title": "Lesson 2",
+      "subtitle": "Elements & People",
+      "version": 1,
+      "path": "kanji/lesson-02.json"
+    }
+  ],
+  "storiesPath": "kanji/stories.json",
+  "readingExercisesPath": "kanji/reading-exercises.json"
+}

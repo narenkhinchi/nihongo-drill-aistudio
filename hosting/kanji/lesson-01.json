@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "level": "N5",
+  "lesson": 1,
+  "title": "Lesson 1",
+  "subtitle": "Nature & Pictographs",
+  "source": "Basic Kanji Book, Lesson 1; user-provided page images",
+  "kanji": [
+    {
+      "number": 1,
+      "kanji": "日",
+      "meaning": "Sun; Day",
+      "kun_readings": ["ひ", "び", "か"],
+      "on_readings": ["ニチ", "ニ", "（ジツ）"],
+      "on_readings_display": ["にち", "に", "じつ"],
+      "stroke_count": 4,
+      "examples": [
+        { "word": "日", "reading": "ひ", "meaning": "the sun, a day" },
+        { "word": "日本", "reading": "に・ほん／にっ・ぽん", "meaning": "Japan" },
+        { "word": "日曜日", "reading": "にち・よう・び", "meaning": "Sunday" },
+        { "word": "３日", "reading": "みっ・か", "meaning": "the third day" }
+      ]
+    },
+    {
+      "number": 2,
+      "kanji": "月",
+      "meaning": "Moon; Month",
+      "kun_readings": ["つき"],
+      "on_readings": ["ゲツ", "（ガツ）"],
+      "on_readings_display": ["げつ", "がつ"],
+      "stroke_count": 4,
+      "examples": [
+        { "word": "月", "reading": "つき", "meaning": "the moon, a month" },
+        { "word": "月曜日", "reading": "げつ・よう・び", "meaning": "Monday" },
+        { "word": "１月", "reading": "いち・がつ", "meaning": "January" },
+        { "word": "１か月", "reading": "いっ・か・げつ", "meaning": "one month" }
+      ]
+    },
+    {
+      "number": 3,
+      "kanji": "木",
+      "meaning": "Tree; Wood",
+      "kun_readings": ["き"],
+      "on_readings": ["モク", "ボク"],
+      "on_readings_display": ["もく", "ぼく"],
+      "stroke_count": 4,
+      "examples": [
+        { "word": "木", "reading": "き", "meaning": "a tree" },
+        { "word": "木曜日", "reading": "もく・よう・び", "meaning": "Thursday" },
+        { "word": "木村", "reading": "き・むら", "meaning": "Japanese name" }
+      ]
+    },
+    {
+      "number": 4,
+      "kanji": "山",
+      "meaning": "Mountain",
+      "kun_readings": ["やま"],
+      "on_readings": ["サン"],
+      "on_readings_display": ["さん"],
+      "stroke_count": 3,
+      "examples": [
+        { "word": "山", "reading": "やま", "meaning": "a mountain" },
+        { "word": "富士山", "reading": "ふ・じ・さん", "meaning": "Mt. Fuji" },
+        { "word": "山下", "reading": "やま・した", "meaning": "Japanese name" },
+        { "word": "火山", "reading": "か・ざん", "meaning": "a volcano" }
+      ]
+    },
+    {
+      "number": 5,
+      "kanji": "川",
+      "meaning": "River; Stream",
+      "kun_readings": ["かわ", "がわ"],
+      "on_readings": ["セン"],
+      "on_readings_display": ["せん"],
+      "stroke_count": 3,
+      "examples": [
+        { "word": "川", "reading": "かわ", "meaning": "a river" },
+        { "word": "ナイル川", "reading": "ないる・がわ", "meaning": "the Nile River" }
+      ]
+    },
+    {
+      "number": 6,
+      "kanji": "田",
+      "meaning": "Rice field",
+      "kun_readings": ["た", "だ"],
+      "on_readings": ["デン"],
+      "on_readings_display": ["でん"],
+      "stroke_count": 5,
+      "examples": [
+        { "word": "田んぼ", "reading": "たんぼ", "meaning": "a rice field" },
+        { "word": "山田", "reading": "やま・だ", "meaning": "Japanese name" },
+        { "word": "田中", "reading": "た・なか", "meaning": "Japanese name" }
+      ]
+    },
+    {
+      "number": 7,
+      "kanji": "人",
+      "meaning": "Man; Person",
+      "kun_readings": ["ひと"],
+      "on_readings": ["ジン", "ニン"],
+      "on_readings_display": ["じん", "にん"],
+      "stroke_count": 2,
+      "examples": [
+        { "word": "人", "reading": "ひと", "meaning": "man, a person" },
+        { "word": "３人", "reading": "さん・にん", "meaning": "three people" },
+        { "word": "日本人", "reading": "に・ほん・じん", "meaning": "a Japanese person" }
+      ]
+    },
+    {
+      "number": 8,
+      "kanji": "口",
+      "meaning": "Mouth; Opening",
+      "kun_readings": ["くち", "ぐち"],
+      "on_readings": ["コウ"],
+      "on_readings_display": ["こう"],
+      "stroke_count": 3,
+      "examples": [
+        { "word": "口", "reading": "くち", "meaning": "a mouth" },
+        { "word": "入口", "reading": "いり・ぐち", "meaning": "an entrance" },
+        { "word": "出口", "reading": "で・ぐち", "meaning": "an exit" },
+        { "word": "人口", "reading": "じん・こう", "meaning": "population" }
+      ]
+    },
+    {
+      "number": 9,
+      "kanji": "車",
+      "meaning": "Car; Vehicle",
+      "kun_readings": ["くるま"],
+      "on_readings": ["シャ"],
+      "on_readings_display": ["しゃ"],
+      "stroke_count": 7,
+      "examples": [
+        { "word": "車", "reading": "くるま", "meaning": "a car" },
+        { "word": "自動車", "reading": "じ・どう・しゃ", "meaning": "a car, an automobile" },
+        { "word": "電車", "reading": "でん・しゃ", "meaning": "a train" }
+      ]
+    },
+    {
+      "number": 10,
+      "kanji": "門",
+      "meaning": "Gate; Entrance",
+      "kun_readings": ["かど"],
+      "on_readings": ["モン"],
+      "on_readings_display": ["もん"],
+      "stroke_count": 8,
+      "examples": [
+        { "word": "門", "reading": "もん", "meaning": "a gate" },
+        { "word": "専門", "reading": "せん・もん", "meaning": "a speciality" }
+      ]
+    }
+  ]
+}

@@ -157,7 +157,9 @@ fun KanjiLearningScreen(
       onStartQuiz = { viewModel.openQuizScreen() },
       onBackToVocabulary = onBackToVocabulary,
       isDarkTheme = isDarkTheme,
-      onToggleTheme = onToggleTheme
+      onToggleTheme = onToggleTheme,
+      onSyncFromServer = { viewModel.syncFromServer(userTriggered = true) },
+      onClearSyncMessage = { viewModel.clearSyncMessage() }
     )
     return
   }

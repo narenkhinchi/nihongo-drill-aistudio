@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "level": "N5",
+  "lesson": 3,
+  "title": "Lesson 3",
+  "subtitle": "Numbers, Money & Years",
+  "source": "Basic Kanji Book, Lesson 3 (#21–#35); user-provided page images",
+  "kanji": [
+    {
+      "number": 21,
+      "kanji": "一",
+      "meaning": "One",
+      "kun_readings": ["ひと-つ"],
+      "on_readings": ["イチ"],
+      "on_readings_display": ["いち"],
+      "stroke_count": 1,
+      "stroke_descriptions": ["1. Single horizontal stroke from left to right"],
+      "examples": [
+        { "word": "一つ", "reading": "ひと・つ", "meaning": "one (thing)" },
+        { "word": "一人", "reading": "ひと・り", "meaning": "one (person)" },
+        { "word": "一月", "reading": "いち・がつ", "meaning": "January" },
+        { "word": "一年", "reading": "いち・ねん", "meaning": "one year" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Horizontal bar across", "points": [[16, 50], [84, 50]] }
+      ],
+      "guidance": {
+        "rule": "One balanced horizontal stroke left to right",
+        "tips": ["1. Draw slightly upward and steady across the center"]
+      }
+    },
+    {
+      "number": 22,
+      "kanji": "二",
+      "meaning": "Two",
+      "kun_readings": ["ふた-つ"],
+      "on_readings": ["ニ"],
+      "on_readings_display": ["に"],
+      "stroke_count": 2,
+      "stroke_descriptions": ["1. Shorter upper horizontal stroke", "2. Longer lower horizontal stroke"],
+      "examples": [
+        { "word": "二つ", "reading": "ふた・つ", "meaning": "two (things)" },
+        { "word": "二人", "reading": "ふた・り", "meaning": "two (people)" },
+        { "word": "二月", "reading": "に・がつ", "meaning": "February" },
+        { "word": "二年", "reading": "に・ねん", "meaning": "two years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Shorter upper bar", "points": [[24, 34], [76, 34]] },
+        { "step": 2, "arrow": "→", "description": "Longer lower bar", "points": [[15, 68], [85, 68]] }
+      ],
+      "guidance": {
+        "rule": "Top to bottom: short upper line, long base line",
+        "tips": ["1. Shorter upper bar", "2. Wider stable bottom bar"]
+      }
+    },
+    {
+      "number": 23,
+      "kanji": "三",
+      "meaning": "Three",
+      "kun_readings": ["みっ-つ"],
+      "on_readings": ["サン"],
+      "on_readings_display": ["さん"],
+      "stroke_count": 3,
+      "stroke_descriptions": ["1. Medium top horizontal stroke", "2. Shortest middle horizontal stroke", "3. Longest bottom horizontal stroke"],
+      "examples": [
+        { "word": "三つ", "reading": "みっ・つ", "meaning": "three (things)" },
+        { "word": "三日", "reading": "みっ・か", "meaning": "the 3rd day" },
+        { "word": "三月", "reading": "さん・がつ", "meaning": "March" },
+        { "word": "三年", "reading": "さん・ねん", "meaning": "three years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Medium top bar", "points": [[22, 26], [78, 26]] },
+        { "step": 2, "arrow": "→", "description": "Shortest middle bar", "points": [[28, 50], [72, 50]] },
+        { "step": 3, "arrow": "→", "description": "Longest bottom bar", "points": [[15, 76], [85, 76]] }
+      ],
+      "guidance": {
+        "rule": "Top to bottom: medium, shortest middle, longest base",
+        "tips": ["1. Top bar", "2. Slightly shorter middle bar", "3. Longest bottom bar"]
+      }
+    },
+    {
+      "number": 24,
+      "kanji": "四",
+      "meaning": "Four",
+      "kun_readings": ["よっ-つ", "よん", "よ"],
+      "on_readings": ["シ"],
+      "on_readings_display": ["し"],
+      "stroke_count": 5,
+      "stroke_descriptions": [
+        "1. Left outer vertical wall down",
+        "2. Top wall turning down on right",
+        "3. Inner left curved sweep down-left",
+        "4. Inner right vertical curving right",
+        "5. Bottom horizontal closing stroke"
+      ],
+      "examples": [
+        { "word": "四つ", "reading": "よっ・つ", "meaning": "four (things)" },
+        { "word": "四日", "reading": "よっ・か", "meaning": "the 4th day" },
+        { "word": "四月", "reading": "し・がつ", "meaning": "April" },
+        { "word": "四年", "reading": "よ・ねん", "meaning": "four years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Left outer side", "points": [[18, 24], [22, 78]] },
+        { "step": 2, "arrow": "↴", "description": "Top & right wall", "points": [[18, 24], [82, 24], [78, 78]] },
+        { "step": 3, "arrow": "↙", "description": "Inner left curve", "points": [[40, 24], [38, 48], [28, 64]] },
+        { "step": 4, "arrow": "↳", "description": "Inner right bend", "points": [[58, 24], [58, 56], [72, 56]] },
+        { "step": 5, "arrow": "→", "description": "Close bottom", "points": [[22, 76], [78, 76]] }
+      ],
+      "guidance": {
+        "rule": "Enclosing Rule: Draw frame, fill inside, close bottom last",
+        "tips": ["1-2. Outer rectangular frame", "3-4. Inner legs left then right", "5. Bottom closing stroke"]
+      }
+    },
+    {
+      "number": 25,
+      "kanji": "五",
+      "meaning": "Five",
+      "kun_readings": ["いつ-つ"],
+      "on_readings": ["ゴ"],
+      "on_readings_display": ["ご"],
+      "stroke_count": 4,
+      "stroke_descriptions": [
+        "1. Top horizontal stroke",
+        "2. Slanted central vertical stroke going down-left",
+        "3. Middle horizontal turning down on right",
+        "4. Wide bottom base horizontal stroke"
+      ],
+      "examples": [
+        { "word": "五つ", "reading": "いつ・つ", "meaning": "five (things)" },
+        { "word": "五日", "reading": "いつ・か", "meaning": "the 5th day" },
+        { "word": "五月", "reading": "ご・がつ", "meaning": "May" },
+        { "word": "五年", "reading": "ご・ねん", "meaning": "five years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Top horizontal bar", "points": [[24, 22], [76, 22]] },
+        { "step": 2, "arrow": "↙", "description": "Slanted center vertical", "points": [[50, 22], [41, 78]] },
+        { "step": 3, "arrow": "↴", "description": "Middle across & down", "points": [[26, 48], [70, 48], [66, 78]] },
+        { "step": 4, "arrow": "→", "description": "Wide bottom base", "points": [[16, 78], [84, 78]] }
+      ],
+      "guidance": {
+        "rule": "Top bar, slanted spine, middle corner, then wide base",
+        "tips": ["1. Top bar", "2. Slightly tilted vertical down", "3. Middle across and down", "4. Long bottom base"]
+      }
+    },
+    {
+      "number": 26,
+      "kanji": "六",
+      "meaning": "Six",
+      "kun_readings": ["むっ-つ"],
+      "on_readings": ["ロク", "ロッ-"],
+      "on_readings_display": ["ろく", "ろっ-"],
+      "stroke_count": 4,
+      "stroke_descriptions": [
+        "1. Top central vertical dot",
+        "2. Wide horizontal roof stroke",
+        "3. Left diagonal leg sweeping down-left",
+        "4. Right diagonal leg sweeping down-right"
+      ],
+      "examples": [
+        { "word": "六つ", "reading": "むっ・つ", "meaning": "six (things)" },
+        { "word": "六日", "reading": "むい・か", "meaning": "the 6th day" },
+        { "word": "六月", "reading": "ろく・がつ", "meaning": "June" },
+        { "word": "六年", "reading": "ろく・ねん", "meaning": "six years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Top center dot", "points": [[50, 16], [50, 32]] },
+        { "step": 2, "arrow": "→", "description": "Wide roof bar", "points": [[16, 38], [84, 38]] },
+        { "step": 3, "arrow": "↙", "description": "Left leg sweep", "points": [[38, 52], [20, 82]] },
+        { "step": 4, "arrow": "↘", "description": "Right leg sweep", "points": [[62, 52], [80, 82]] }
+      ],
+      "guidance": {
+        "rule": "Lid first (dot then bar), then two balanced legs",
+        "tips": ["1. Top dot", "2. Wide horizontal bar", "3-4. Left leg then right leg"]
+      }
+    },
+    {
+      "number": 27,
+      "kanji": "七",
+      "meaning": "Seven",
+      "kun_readings": ["なな-つ"],
+      "on_readings": ["シチ"],
+      "on_readings_display": ["しち"],
+      "stroke_count": 2,
+      "stroke_descriptions": [
+        "1. Slanted horizontal stroke rising slightly to the right",
+        "2. Vertical stroke curving smoothly right and hooking upward"
+      ],
+      "examples": [
+        { "word": "七つ", "reading": "なな・つ", "meaning": "seven (things)" },
+        { "word": "七日", "reading": "なの・か", "meaning": "the 7th day" },
+        { "word": "七月", "reading": "しち・がつ", "meaning": "July" },
+        { "word": "七年", "reading": "しち・ねん", "meaning": "seven years" },
+        { "word": "七人", "reading": "なな・にん／しち・にん", "meaning": "seven people" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↗", "description": "Rising horizontal stroke", "points": [[18, 48], [82, 36]] },
+        { "step": 2, "arrow": "↳", "description": "Down, curve right & hook", "points": [[44, 18], [44, 72], [52, 80], [80, 80], [83, 68]] }
+      ],
+      "guidance": {
+        "rule": "Slanted horizontal first, then curved vertical-to-right hook",
+        "tips": ["1. Rising line across", "2. Vertical down, smooth curve right, small upward hook"]
+      }
+    },
+    {
+      "number": 28,
+      "kanji": "八",
+      "meaning": "Eight",
+      "kun_readings": ["やっ-つ"],
+      "on_readings": ["ハチ", "ハッ-"],
+      "on_readings_display": ["はち", "はっ-"],
+      "stroke_count": 2,
+      "stroke_descriptions": [
+        "1. Left short sweeping stroke curving down-left",
+        "2. Right taller sweeping stroke curving down-right"
+      ],
+      "examples": [
+        { "word": "八つ", "reading": "やっ・つ", "meaning": "eight (things)" },
+        { "word": "八日", "reading": "よう・か", "meaning": "the 8th day" },
+        { "word": "八月", "reading": "はち・がつ", "meaning": "August" },
+        { "word": "八年", "reading": "はち・ねん", "meaning": "eight years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Left curved sweep", "points": [[40, 34], [30, 58], [16, 78]] },
+        { "step": 2, "arrow": "↘", "description": "Right taller sweep", "points": [[56, 22], [68, 56], [84, 78]] }
+      ],
+      "guidance": {
+        "rule": "Left stroke starts lower; right stroke starts higher and opens outward",
+        "tips": ["1. Left curved sweep", "2. Right taller sweep leaving a gap at top"]
+      }
+    },
+    {
+      "number": 29,
+      "kanji": "九",
+      "meaning": "Nine",
+      "kun_readings": ["ここの-つ"],
+      "on_readings": ["ク", "キュウ"],
+      "on_readings_display": ["く", "きゅう"],
+      "stroke_count": 2,
+      "stroke_descriptions": [
+        "1. Tall curved sweep from top-center down to bottom-left",
+        "2. Horizontal across, down, curving right and hooking upward"
+      ],
+      "examples": [
+        { "word": "九つ", "reading": "ここの・つ", "meaning": "nine (things)" },
+        { "word": "九日", "reading": "ここの・か", "meaning": "the 9th day" },
+        { "word": "九月", "reading": "く・がつ", "meaning": "September" },
+        { "word": "九百", "reading": "きゅう・ひゃく", "meaning": "900" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Center curved sweep left", "points": [[46, 16], [42, 48], [32, 68], [16, 82]] },
+        { "step": 2, "arrow": "↴", "description": "Across, down, curve & hook", "points": [[20, 42], [66, 36], [62, 72], [68, 82], [82, 82], [85, 70]] }
+      ],
+      "guidance": {
+        "rule": "Center sweeping curve first, then crossing curved hook",
+        "tips": ["1. Vertical-to-left sweep", "2. Cross horizontally, bend down, curve right and hook up"]
+      }
+    },
+    {
+      "number": 30,
+      "kanji": "十",
+      "meaning": "Ten",
+      "kun_readings": ["とお"],
+      "on_readings": ["ジュウ", "ジュッ-", "ジッ-"],
+      "on_readings_display": ["じゅう", "じゅっ-", "じっ-"],
+      "stroke_count": 2,
+      "stroke_descriptions": [
+        "1. Wide horizontal stroke across center",
+        "2. Tall central vertical stroke going straight down"
+      ],
+      "examples": [
+        { "word": "十", "reading": "とお", "meaning": "ten (things)" },
+        { "word": "十日", "reading": "とお・か", "meaning": "the 10th day" },
+        { "word": "十月", "reading": "じゅう・がつ", "meaning": "October" },
+        { "word": "十年", "reading": "じゅう・ねん", "meaning": "10 years" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Horizontal bar across", "points": [[16, 48], [84, 48]] },
+        { "step": 2, "arrow": "↓", "description": "Vertical line down", "points": [[50, 14], [50, 86]] }
+      ],
+      "guidance": {
+        "rule": "Horizontal always before vertical",
+        "tips": ["1. Horizontal across center", "2. Straight vertical through the middle"]
+      }
+    },
+    {
+      "number": 31,
+      "kanji": "百",
+      "meaning": "Hundred",
+      "kun_readings": [],
+      "on_readings": ["ヒャク", "-ビャク", "-ピャク"],
+      "on_readings_display": ["ひゃく", "-びゃく", "-ぴゃく"],
+      "stroke_count": 6,
+      "stroke_descriptions": [
+        "1. Wide top horizontal stroke",
+        "2. Short central slanted tick downward-left",
+        "3. Left vertical side of inner 日",
+        "4. Top and right sides of inner 日",
+        "5. Middle horizontal bar inside 日",
+        "6. Bottom horizontal closing stroke"
+      ],
+      "examples": [
+        { "word": "二百", "reading": "に・ひゃく", "meaning": "200" },
+        { "word": "三百", "reading": "さん・びゃく", "meaning": "300" },
+        { "word": "六百", "reading": "ろっ・ぴゃく", "meaning": "600" },
+        { "word": "八百", "reading": "はっ・ぴゃく", "meaning": "800" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Wide top bar", "points": [[16, 20], [84, 20]] },
+        { "step": 2, "arrow": "↙", "description": "Short center tick", "points": [[50, 20], [45, 38]] },
+        { "step": 3, "arrow": "↓", "description": "Left box wall", "points": [[28, 38], [28, 84]] },
+        { "step": 4, "arrow": "↴", "description": "Top & right box wall", "points": [[28, 38], [72, 38], [72, 84]] },
+        { "step": 5, "arrow": "→", "description": "Middle bar", "points": [[28, 59], [72, 59]] },
+        { "step": 6, "arrow": "→", "description": "Close bottom", "points": [[28, 81], [72, 81]] }
+      ],
+      "guidance": {
+        "rule": "Top bar (一) + short tick + White/Sun box (日) below",
+        "tips": ["1. Wide top line", "2. Short center tick", "3-6. Draw 日 box and close bottom last"]
+      }
+    },
+    {
+      "number": 32,
+      "kanji": "千",
+      "meaning": "Thousand",
+      "kun_readings": ["ち"],
+      "on_readings": ["セン", "-ゼン"],
+      "on_readings_display": ["せん", "-ぜん"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Short top angled sweep from right to left",
+        "2. Wide middle horizontal stroke",
+        "3. Tall central vertical stroke going straight down"
+      ],
+      "examples": [
+        { "word": "千円", "reading": "せん・えん", "meaning": "a thousand yen" },
+        { "word": "千葉", "reading": "ち・ば", "meaning": "Chiba pref." },
+        { "word": "三千", "reading": "さん・ぜん", "meaning": "3,000" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Top angled sweep left", "points": [[68, 18], [48, 25], [26, 30]] },
+        { "step": 2, "arrow": "→", "description": "Wide horizontal bar", "points": [[16, 52], [84, 52]] },
+        { "step": 3, "arrow": "↓", "description": "Center vertical down", "points": [[50, 26], [50, 86]] }
+      ],
+      "guidance": {
+        "rule": "Top slant from right to left, then cross (十)",
+        "tips": ["1. Short sweep right to left", "2. Wide horizontal bar", "3. Long vertical down"]
+      }
+    },
+    {
+      "number": 33,
+      "kanji": "万",
+      "meaning": "Ten thousand; All, Every",
+      "kun_readings": [],
+      "on_readings": ["マン", "バン"],
+      "on_readings_display": ["まん", "ばん"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Wide top horizontal stroke",
+        "2. Middle horizontal turning down-left with an inward hook",
+        "3. Curved diagonal sweep down-left from top center"
+      ],
+      "examples": [
+        { "word": "一万円", "reading": "いち・まん・えん", "meaning": "ten thousand yen" },
+        { "word": "万国", "reading": "ばん・こく", "meaning": "all countries" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Wide top bar", "points": [[16, 24], [84, 24]] },
+        { "step": 2, "arrow": "↴", "description": "Middle turn & hook", "points": [[46, 46], [76, 46], [68, 82], [56, 74]] },
+        { "step": 3, "arrow": "↙", "description": "Center sweep down-left", "points": [[48, 24], [40, 56], [22, 82]] }
+      ],
+      "guidance": {
+        "rule": "Note stroke order: Top bar, hooked right turn FIRST, then left sweep LAST",
+        "tips": ["1. Wide top bar", "2. Middle across, down and hook", "3. Left sweep down last"]
+      }
+    },
+    {
+      "number": 34,
+      "kanji": "円",
+      "meaning": "Circle; Yen",
+      "kun_readings": [],
+      "on_readings": ["エン"],
+      "on_readings_display": ["えん"],
+      "stroke_count": 4,
+      "stroke_descriptions": [
+        "1. Left tall outer vertical pillar down",
+        "2. Top bar turning down right pillar with hook",
+        "3. Center short vertical divider down to middle bar",
+        "4. Middle horizontal crossbar connecting both pillars"
+      ],
+      "examples": [
+        { "word": "円", "reading": "えん", "meaning": "a circle, yen" },
+        { "word": "百円", "reading": "ひゃく・えん", "meaning": "100 yen" },
+        { "word": "五千円", "reading": "ご・せん・えん", "meaning": "5,000 yen" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Left tall pillar", "points": [[22, 20], [22, 84]] },
+        { "step": 2, "arrow": "↴", "description": "Top & right pillar with hook", "points": [[22, 20], [78, 20], [78, 84], [68, 76]] },
+        { "step": 3, "arrow": "↓", "description": "Upper center divider", "points": [[50, 20], [50, 52]] },
+        { "step": 4, "arrow": "→", "description": "Middle crossbar", "points": [[22, 52], [78, 52]] }
+      ],
+      "guidance": {
+        "rule": "Outer arch frame first, upper divider, then middle bar",
+        "tips": ["1. Left pillar", "2. Top & right pillar with hook", "3. Upper vertical divider", "4. Middle horizontal bar"]
+      }
+    },
+    {
+      "number": 35,
+      "kanji": "年",
+      "meaning": "Year; Age",
+      "kun_readings": ["とし"],
+      "on_readings": ["ネン"],
+      "on_readings_display": ["ねん"],
+      "stroke_count": 6,
+      "stroke_descriptions": [
+        "1. Top-left short diagonal sweep",
+        "2. Upper horizontal stroke",
+        "3. Middle shorter horizontal stroke",
+        "4. Left short vertical connector",
+        "5. Wide bottom horizontal stroke",
+        "6. Tall central vertical stem going all the way down"
+      ],
+      "examples": [
+        { "word": "年上", "reading": "とし・うえ", "meaning": "older person" },
+        { "word": "来年", "reading": "らい・ねん", "meaning": "next year" },
+        { "word": "去年", "reading": "きょ・ねん", "meaning": "last year" },
+        { "word": "今年", "reading": "こ・とし", "meaning": "this year" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Top-left short sweep", "points": [[36, 14], [28, 30], [20, 40]] },
+        { "step": 2, "arrow": "→", "description": "Upper horizontal bar", "points": [[32, 26], [78, 26]] },
+        { "step": 3, "arrow": "→", "description": "Middle horizontal bar", "points": [[32, 46], [74, 46]] },
+        { "step": 4, "arrow": "↓", "description": "Left short vertical", "points": [[32, 46], [32, 66]] },
+        { "step": 5, "arrow": "→", "description": "Wide lower bar", "points": [[16, 66], [84, 66]] },
+        { "step": 6, "arrow": "↓", "description": "Center tall stem last", "points": [[54, 26], [54, 88]] }
+      ],
+      "guidance": {
+        "rule": "Build horizontal layers first, then pierce through with the final center vertical",
+        "tips": ["1-2. Top slant & bar", "3-4. Middle bar & left short vertical", "5. Wide lower bar", "6. Final long vertical down"]
+      }
+    }
+  ]
+}

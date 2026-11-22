@@ -39,12 +39,14 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
@@ -57,10 +59,13 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -112,10 +117,21 @@ fun KanjiHomeScreen(
   onBackToVocabulary: (() -> Unit)? = null,
   isDarkTheme: Boolean = isKanjiDarkTheme,
   onToggleTheme: (() -> Unit)? = null,
+  onSyncFromServer: () -> Unit = {},
+  onClearSyncMessage: () -> Unit = {},
   modifier: Modifier = Modifier
 ) {
   val levels = listOf("N5", "N4", "N3", "N2", "N1")
   val filters = listOf("All", "To Learn", "Completed", "Starred")
+  val snackbarHostState = remember { SnackbarHostState() }
+
+  LaunchedEffect(uiState.syncMessage) {
+    val msg = uiState.syncMessage
+    if (!msg.isNullOrBlank()) {
+      snackbarHostState.showSnackbar(msg)
+      onClearSyncMessage()
+    }
+  }
 
   BackHandler(enabled = onBackToVocabulary != null) {
     onBackToVocabulary?.invoke()
@@ -126,6 +142,7 @@ fun KanjiHomeScreen(
       .fillMaxSize()
       .background(MainBackground),
     containerColor = MainBackground,
+    snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
     bottomBar = {
       // Sticky Bottom Bar: Unified "Search Kanji" CTA
       Surface(
@@ -238,6 +255,33 @@ fun KanjiHomeScreen(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
           ) {
+            // Sync Kanji Lessons from Firebase Hosting
+            Box(
+              modifier = Modifier
+                .size(42.dp)
+                .clip(RoundedCornerShape(12.dp))
+                .background(CardSurface)
+                .border(1.2.dp, BorderOutline, RoundedCornerShape(12.dp))
+                .clickable(enabled = !uiState.isSyncingFromServer, onClick = onSyncFromServer)
+                .testTag("kanji_sync_server_button"),
+              contentAlignment = Alignment.Center
+            ) {
+              if (uiState.isSyncingFromServer) {
+                CircularProgressIndicator(
+                  modifier = Modifier.size(18.dp),
+                  color = BrandPurple,
+                  strokeWidth = 2.dp
+                )
+              } else {
+                Icon(
+                  imageVector = Icons.Default.Sync,
+                  contentDescription = "Sync Kanji lessons from server",
+                  tint = BrandPurple,
+                  modifier = Modifier.size(20.dp)
+                )
+              }
+            }
+
             // Dark / Light Mode Toggle Icon Button (matching Vocab Home screen)
             if (onToggleTheme != null) {
               Box(
