@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0",
+  "level": "N5",
+  "lesson": 4,
+  "title": "Lesson 4",
+  "subtitle": "Position, Size & Basics",
+  "source": "Basic Kanji Book, Lesson 4 (#36–#45); user-provided page images",
+  "kanji": [
+    {
+      "number": 36,
+      "kanji": "上",
+      "meaning": "Above, On; Up, Superior",
+      "kun_readings": ["うえ", "あ-がる", "のぼ-る", "あ-げる"],
+      "on_readings": ["ジョウ"],
+      "on_readings_display": ["じょう"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Central vertical stem going straight down",
+        "2. Short horizontal branch extending right from middle",
+        "3. Wide bottom horizontal base stroke"
+      ],
+      "examples": [
+        { "word": "上", "reading": "うえ", "meaning": "above, on" },
+        { "word": "上がる", "reading": "あ・がる", "meaning": "to go up, to rise" },
+        { "word": "上る", "reading": "のぼ・る", "meaning": "to go up" },
+        { "word": "上手な", "reading": "じょう・ず・な", "meaning": "skillful" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Center vertical stem", "points": [[48, 16], [48, 80]] },
+        { "step": 2, "arrow": "→", "description": "Short right branch", "points": [[48, 46], [78, 46]] },
+        { "step": 3, "arrow": "→", "description": "Long bottom base", "points": [[16, 80], [84, 80]] }
+      ],
+      "guidance": {
+        "rule": "Vertical stem first, right marker second, wide ground line last",
+        "tips": ["1. Center vertical down", "2. Short horizontal to the right", "3. Wide bottom base"]
+      }
+    },
+    {
+      "number": 37,
+      "kanji": "下",
+      "meaning": "Under; Down, Inferior",
+      "kun_readings": ["した", "さ-がる", "くだ-る", "さ-げる"],
+      "on_readings": ["カ", "ゲ"],
+      "on_readings_display": ["か", "げ"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Wide top horizontal stroke",
+        "2. Central vertical stem going straight down",
+        "3. Short diagonal dot downward-right from stem"
+      ],
+      "examples": [
+        { "word": "下", "reading": "した", "meaning": "under" },
+        { "word": "下がる", "reading": "さ・がる", "meaning": "to go down" },
+        { "word": "年下", "reading": "とし・した", "meaning": "younger" },
+        { "word": "下車する", "reading": "げ・しゃ・する", "meaning": "to get off" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Wide top bar", "points": [[16, 22], [84, 22]] },
+        { "step": 2, "arrow": "↓", "description": "Center vertical down", "points": [[48, 22], [48, 84]] },
+        { "step": 3, "arrow": "↘", "description": "Short right dot", "points": [[52, 44], [74, 58]] }
+      ],
+      "guidance": {
+        "rule": "Top ceiling first, vertical stem down, downward pointer last",
+        "tips": ["1. Wide top bar", "2. Straight vertical down", "3. Short angled dot to the right"]
+      }
+    },
+    {
+      "number": 38,
+      "kanji": "中",
+      "meaning": "Middle; Inside",
+      "kun_readings": ["なか"],
+      "on_readings": ["チュウ", "-ジュウ"],
+      "on_readings_display": ["ちゅう", "-じゅう"],
+      "stroke_count": 4,
+      "stroke_descriptions": [
+        "1. Left side of box going down",
+        "2. Top and right sides of box",
+        "3. Bottom closing stroke of box",
+        "4. Tall central vertical line piercing straight down"
+      ],
+      "examples": [
+        { "word": "中", "reading": "なか", "meaning": "inside" },
+        { "word": "中心", "reading": "ちゅう・しん", "meaning": "the center" },
+        { "word": "一日中", "reading": "いち・にち・じゅう", "meaning": "all day long" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Left box side", "points": [[20, 32], [24, 62]] },
+        { "step": 2, "arrow": "↴", "description": "Top & right box side", "points": [[20, 32], [80, 32], [76, 62]] },
+        { "step": 3, "arrow": "→", "description": "Close box bottom", "points": [[24, 60], [76, 60]] },
+        { "step": 4, "arrow": "↓", "description": "Center piercing vertical", "points": [[50, 12], [50, 88]] }
+      ],
+      "guidance": {
+        "rule": "Draw the wide 口 box first, then pierce the center top-to-bottom last",
+        "tips": ["1-3. Complete the 口 box", "4. Long vertical shaft straight through the middle"]
+      }
+    },
+    {
+      "number": 39,
+      "kanji": "大",
+      "meaning": "Big, Large; Great",
+      "kun_readings": ["おお-きい"],
+      "on_readings": ["ダイ", "タイ"],
+      "on_readings_display": ["だい", "たい"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Wide horizontal arms stroke",
+        "2. Tall central sweep curving down-left",
+        "3. Right diagonal leg sweeping down-right"
+      ],
+      "examples": [
+        { "word": "大きい＝大きな", "reading": "おお・きい", "meaning": "big" },
+        { "word": "大学", "reading": "だい・がく", "meaning": "a university" },
+        { "word": "大切な", "reading": "たい・せつ・な", "meaning": "important" },
+        { "word": "大人", "reading": "おとな", "meaning": "an adult" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Wide horizontal arms", "points": [[16, 40], [84, 40]] },
+        { "step": 2, "arrow": "↙", "description": "Center sweep down-left", "points": [[50, 14], [46, 52], [32, 72], [16, 84]] },
+        { "step": 3, "arrow": "↘", "description": "Right leg down-right", "points": [[48, 42], [64, 68], [84, 84]] }
+      ],
+      "guidance": {
+        "rule": "Horizontal arms first, then 人 (left sweep, right leg)",
+        "tips": ["1. Wide horizontal bar", "2. Tall curve sweeping down-left", "3. Supporting leg down-right"]
+      }
+    },
+    {
+      "number": 40,
+      "kanji": "小",
+      "meaning": "Small, Little",
+      "kun_readings": ["ちい-さい", "こ", "お"],
+      "on_readings": ["ショウ"],
+      "on_readings_display": ["しょう"],
+      "stroke_count": 3,
+      "stroke_descriptions": [
+        "1. Central vertical stem going down with a small left hook",
+        "2. Left short outward diagonal stroke",
+        "3. Right short outward diagonal dot"
+      ],
+      "examples": [
+        { "word": "小さい＝小さな", "reading": "ちい・さい", "meaning": "small" },
+        { "word": "小川", "reading": "お・がわ", "meaning": "a brook, a stream" },
+        { "word": "小学校", "reading": "しょう・がっ・こう", "meaning": "a primary school" },
+        { "word": "小人", "reading": "こども", "meaning": "a child" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↓", "description": "Center stem with hook", "points": [[50, 16], [50, 84], [40, 76]] },
+        { "step": 2, "arrow": "↙", "description": "Left outward flick", "points": [[32, 40], [18, 66]] },
+        { "step": 3, "arrow": "↘", "description": "Right outward dot", "points": [[68, 40], [84, 66]] }
+      ],
+      "guidance": {
+        "rule": "Symmetry Rule: Center vertical hook first, then left and right sides",
+        "tips": ["1. Center line down & hook", "2. Left outward flick", "3. Right outward dot"]
+      }
+    },
+    {
+      "number": 41,
+      "kanji": "本",
+      "meaning": "Root, Origin; True, Main",
+      "kun_readings": ["もと"],
+      "on_readings": ["ホン"],
+      "on_readings_display": ["ほん"],
+      "stroke_count": 5,
+      "stroke_descriptions": [
+        "1. Wide horizontal branch stroke",
+        "2. Tall central vertical trunk straight down",
+        "3. Left diagonal root sweeping down-left",
+        "4. Right diagonal root sweeping down-right",
+        "5. Short horizontal mark across the lower trunk"
+      ],
+      "examples": [
+        { "word": "山本", "reading": "やま・もと", "meaning": "a Japanese surname" },
+        { "word": "本", "reading": "ほん", "meaning": "a book" },
+        { "word": "本日", "reading": "ほん・じつ", "meaning": "this day" },
+        { "word": "本店", "reading": "ほん・てん", "meaning": "the main office" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "→", "description": "Horizontal branch", "points": [[18, 34], [82, 34]] },
+        { "step": 2, "arrow": "↓", "description": "Vertical trunk", "points": [[50, 14], [50, 86]] },
+        { "step": 3, "arrow": "↙", "description": "Left diagonal sweep", "points": [[50, 34], [34, 58], [16, 76]] },
+        { "step": 4, "arrow": "↘", "description": "Right diagonal sweep", "points": [[50, 34], [66, 58], [84, 76]] },
+        { "step": 5, "arrow": "→", "description": "Lower root bar", "points": [[30, 70], [70, 70]] }
+      ],
+      "guidance": {
+        "rule": "Write 木 (tree) completely first, then add the root mark at the bottom",
+        "tips": ["1-4. Draw 木", "5. Short horizontal mark across the root"]
+      }
+    },
+    {
+      "number": 42,
+      "kanji": "半",
+      "meaning": "Half",
+      "kun_readings": ["（なか-ば）"],
+      "on_readings": ["ハン"],
+      "on_readings_display": ["はん"],
+      "stroke_count": 5,
+      "stroke_descriptions": [
+        "1. Upper-left small downward dot",
+        "2. Upper-right small inward flick",
+        "3. Shorter middle horizontal stroke",
+        "4. Longer lower horizontal stroke",
+        "5. Tall central vertical line cutting down the middle"
+      ],
+      "examples": [
+        { "word": "半ば", "reading": "なか・ば", "meaning": "halfway, middle" },
+        { "word": "半分", "reading": "はん・ぶん", "meaning": "half" },
+        { "word": "半年", "reading": "はん・とし", "meaning": "half a year" },
+        { "word": "三時半", "reading": "さん・じ・はん", "meaning": "3:30" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↘", "description": "Upper-left dot", "points": [[24, 22], [33, 34]] },
+        { "step": 2, "arrow": "↙", "description": "Upper-right flick", "points": [[76, 20], [66, 34]] },
+        { "step": 3, "arrow": "→", "description": "Upper horizontal bar", "points": [[26, 44], [74, 44]] },
+        { "step": 4, "arrow": "→", "description": "Wide lower horizontal", "points": [[16, 64], [84, 64]] },
+        { "step": 5, "arrow": "↓", "description": "Center vertical split", "points": [[50, 12], [50, 88]] }
+      ],
+      "guidance": {
+        "rule": "Two upper dots, two horizontal bars, then split down the middle last",
+        "tips": ["1-2. Left dot & right flick", "3-4. Two horizontal bars", "5. Long center vertical cutting in half"]
+      }
+    },
+    {
+      "number": 43,
+      "kanji": "分",
+      "meaning": "Division, Part; Minute",
+      "kun_readings": ["わ-かれる", "わ-かる", "わ-ける"],
+      "on_readings": ["ブン", "ブ", "フン", "-プン"],
+      "on_readings_display": ["ぶん", "ぶ", "ふん", "-ぷん"],
+      "stroke_count": 4,
+      "stroke_descriptions": [
+        "1. Upper-left curved sweep down-left (八)",
+        "2. Upper-right diagonal sweep down-right (八)",
+        "3. Lower sword horizontal turning down with hook (刀)",
+        "4. Lower sword curved sweep down-left"
+      ],
+      "examples": [
+        { "word": "分ける", "reading": "わ・ける", "meaning": "to divide" },
+        { "word": "分かる", "reading": "わ・かる", "meaning": "to understand" },
+        { "word": "五分", "reading": "ご・ふん", "meaning": "five minutes" },
+        { "word": "六分", "reading": "ろっ・ぷん", "meaning": "six minutes" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Top-left sweep (八)", "points": [[40, 20], [28, 36], [16, 48]] },
+        { "step": 2, "arrow": "↘", "description": "Top-right sweep (八)", "points": [[56, 16], [70, 34], [84, 48]] },
+        { "step": 3, "arrow": "↴", "description": "Lower across, down & hook", "points": [[28, 50], [72, 50], [66, 84], [54, 76]] },
+        { "step": 4, "arrow": "↙", "description": "Lower sweep down-left", "points": [[48, 50], [38, 70], [22, 84]] }
+      ],
+      "guidance": {
+        "rule": "Top 八 (divide) first, then bottom 刀 (sword/blade)",
+        "tips": ["1-2. Top 八 strokes", "3-4. Bottom 刀: turn & hook first, left sweep last"]
+      }
+    },
+    {
+      "number": 44,
+      "kanji": "力",
+      "meaning": "Power, Force; Ability",
+      "kun_readings": ["ちから"],
+      "on_readings": ["リョク", "リキ"],
+      "on_readings_display": ["りょく", "りき"],
+      "stroke_count": 2,
+      "stroke_descriptions": [
+        "1. Horizontal bar turning smoothly down-left with upward hook",
+        "2. Tall curved sweeping stroke from top center down-left"
+      ],
+      "examples": [
+        { "word": "力", "reading": "ちから", "meaning": "power" },
+        { "word": "実力", "reading": "じつ・りょく", "meaning": "one's real ability" },
+        { "word": "力学", "reading": "りき・がく", "meaning": "dynamics" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↴", "description": "Across, down & hook", "points": [[22, 38], [78, 38], [72, 82], [60, 74]] },
+        { "step": 2, "arrow": "↙", "description": "Tall curved sweep left", "points": [[50, 14], [44, 52], [32, 72], [18, 84]] }
+      ],
+      "guidance": {
+        "rule": "Hooked horizontal-turn stroke FIRST, then tall sweeping diagonal LAST",
+        "tips": ["1. Horizontal across, sweep down and hook", "2. Long curved sweep through the middle"]
+      }
+    },
+    {
+      "number": 45,
+      "kanji": "何",
+      "meaning": "What",
+      "kun_readings": ["なに", "なん"],
+      "on_readings": ["（カ）"],
+      "on_readings_display": ["か"],
+      "stroke_count": 7,
+      "stroke_descriptions": [
+        "1. Left person radical top diagonal sweep",
+        "2. Left person radical vertical stem",
+        "3. Right wide top horizontal bar",
+        "4. Inner 口 left side down",
+        "5. Inner 口 top and right corner",
+        "6. Inner 口 bottom closing bar",
+        "7. Far-right tall vertical stem with hook at bottom"
+      ],
+      "examples": [
+        { "word": "何", "reading": "なに", "meaning": "what" },
+        { "word": "何ですか。", "reading": "なん・ですか。", "meaning": "What is it?" },
+        { "word": "何人", "reading": "なん・にん", "meaning": "how many people" },
+        { "word": "何年", "reading": "なん・ねん", "meaning": "what year" }
+      ],
+      "strokes": [
+        { "step": 1, "arrow": "↙", "description": "Left radical sweep (亻)", "points": [[32, 16], [22, 38], [14, 52]] },
+        { "step": 2, "arrow": "↓", "description": "Left radical vertical", "points": [[24, 38], [24, 86]] },
+        { "step": 3, "arrow": "→", "description": "Right top bar", "points": [[38, 22], [88, 22]] },
+        { "step": 4, "arrow": "↓", "description": "Inner 口 left side", "points": [[42, 42], [44, 66]] },
+        { "step": 5, "arrow": "↴", "description": "Inner 口 top & right", "points": [[42, 42], [64, 42], [62, 66]] },
+        { "step": 6, "arrow": "→", "description": "Inner 口 bottom", "points": [[44, 64], [62, 64]] },
+        { "step": 7, "arrow": "↓", "description": "Right pillar & hook", "points": [[76, 22], [76, 86], [66, 78]] }
+      ],
+      "guidance": {
+        "rule": "Left person radical (亻), then right 可 (top bar, 口 box, hooked pillar last)",
+        "tips": ["1-2. Left 亻 radical", "3. Right top bar", "4-6. Inner 口 box", "7. Tall right pillar with hook"]
+      }
+    }
+  ]
+}

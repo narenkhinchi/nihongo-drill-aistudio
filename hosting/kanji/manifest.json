@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 2,
+  "contentVersion": 3,
   "lessons": [
     {
       "id": "N5_L1",
@@ -28,6 +28,15 @@
       "subtitle": "Numbers, Money & Years",
       "version": 1,
       "path": "kanji/lesson-03.json"
+    },
+    {
+      "id": "N5_L4",
+      "level": "N5",
+      "lessonNumber": 4,
+      "title": "Lesson 4",
+      "subtitle": "Position, Size & Basics",
+      "version": 1,
+      "path": "kanji/lesson-04.json"
     }
   ],
   "storiesPath": "kanji/stories.json",
