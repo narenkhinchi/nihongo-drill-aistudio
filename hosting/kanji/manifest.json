@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "lessons": [
     {
       "id": "N5_L1",
@@ -19,6 +19,15 @@
       "subtitle": "Elements & People",
       "version": 1,
       "path": "kanji/lesson-02.json"
+    },
+    {
+      "id": "N5_L3",
+      "level": "N5",
+      "lessonNumber": 3,
+      "title": "Lesson 3",
+      "subtitle": "Numbers, Money & Years",
+      "version": 1,
+      "path": "kanji/lesson-03.json"
     }
   ],
   "storiesPath": "kanji/stories.json",
