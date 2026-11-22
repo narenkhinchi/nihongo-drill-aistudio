@@ -22,8 +22,8 @@
       "examples": [
         { "word": "上", "reading": "うえ", "meaning": "above, on" },
         { "word": "上がる", "reading": "あ・がる", "meaning": "to go up, to rise" },
-        { "word": "上る", "reading": "のぼ・る", "meaning": "to go up" },
-        { "word": "上手な", "reading": "じょう・ず・な", "meaning": "skillful" }
+        { "word": "上る", "reading": "のぼ・る", "meaning": "to climb, to go up" },
+        { "word": "上手な", "reading": "じょう・ず・な", "meaning": "skillful, good at" }
       ],
       "strokes": [
         { "step": 1, "arrow": "↓", "description": "Center vertical stem", "points": [[48, 16], [48, 80]] },
@@ -52,7 +52,7 @@
         { "word": "下", "reading": "した", "meaning": "under" },
         { "word": "下がる", "reading": "さ・がる", "meaning": "to go down" },
         { "word": "年下", "reading": "とし・した", "meaning": "younger" },
-        { "word": "下車する", "reading": "げ・しゃ・する", "meaning": "to get off" }
+        { "word": "下車する", "reading": "げ・しゃ・する", "meaning": "to get off (a train/bus)" }
       ],
       "strokes": [
         { "step": 1, "arrow": "→", "description": "Wide top bar", "points": [[16, 22], [84, 22]] },
@@ -108,7 +108,8 @@
         "3. Right diagonal leg sweeping down-right"
       ],
       "examples": [
-        { "word": "大きい＝大きな", "reading": "おお・きい", "meaning": "big" },
+        { "word": "大きい", "reading": "おお・きい", "meaning": "big, large" },
+        { "word": "大きな", "reading": "おお・きな", "meaning": "big (before a noun)" },
         { "word": "大学", "reading": "だい・がく", "meaning": "a university" },
         { "word": "大切な", "reading": "たい・せつ・な", "meaning": "important" },
         { "word": "大人", "reading": "おとな", "meaning": "an adult" }
@@ -137,10 +138,11 @@
         "3. Right short outward diagonal dot"
       ],
       "examples": [
-        { "word": "小さい＝小さな", "reading": "ちい・さい", "meaning": "small" },
+        { "word": "小さい", "reading": "ちい・さい", "meaning": "small, little" },
+        { "word": "小さな", "reading": "ちい・さな", "meaning": "small (before a noun)" },
         { "word": "小川", "reading": "お・がわ", "meaning": "a brook, a stream" },
         { "word": "小学校", "reading": "しょう・がっ・こう", "meaning": "a primary school" },
-        { "word": "小人", "reading": "こども", "meaning": "a child" }
+        { "word": "小人", "reading": "こども", "meaning": "child (e.g., ticket fare)" }
       ],
       "strokes": [
         { "step": 1, "arrow": "↓", "description": "Center stem with hook", "points": [[50, 16], [50, 84], [40, 76]] },
@@ -168,10 +170,10 @@
         "5. Short horizontal mark across the lower trunk"
       ],
       "examples": [
-        { "word": "山本", "reading": "やま・もと", "meaning": "a Japanese surname" },
+        { "word": "山本", "reading": "やま・もと", "meaning": "Japanese surname" },
         { "word": "本", "reading": "ほん", "meaning": "a book" },
-        { "word": "本日", "reading": "ほん・じつ", "meaning": "this day" },
-        { "word": "本店", "reading": "ほん・てん", "meaning": "the main office" }
+        { "word": "本日", "reading": "ほん・じつ", "meaning": "today (formal)" },
+        { "word": "本店", "reading": "ほん・てん", "meaning": "main store, head office" }
       ],
       "strokes": [
         { "step": 1, "arrow": "→", "description": "Horizontal branch", "points": [[18, 34], [82, 34]] },

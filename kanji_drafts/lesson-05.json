@@ -26,7 +26,7 @@
       ],
       "examples": [
         { "word": "明るい", "reading": "あか・るい", "meaning": "bright, cheerful" },
-        { "word": "明ける", "reading": "あ・ける", "meaning": "(dawn) to break" }
+        { "word": "明ける", "reading": "あ・ける", "meaning": "to dawn, to break (day)" }
       ],
       "strokes": [
         { "step": 1, "arrow": "↓", "description": "Left 日 left side", "points": [[16, 24], [16, 72]] },
@@ -130,8 +130,8 @@
         "6. Right 子: wide horizontal crossbar"
       ],
       "examples": [
-        { "word": "好きな", "reading": "す・きな", "meaning": "favorite" },
-        { "word": "好かれる", "reading": "す・かれる", "meaning": "to be loved" }
+        { "word": "好きな", "reading": "す・きな", "meaning": "favorite, liked" },
+        { "word": "好かれる", "reading": "す・かれる", "meaning": "to be liked, to be loved" }
       ],
       "strokes": [
         { "step": 1, "arrow": "↙", "description": "Left 女 bent stroke", "points": [[30, 18], [20, 52], [34, 64], [46, 76]] },
@@ -291,7 +291,7 @@
       "examples": [
         { "word": "間", "reading": "あいだ", "meaning": "between" },
         { "word": "間に合う", "reading": "ま・に・あ・う", "meaning": "to be on time" },
-        { "word": "一年間", "reading": "いち・ねん・かん", "meaning": "a year" },
+        { "word": "一年間", "reading": "いち・ねん・かん", "meaning": "for one year" },
         { "word": "時間", "reading": "じ・かん", "meaning": "time" }
       ],
       "strokes": [

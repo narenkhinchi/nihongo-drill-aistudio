@@ -1,16 +1,16 @@
-number,level,lesson,kanji,meaning,kun_readings,on_readings,stroke_count,examples
-21,N5,3,一,"one","ひと-つ","イチ",1,"一つ(ひと・つ): one (thing) | 一人(ひと・り): one (person) | 一月(いち・がつ): January | 一年(いち・ねん): one year"
-22,N5,3,二,"two","ふた-つ","ニ",2,"二つ(ふた・つ): two (things) | 二人(ふた・り): two (people) | 二月(に・がつ): February | 二年(に・ねん): two years"
-23,N5,3,三,"three","みっ-つ","サン",3,"三つ(みっ・つ): three (things) | 三日(みっ・か): the 3rd day | 三月(さん・がつ): March | 三年(さん・ねん): three years"
-24,N5,3,四,"four","よっ-つ; よん; よ","シ",5,"四つ(よっ・つ): four (things) | 四日(よっ・か): the 4th day | 四月(し・がつ): April | 四年(よ・ねん): four years"
-25,N5,3,五,"five","いつ-つ","ゴ",4,"五つ(いつ・つ): five (things) | 五日(いつ・か): the 5th day | 五月(ご・がつ): May | 五年(ご・ねん): five years"
-26,N5,3,六,"six","むっ-つ","ロク; ロッ-",4,"六つ(むっ・つ): six (things) | 六日(むい・か): the 6th day | 六月(ろく・がつ): June | 六年(ろく・ねん): six years"
-27,N5,3,七,"seven","なな-つ","シチ",2,"七つ(なな・つ): seven (things) | 七日(なの・か): the 7th day | 七月(しち・がつ): July | 七年(しち・ねん): seven years | 七人(なな・にん／しち・にん): seven people"
-28,N5,3,八,"eight","やっ-つ","ハチ; ハッ-",2,"八つ(やっ・つ): eight (things) | 八日(よう・か): the 8th day | 八月(はち・がつ): August | 八年(はち・ねん): eight years"
-29,N5,3,九,"nine","ここの-つ","ク; キュウ",2,"九つ(ここの・つ): nine (things) | 九日(ここの・か): the 9th day | 九月(く・がつ): September | 九百(きゅう・ひゃく): 900"
-30,N5,3,十,"ten","とお","ジュウ; ジュッ-; ジッ-",2,"十(とお): ten (things) | 十日(とお・か): the 10th day | 十月(じゅう・がつ): October | 十年(じゅう・ねん): 10 years"
-31,N5,3,百,"hundred","","ヒャク; -ビャク; -ピャク",6,"二百(に・ひゃく): 200 | 三百(さん・びゃく): 300 | 六百(ろっ・ぴゃく): 600 | 八百(はっ・ぴゃく): 800"
-32,N5,3,千,"thousand","ち","セン; -ゼン",3,"千円(せん・えん): a thousand yen | 千葉(ち・ば): Chiba pref. | 三千(さん・ぜん): 3,000"
-33,N5,3,万,"ten thousand; all, every","","マン; バン",3,"一万円(いち・まん・えん): ten thousand yen | 万国(ばん・こく): all countries"
-34,N5,3,円,"circle; yen","","エン",4,"円(えん): a circle, yen | 百円(ひゃく・えん): 100 yen | 五千円(ご・せん・えん): 5,000 yen"
-35,N5,3,年,"year; age","とし","ネン",6,"年上(とし・うえ): older person | 来年(らい・ねん): next year | 去年(きょ・ねん): last year | 今年(こ・とし): this year"
+level,lesson,number,kanji,meaning,kun_readings,on_readings,stroke_count,examples
+N5,3,21,一,One,ひと-つ,イチ,1,一つ (ひと・つ) = one (thing) | 一人 (ひと・り) = one (person) | 一月 (いち・がつ) = January | 一年 (いち・ねん) = one year
+N5,3,22,二,Two,ふた-つ,ニ,2,二つ (ふた・つ) = two (things) | 二人 (ふた・り) = two (people) | 二月 (に・がつ) = February | 二年 (に・ねん) = two years
+N5,3,23,三,Three,みっ-つ,サン,3,三つ (みっ・つ) = three (things) | 三日 (みっ・か) = the 3rd day | 三月 (さん・がつ) = March | 三年 (さん・ねん) = three years
+N5,3,24,四,Four,よっ-つ; よん; よ,シ,5,四つ (よっ・つ) = four (things) | 四日 (よっ・か) = the 4th day | 四月 (し・がつ) = April | 四年 (よ・ねん) = four years
+N5,3,25,五,Five,いつ-つ,ゴ,4,五つ (いつ・つ) = five (things) | 五日 (いつ・か) = the 5th day | 五月 (ご・がつ) = May | 五年 (ご・ねん) = five years
+N5,3,26,六,Six,むっ-つ,ロク; ロッ-,4,六つ (むっ・つ) = six (things) | 六日 (むい・か) = the 6th day | 六月 (ろく・がつ) = June | 六年 (ろく・ねん) = six years
+N5,3,27,七,Seven,なな-つ,シチ,2,七つ (なな・つ) = seven (things) | 七日 (なの・か) = the 7th day | 七月 (しち・がつ) = July | 七年 (しち・ねん) = seven years | 七人 (なな・にん／しち・にん) = seven people
+N5,3,28,八,Eight,やっ-つ,ハチ; ハッ-,2,八つ (やっ・つ) = eight (things) | 八日 (よう・か) = the 8th day | 八月 (はち・がつ) = August | 八年 (はち・ねん) = eight years
+N5,3,29,九,Nine,ここの-つ,ク; キュウ,2,九つ (ここの・つ) = nine (things) | 九日 (ここの・か) = the 9th day | 九月 (く・がつ) = September | 九百 (きゅう・ひゃく) = 900
+N5,3,30,十,Ten,とお,ジュウ; ジュッ-; ジッ-,2,十 (とお) = ten (things) | 十日 (とお・か) = the 10th day | 十月 (じゅう・がつ) = October | 十年 (じゅう・ねん) = 10 years
+N5,3,31,百,Hundred,,ヒャク; -ビャク; -ピャク,6,二百 (に・ひゃく) = 200 | 三百 (さん・びゃく) = 300 | 六百 (ろっ・ぴゃく) = 600 | 八百 (はっ・ぴゃく) = 800
+N5,3,32,千,Thousand,ち,セン; -ゼン,3,"千円 (せん・えん) = a thousand yen | 千葉 (ち・ば) = Chiba Prefecture | 三千 (さん・ぜん) = 3,000"
+N5,3,33,万,"Ten thousand; All, Every",,マン; バン,3,一万円 (いち・まん・えん) = ten thousand yen | 万国 (ばん・こく) = all countries
+N5,3,34,円,Circle; Yen,,エン,4,"円 (えん) = yen, a circle | 百円 (ひゃく・えん) = 100 yen | 五千円 (ご・せん・えん) = 5,000 yen"
+N5,3,35,年,Year; Age,とし,ネン,6,年上 (とし・うえ) = older person | 来年 (らい・ねん) = next year | 去年 (きょ・ねん) = last year | 今年 (こ・とし) = this year

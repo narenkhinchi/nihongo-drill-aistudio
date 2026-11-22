@@ -627,7 +627,7 @@ object KanjiRepository {
 
     // Kanji 10: 門
     Vocabulary(10, "門", "もん", "a gate"),
-    Vocabulary(10, "専門", "せん・もん", "a speciality"),
+    Vocabulary(10, "専門", "せん・もん", "a specialty, major"),
 
     // Lesson 2 Vocabulary (Basic Kanji Book Lesson 2 — exact book examples)
     // Kanji 11: 火

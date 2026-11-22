@@ -404,11 +404,17 @@ private fun KanjiOverviewItemCard(
 
         Spacer(modifier = Modifier.height(3.dp))
 
-        Text(
-          text = "Kun: ${kanji.kunReadings.joinToString(", ")}  ·  On: ${kanji.onReadingsDisplay.joinToString(", ")}",
-          fontSize = 12.5.sp,
-          color = SecondaryText
-        )
+        val readingsSummary = listOfNotNull(
+          kanji.kunReadings.takeIf { it.isNotEmpty() }?.let { "Kun: ${it.joinToString(", ")}" },
+          kanji.onReadingsDisplay.takeIf { it.isNotEmpty() }?.let { "On: ${it.joinToString(", ")}" }
+        ).joinToString("  ·  ")
+        if (readingsSummary.isNotEmpty()) {
+          Text(
+            text = readingsSummary,
+            fontSize = 12.5.sp,
+            color = SecondaryText
+          )
+        }
 
         Spacer(modifier = Modifier.height(2.dp))
 
@@ -419,6 +425,8 @@ private fun KanjiOverviewItemCard(
           fontWeight = FontWeight.Medium
         )
       }
+
+      Spacer(modifier = Modifier.width(8.dp))
 
       // Speaker icon button
       Box(

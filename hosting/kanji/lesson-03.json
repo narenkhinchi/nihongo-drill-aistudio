@@ -332,7 +332,7 @@
       ],
       "examples": [
         { "word": "千円", "reading": "せん・えん", "meaning": "a thousand yen" },
-        { "word": "千葉", "reading": "ち・ば", "meaning": "Chiba pref." },
+        { "word": "千葉", "reading": "ち・ば", "meaning": "Chiba Prefecture" },
         { "word": "三千", "reading": "さん・ぜん", "meaning": "3,000" }
       ],
       "strokes": [
@@ -387,7 +387,7 @@
         "4. Middle horizontal crossbar connecting both pillars"
       ],
       "examples": [
-        { "word": "円", "reading": "えん", "meaning": "a circle, yen" },
+        { "word": "円", "reading": "えん", "meaning": "yen, a circle" },
         { "word": "百円", "reading": "ひゃく・えん", "meaning": "100 yen" },
         { "word": "五千円", "reading": "ご・せん・えん", "meaning": "5,000 yen" }
       ],

@@ -16,6 +16,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -727,6 +729,8 @@ fun KanjiHeroCard(
         }
       }
 
+      Spacer(modifier = Modifier.width(12.dp))
+
       // Speaker / Audio button on right with active feedback
       val audioBgColor by animateColorAsState(
         targetValue = if (isPlaying) BrandPurple else BrandPurpleVeryLight,
@@ -763,6 +767,7 @@ fun KanjiHeroCard(
 /**
  * 2. Readings Card (Kun'yomi & On'yomi rows with chips and speaker buttons)
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ReadingsCard(
   kanji: Kanji,
@@ -802,7 +807,7 @@ fun ReadingsCard(
         // Label pill
         Box(
           modifier = Modifier
-            .width(82.dp)
+            .width(78.dp)
             .clip(RoundedCornerShape(14.dp))
             .background(BrandPurpleLight)
             .padding(vertical = 6.dp),
@@ -812,78 +817,95 @@ fun ReadingsCard(
             text = "Kun'yomi",
             fontSize = 12.sp,
             fontWeight = FontWeight.Bold,
-            color = BrandPurple
+            color = BrandPurple,
+            maxLines = 1,
+            softWrap = false
           )
         }
 
         Spacer(modifier = Modifier.width(10.dp))
 
-        // Readings chips
-        Row(
+        // Wrapping readings chips so pills never squish vertically
+        FlowRow(
           modifier = Modifier.weight(1f),
           horizontalArrangement = Arrangement.spacedBy(8.dp),
-          verticalAlignment = Alignment.CenterVertically
+          verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-          kanji.kunReadings.forEach { reading ->
-            val isChipPlaying = currentlyPlaying == reading
-            val chipBg by animateColorAsState(
-              targetValue = if (isChipPlaying) BrandPurple else CardSurfaceElevated,
-              label = "KunChipBg"
+          if (kanji.kunReadings.isEmpty()) {
+            Text(
+              text = "—",
+              fontSize = 14.sp,
+              color = SecondaryText,
+              modifier = Modifier.padding(horizontal = 4.dp, vertical = 6.dp)
             )
-            val chipTextColor by animateColorAsState(
-              targetValue = if (isChipPlaying) Color.White else PrimaryText,
-              label = "KunChipText"
-            )
-
-            Box(
-              modifier = Modifier
-                .clip(RoundedCornerShape(12.dp))
-                .border(
-                  1.2.dp,
-                  if (isChipPlaying) BrandPurple else BorderOutline,
-                  RoundedCornerShape(12.dp)
-                )
-                .background(chipBg)
-                .clickable { onPlayReading(reading) }
-                .padding(horizontal = 12.dp, vertical = 6.dp),
-              contentAlignment = Alignment.Center
-            ) {
-              Text(
-                text = reading,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = chipTextColor
+          } else {
+            kanji.kunReadings.forEach { reading ->
+              val isChipPlaying = currentlyPlaying == reading
+              val chipBg by animateColorAsState(
+                targetValue = if (isChipPlaying) BrandPurple else CardSurfaceElevated,
+                label = "KunChipBg"
               )
+              val chipTextColor by animateColorAsState(
+                targetValue = if (isChipPlaying) Color.White else PrimaryText,
+                label = "KunChipText"
+              )
+
+              Box(
+                modifier = Modifier
+                  .clip(RoundedCornerShape(12.dp))
+                  .border(
+                    1.2.dp,
+                    if (isChipPlaying) BrandPurple else BorderOutline,
+                    RoundedCornerShape(12.dp)
+                  )
+                  .background(chipBg)
+                  .clickable { onPlayReading(reading) }
+                  .padding(horizontal = 11.dp, vertical = 6.dp),
+                contentAlignment = Alignment.Center
+              ) {
+                Text(
+                  text = reading,
+                  fontSize = 13.5.sp,
+                  fontWeight = FontWeight.SemiBold,
+                  color = chipTextColor,
+                  maxLines = 1,
+                  softWrap = false
+                )
+              }
             }
           }
         }
 
-        // Speaker icon on right
-        val isAllKunPlaying = currentlyPlaying == kanji.kunReadings.joinToString("、")
-        val allKunBg by animateColorAsState(
-          targetValue = if (isAllKunPlaying) BrandPurple else BrandPurpleVeryLight,
-          label = "AllKunBg"
-        )
-        val allKunIcon by animateColorAsState(
-          targetValue = if (isAllKunPlaying) Color.White else BrandPurple,
-          label = "AllKunIcon"
-        )
+        if (kanji.kunReadings.isNotEmpty()) {
+          Spacer(modifier = Modifier.width(10.dp))
 
-        Box(
-          modifier = Modifier
-            .size(38.dp)
-            .clip(CircleShape)
-            .border(1.2.dp, SoftPurpleBorder, CircleShape)
-            .background(allKunBg)
-            .clickable(onClick = onPlayAllKun),
-          contentAlignment = Alignment.Center
-        ) {
-          Icon(
-            Icons.AutoMirrored.Filled.VolumeUp,
-            contentDescription = "Play Kun'yomi",
-            tint = allKunIcon,
-            modifier = Modifier.size(19.dp)
+          // Speaker icon on right
+          val isAllKunPlaying = currentlyPlaying == kanji.kunReadings.joinToString("、")
+          val allKunBg by animateColorAsState(
+            targetValue = if (isAllKunPlaying) BrandPurple else BrandPurpleVeryLight,
+            label = "AllKunBg"
           )
+          val allKunIcon by animateColorAsState(
+            targetValue = if (isAllKunPlaying) Color.White else BrandPurple,
+            label = "AllKunIcon"
+          )
+
+          Box(
+            modifier = Modifier
+              .size(38.dp)
+              .clip(CircleShape)
+              .border(1.2.dp, SoftPurpleBorder, CircleShape)
+              .background(allKunBg)
+              .clickable(onClick = onPlayAllKun),
+            contentAlignment = Alignment.Center
+          ) {
+            Icon(
+              Icons.AutoMirrored.Filled.VolumeUp,
+              contentDescription = "Play Kun'yomi",
+              tint = allKunIcon,
+              modifier = Modifier.size(19.dp)
+            )
+          }
         }
       }
 
@@ -897,7 +919,7 @@ fun ReadingsCard(
         // Label pill
         Box(
           modifier = Modifier
-            .width(82.dp)
+            .width(78.dp)
             .clip(RoundedCornerShape(14.dp))
             .background(BrandPurpleLight)
             .padding(vertical = 6.dp),
@@ -907,78 +929,95 @@ fun ReadingsCard(
             text = "On'yomi",
             fontSize = 12.sp,
             fontWeight = FontWeight.Bold,
-            color = BrandPurple
+            color = BrandPurple,
+            maxLines = 1,
+            softWrap = false
           )
         }
 
         Spacer(modifier = Modifier.width(10.dp))
 
-        // Readings chips
-        Row(
+        // Wrapping readings chips so pills never squish vertically
+        FlowRow(
           modifier = Modifier.weight(1f),
           horizontalArrangement = Arrangement.spacedBy(8.dp),
-          verticalAlignment = Alignment.CenterVertically
+          verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-          kanji.onReadingsDisplay.forEach { reading ->
-            val isChipPlaying = currentlyPlaying == reading
-            val chipBg by animateColorAsState(
-              targetValue = if (isChipPlaying) BrandPurple else CardSurfaceElevated,
-              label = "OnChipBg"
+          if (kanji.onReadingsDisplay.isEmpty()) {
+            Text(
+              text = "—",
+              fontSize = 14.sp,
+              color = SecondaryText,
+              modifier = Modifier.padding(horizontal = 4.dp, vertical = 6.dp)
             )
-            val chipTextColor by animateColorAsState(
-              targetValue = if (isChipPlaying) Color.White else PrimaryText,
-              label = "OnChipText"
-            )
-
-            Box(
-              modifier = Modifier
-                .clip(RoundedCornerShape(12.dp))
-                .border(
-                  1.2.dp,
-                  if (isChipPlaying) BrandPurple else BorderOutline,
-                  RoundedCornerShape(12.dp)
-                )
-                .background(chipBg)
-                .clickable { onPlayReading(reading) }
-                .padding(horizontal = 12.dp, vertical = 6.dp),
-              contentAlignment = Alignment.Center
-            ) {
-              Text(
-                text = reading,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = chipTextColor
+          } else {
+            kanji.onReadingsDisplay.forEach { reading ->
+              val isChipPlaying = currentlyPlaying == reading
+              val chipBg by animateColorAsState(
+                targetValue = if (isChipPlaying) BrandPurple else CardSurfaceElevated,
+                label = "OnChipBg"
               )
+              val chipTextColor by animateColorAsState(
+                targetValue = if (isChipPlaying) Color.White else PrimaryText,
+                label = "OnChipText"
+              )
+
+              Box(
+                modifier = Modifier
+                  .clip(RoundedCornerShape(12.dp))
+                  .border(
+                    1.2.dp,
+                    if (isChipPlaying) BrandPurple else BorderOutline,
+                    RoundedCornerShape(12.dp)
+                  )
+                  .background(chipBg)
+                  .clickable { onPlayReading(reading) }
+                  .padding(horizontal = 11.dp, vertical = 6.dp),
+                contentAlignment = Alignment.Center
+              ) {
+                Text(
+                  text = reading,
+                  fontSize = 13.5.sp,
+                  fontWeight = FontWeight.SemiBold,
+                  color = chipTextColor,
+                  maxLines = 1,
+                  softWrap = false
+                )
+              }
             }
           }
         }
 
-        // Speaker icon on right
-        val isAllOnPlaying = currentlyPlaying == kanji.onReadingsDisplay.joinToString("、")
-        val allOnBg by animateColorAsState(
-          targetValue = if (isAllOnPlaying) BrandPurple else BrandPurpleVeryLight,
-          label = "AllOnBg"
-        )
-        val allOnIcon by animateColorAsState(
-          targetValue = if (isAllOnPlaying) Color.White else BrandPurple,
-          label = "AllOnIcon"
-        )
+        if (kanji.onReadingsDisplay.isNotEmpty()) {
+          Spacer(modifier = Modifier.width(10.dp))
 
-        Box(
-          modifier = Modifier
-            .size(38.dp)
-            .clip(CircleShape)
-            .border(1.2.dp, SoftPurpleBorder, CircleShape)
-            .background(allOnBg)
-            .clickable(onClick = onPlayAllOn),
-          contentAlignment = Alignment.Center
-        ) {
-          Icon(
-            Icons.AutoMirrored.Filled.VolumeUp,
-            contentDescription = "Play On'yomi",
-            tint = allOnIcon,
-            modifier = Modifier.size(19.dp)
+          // Speaker icon on right
+          val isAllOnPlaying = currentlyPlaying == kanji.onReadingsDisplay.joinToString("、")
+          val allOnBg by animateColorAsState(
+            targetValue = if (isAllOnPlaying) BrandPurple else BrandPurpleVeryLight,
+            label = "AllOnBg"
           )
+          val allOnIcon by animateColorAsState(
+            targetValue = if (isAllOnPlaying) Color.White else BrandPurple,
+            label = "AllOnIcon"
+          )
+
+          Box(
+            modifier = Modifier
+              .size(38.dp)
+              .clip(CircleShape)
+              .border(1.2.dp, SoftPurpleBorder, CircleShape)
+              .background(allOnBg)
+              .clickable(onClick = onPlayAllOn),
+            contentAlignment = Alignment.Center
+          ) {
+            Icon(
+              Icons.AutoMirrored.Filled.VolumeUp,
+              contentDescription = "Play On'yomi",
+              tint = allOnIcon,
+              modifier = Modifier.size(19.dp)
+            )
+          }
         }
       }
     }
@@ -1038,7 +1077,7 @@ fun VocabularyCard(
             .clip(RoundedCornerShape(8.dp))
             .background(rowBg)
             .clickable { onPlayVocab(vocab) }
-            .padding(horizontal = 4.dp, vertical = 7.dp),
+            .padding(horizontal = 4.dp, vertical = 8.dp),
           verticalAlignment = Alignment.CenterVertically
         ) {
           // Speaker icon
@@ -1051,14 +1090,24 @@ fun VocabularyCard(
 
           Spacer(modifier = Modifier.width(10.dp))
 
-          // Word with furigana/reading
-          Text(
-            text = "${vocab.word} (${vocab.reading})",
-            fontSize = 14.5.sp,
-            fontWeight = FontWeight.Medium,
-            color = PrimaryText,
-            modifier = Modifier.weight(1.3f)
-          )
+          // Word stacked cleanly above its reading (no awkward mid-furigana line breaks)
+          Column(modifier = Modifier.weight(1.15f)) {
+            Text(
+              text = vocab.word,
+              fontSize = 15.5.sp,
+              fontWeight = FontWeight.SemiBold,
+              color = PrimaryText
+            )
+            if (vocab.reading.isNotBlank()) {
+              Text(
+                text = vocab.reading,
+                fontSize = 12.5.sp,
+                color = BrandPurple
+              )
+            }
+          }
+
+          Spacer(modifier = Modifier.width(8.dp))
 
           // Meaning
           Text(
@@ -1120,20 +1169,23 @@ fun PracticeWritingCard(
         text = "Practice Writing",
         fontSize = 15.sp,
         fontWeight = FontWeight.Bold,
-        color = PrimaryText
+        color = PrimaryText,
+        maxLines = 1,
+        softWrap = false
       )
 
       Spacer(modifier = Modifier.weight(1f))
+      Spacer(modifier = Modifier.width(10.dp))
 
-      // 4 faint preview boxes
+      // 3 crisp preview boxes with comfortable breathing room
       Row(
-        horizontalArrangement = Arrangement.spacedBy(5.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
         verticalAlignment = Alignment.CenterVertically
       ) {
-        repeat(4) {
+        repeat(3) {
           PracticeWritingBox(
             character = kanji.character,
-            size = 36.dp,
+            size = 34.dp,
             onClick = onClick
           )
         }

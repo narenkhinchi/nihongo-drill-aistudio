@@ -1,11 +1,11 @@
-number,level,lesson,kanji,meaning,kun_readings,on_readings,stroke_count,examples
-36,N5,4,上,"above, on; up, superior","うえ; あ-がる; のぼ-る; あ-げる","ジョウ",3,"上(うえ): above, on | 上がる(あ・がる): to go up, to rise | 上る(のぼ・る): to go up | 上手な(じょう・ず・な): skillful"
-37,N5,4,下,"under; down, inferior","した; さ-がる; くだ-る; さ-げる","カ; ゲ",3,"下(した): under | 下がる(さ・がる): to go down | 年下(とし・した): younger | 下車する(げ・しゃ・する): to get off"
-38,N5,4,中,"middle; inside","なか","チュウ; -ジュウ",4,"中(なか): inside | 中心(ちゅう・しん): the center | 一日中(いち・にち・じゅう): all day long"
-39,N5,4,大,"big, large; great","おお-きい","ダイ; タイ",3,"大きい＝大きな(おお・きい): big | 大学(だい・がく): a university | 大切な(たい・せつ・な): important | 大人(おとな): an adult"
-40,N5,4,小,"small, little","ちい-さい; こ; お","ショウ",3,"小さい＝小さな(ちい・さい): small | 小川(お・がわ): a brook, a stream | 小学校(しょう・がっ・こう): a primary school | 小人(こども): a child"
-41,N5,4,本,"root, origin; true, main","もと","ホン",5,"山本(やま・もと): a Japanese surname | 本(ほん): a book | 本日(ほん・じつ): this day | 本店(ほん・てん): the main office"
-42,N5,4,半,"half","（なか-ば）","ハン",5,"半ば(なか・ば): halfway, middle | 半分(はん・ぶん): half | 半年(はん・とし): half a year | 三時半(さん・じ・はん): 3:30"
-43,N5,4,分,"division, part; minute","わ-かれる; わ-かる; わ-ける","ブン; ブ; フン; -プン",4,"分ける(わ・ける): to divide | 分かる(わ・かる): to understand | 五分(ご・ふん): five minutes | 六分(ろっ・ぷん): six minutes"
-44,N5,4,力,"power, force; ability","ちから","リョク; リキ",2,"力(ちから): power | 実力(じつ・りょく): one's real ability | 力学(りき・がく): dynamics"
-45,N5,4,何,"what","なに; なん","（カ）",7,"何(なに): what | 何ですか。(なん・ですか。): What is it? | 何人(なん・にん): how many people | 何年(なん・ねん): what year"
+level,lesson,number,kanji,meaning,kun_readings,on_readings,stroke_count,examples
+N5,4,36,上,"Above, On; Up, Superior",うえ; あ-がる; のぼ-る; あ-げる,ジョウ,3,"上 (うえ) = above, on | 上がる (あ・がる) = to go up, to rise | 上る (のぼ・る) = to climb, to go up | 上手な (じょう・ず・な) = skillful, good at"
+N5,4,37,下,"Under; Down, Inferior",した; さ-がる; くだ-る; さ-げる,カ; ゲ,3,下 (した) = under | 下がる (さ・がる) = to go down | 年下 (とし・した) = younger | 下車する (げ・しゃ・する) = to get off (a train/bus)
+N5,4,38,中,Middle; Inside,なか,チュウ; -ジュウ,4,中 (なか) = inside | 中心 (ちゅう・しん) = the center | 一日中 (いち・にち・じゅう) = all day long
+N5,4,39,大,"Big, Large; Great",おお-きい,ダイ; タイ,3,"大きい (おお・きい) = big, large | 大きな (おお・きな) = big (before a noun) | 大学 (だい・がく) = a university | 大切な (たい・せつ・な) = important | 大人 (おとな) = an adult"
+N5,4,40,小,"Small, Little",ちい-さい; こ; お,ショウ,3,"小さい (ちい・さい) = small, little | 小さな (ちい・さな) = small (before a noun) | 小川 (お・がわ) = a brook, a stream | 小学校 (しょう・がっ・こう) = a primary school | 小人 (こども) = child (e.g., ticket fare)"
+N5,4,41,本,"Root, Origin; True, Main",もと,ホン,5,"山本 (やま・もと) = Japanese surname | 本 (ほん) = a book | 本日 (ほん・じつ) = today (formal) | 本店 (ほん・てん) = main store, head office"
+N5,4,42,半,Half,（なか-ば）,ハン,5,"半ば (なか・ば) = halfway, middle | 半分 (はん・ぶん) = half | 半年 (はん・とし) = half a year | 三時半 (さん・じ・はん) = 3:30"
+N5,4,43,分,"Division, Part; Minute",わ-かれる; わ-かる; わ-ける,ブン; ブ; フン; -プン,4,分ける (わ・ける) = to divide | 分かる (わ・かる) = to understand | 五分 (ご・ふん) = five minutes | 六分 (ろっ・ぷん) = six minutes
+N5,4,44,力,"Power, Force; Ability",ちから,リョク; リキ,2,力 (ちから) = power | 実力 (じつ・りょく) = one's real ability | 力学 (りき・がく) = dynamics
+N5,4,45,何,What,なに; なん,（カ）,7,何 (なに) = what | 何ですか。 (なん・ですか。) = What is it? | 何人 (なん・にん) = how many people | 何年 (なん・ねん) = what year
