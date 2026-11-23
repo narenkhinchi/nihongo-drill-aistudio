@@ -566,6 +566,31 @@ fun KanjiReadingScreen(
     selectedCharIndex = null
   }
 
+  val lessonsWithReading = remember(readingLessons, storiesInLevel, exercisesInLevel) {
+    readingLessons.filter { lesson ->
+      storiesInLevel.any { it.lessonNumber == lesson.lessonNumber } ||
+        exercisesInLevel.any { it.lessonNumber == lesson.lessonNumber }
+    }
+  }
+  val storyAnchorLessonNumber = if (selectedLessonNumbers.size == 1) {
+    selectedLessonNumbers.first()
+  } else {
+    currentStory?.lessonNumber
+  }
+  val storyLessonPos = remember(lessonsWithReading, storyAnchorLessonNumber) {
+    if (storyAnchorLessonNumber != null) {
+      lessonsWithReading.indexOfFirst { it.lessonNumber == storyAnchorLessonNumber }
+    } else {
+      -1
+    }
+  }
+  val previousLessonForStory = if (storyLessonPos > 0) lessonsWithReading[storyLessonPos - 1] else null
+  val nextLessonForStory = if (storyLessonPos in 0 until lessonsWithReading.lastIndex) {
+    lessonsWithReading[storyLessonPos + 1]
+  } else {
+    null
+  }
+
   Scaffold(
     modifier = modifier
       .fillMaxSize()
@@ -573,7 +598,20 @@ fun KanjiReadingScreen(
     containerColor = MainBackground,
     bottomBar = {
       if (readingMode == "Story" && currentStory != null) {
-        // Bottom Navigation Bar matching image_eedcb741.png: [ < Previous ]   1 / 2   [ Next > ]
+        val canGoPrevious = currentPageIndex > 0 || previousLessonForStory != null
+        val canGoNext = currentPageIndex < totalPages - 1 || nextLessonForStory != null
+        val previousLabel = when {
+          currentPageIndex > 0 -> "Previous"
+          previousLessonForStory != null -> previousLessonForStory.title
+          else -> "Previous"
+        }
+        val nextLabel = when {
+          currentPageIndex < totalPages - 1 -> "Next"
+          nextLessonForStory != null -> nextLessonForStory.title
+          else -> "Next"
+        }
+
+        // Bottom Navigation Bar: [ < Previous / Lesson X ]   1 / 2   [ Next / Lesson Y > ]
         Surface(
           modifier = Modifier
             .fillMaxWidth()
@@ -587,39 +625,48 @@ fun KanjiReadingScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
           ) {
-            // < Previous pill button
+            // < Previous pill button (previous page, or previous lesson when on Page 1)
             Surface(
               onClick = {
                 if (currentPageIndex > 0) {
                   currentPageIndex--
+                } else if (previousLessonForStory != null) {
+                  selectedLessonIds = setOf(previousLessonForStory.id)
                 }
               },
-              enabled = currentPageIndex > 0,
+              enabled = canGoPrevious,
               shape = RoundedCornerShape(24.dp),
               color = SoftPurplePillBg,
-              border = BorderStroke(1.dp, SoftPurpleBorder),
+              border = BorderStroke(
+                1.dp,
+                if (canGoPrevious) BrandPurple.copy(alpha = 0.45f) else SoftPurpleBorder
+              ),
               modifier = Modifier
-                .width(124.dp)
-                .height(44.dp)
+                .width(128.dp)
+                .height(48.dp)
                 .testTag("story_previous_button")
             ) {
               Row(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                  .fillMaxSize()
+                  .padding(horizontal = 10.dp),
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
               ) {
                 Icon(
                   Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                   contentDescription = null,
-                  tint = if (currentPageIndex > 0) BrandPurple else BrandPurple.copy(alpha = 0.45f),
+                  tint = if (canGoPrevious) BrandPurple else BrandPurple.copy(alpha = 0.45f),
                   modifier = Modifier.size(18.dp)
                 )
                 Spacer(modifier = Modifier.width(2.dp))
                 Text(
-                  text = "Previous",
+                  text = previousLabel,
                   fontSize = 14.5.sp,
                   fontWeight = FontWeight.Bold,
-                  color = if (currentPageIndex > 0) BrandPurple else BrandPurple.copy(alpha = 0.45f)
+                  color = if (canGoPrevious) BrandPurple else BrandPurple.copy(alpha = 0.45f),
+                  maxLines = 1,
+                  overflow = TextOverflow.Ellipsis
                 )
               }
             }
@@ -632,14 +679,16 @@ fun KanjiReadingScreen(
               color = PrimaryText
             )
 
-            // Next > pill button
+            // Next > pill button (next page, or next lesson when on last page)
             Button(
               onClick = {
                 if (currentPageIndex < totalPages - 1) {
                   currentPageIndex++
+                } else if (nextLessonForStory != null) {
+                  selectedLessonIds = setOf(nextLessonForStory.id)
                 }
               },
-              enabled = currentPageIndex < totalPages - 1,
+              enabled = canGoNext,
               shape = RoundedCornerShape(24.dp),
               colors = ButtonDefaults.buttonColors(
                 containerColor = BrandPurple,
@@ -647,16 +696,18 @@ fun KanjiReadingScreen(
                 disabledContainerColor = BrandPurple.copy(alpha = 0.45f),
                 disabledContentColor = Color.White
               ),
-              contentPadding = PaddingValues(horizontal = 16.dp, vertical = 0.dp),
+              contentPadding = PaddingValues(horizontal = 12.dp, vertical = 0.dp),
               modifier = Modifier
-                .width(124.dp)
-                .height(44.dp)
+                .width(128.dp)
+                .height(48.dp)
                 .testTag("story_next_button")
             ) {
               Text(
-                text = "Next",
+                text = nextLabel,
                 fontSize = 14.5.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
               )
               Spacer(modifier = Modifier.width(4.dp))
               Icon(
