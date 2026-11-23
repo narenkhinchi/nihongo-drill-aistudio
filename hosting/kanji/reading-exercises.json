@@ -1,4 +1,333 @@
 {
   "schemaVersion": 1,
-  "exercises": []
+  "exercises": [
+    {
+      "id": 101,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "きょうは３月１５日です。",
+      "readingHiragana": "きょうは さんがつ じゅうごにち です。",
+      "translation": "Today is the 15th of March."
+    },
+    {
+      "id": 102,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "あの人は山川さんです。",
+      "readingHiragana": "あのひとは やまかわさん です。",
+      "translation": "That man over there is Mr. Yamakawa."
+    },
+    {
+      "id": 103,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "山川さんは日本人です。",
+      "readingHiragana": "やまかわさんは にほんじん です。",
+      "translation": "Mr. Yamakawa is a Japanese."
+    },
+    {
+      "id": 104,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "あの山は筑波山です。",
+      "readingHiragana": "あのやまは つくばさん です。",
+      "translation": "That mountain over there is Mt. Tsukuba."
+    },
+    {
+      "id": 105,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "この川は利根川です。",
+      "readingHiragana": "このかわは とねがわ です。",
+      "translation": "This river is the Tone River."
+    },
+    {
+      "id": 106,
+      "level": "N5",
+      "lessonNumber": 1,
+      "sentenceWithKanji": "川田さんの専門は車です。",
+      "readingHiragana": "かわださんの せんもんは くるま です。",
+      "translation": "Mr. Kawada's specialty is cars."
+    },
+    {
+      "id": 201,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "これは山川さんのお金です。",
+      "readingHiragana": "これは やまかわさんの おかね です。",
+      "translation": "This is Mr. Yamakawa's money."
+    },
+    {
+      "id": 202,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "すみません。水をください。",
+      "readingHiragana": "すみません。みずを ください。",
+      "translation": "Excuse me. Please give me some water."
+    },
+    {
+      "id": 203,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "あの女の人は学生です。",
+      "readingHiragana": "あの おんなのひとは がくせい です。",
+      "translation": "That woman over there is a student."
+    },
+    {
+      "id": 204,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "私は先生ではありません。",
+      "readingHiragana": "わたしは せんせい では ありません。",
+      "translation": "I am not a teacher."
+    },
+    {
+      "id": 205,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "金田さんは大学の先生です。",
+      "readingHiragana": "かねださんは だいがくの せんせい です。",
+      "translation": "Mr. Kaneda is a university teacher."
+    },
+    {
+      "id": 206,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "あの女子学生は２１です。",
+      "readingHiragana": "あの じょしがくせいは にじゅういち です。",
+      "translation": "That girl student is 21 years old."
+    },
+    {
+      "id": 207,
+      "level": "N5",
+      "lessonNumber": 2,
+      "sentenceWithKanji": "私の生年月日は１９６０年３月１１日です。",
+      "readingHiragana": "わたしの せいねんがっぴは せんきゅうひゃくろくじゅうねん さんがつ じゅういちにち です。",
+      "translation": "My date of birth is the 11th of March 1960."
+    },
+    {
+      "id": 301,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "百円",
+      "readingHiragana": "ひゃくえん",
+      "translation": "100 yen"
+    },
+    {
+      "id": 302,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "六千九百円",
+      "readingHiragana": "ろくせん きゅうひゃくえん",
+      "translation": "6,900 yen"
+    },
+    {
+      "id": 303,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "六百円",
+      "readingHiragana": "ろっぴゃくえん",
+      "translation": "600 yen"
+    },
+    {
+      "id": 304,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "一万七千円",
+      "readingHiragana": "いちまん ななせんえん",
+      "translation": "17,000 yen"
+    },
+    {
+      "id": 305,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "四か月",
+      "readingHiragana": "よんかげつ",
+      "translation": "4 months"
+    },
+    {
+      "id": 306,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "八年",
+      "readingHiragana": "はちねん",
+      "translation": "8 years"
+    },
+    {
+      "id": 307,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "山田先生の年は四十九です。",
+      "readingHiragana": "やまだせんせいの としは よんじゅうきゅう です。",
+      "translation": "Mr. Yamada is 49 years old."
+    },
+    {
+      "id": 308,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "この車は四十五万円です。",
+      "readingHiragana": "この くるまは よんじゅうごまんえん です。",
+      "translation": "This car is 450,000 yen."
+    },
+    {
+      "id": 309,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "あの山は二千メートルです。",
+      "readingHiragana": "あの やまは にせん メートル です。",
+      "translation": "That mountain is 2,000 meters high."
+    },
+    {
+      "id": 310,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "一年は三百六十五日です。",
+      "readingHiragana": "いちねんは さんびゃくろくじゅうごにち です。",
+      "translation": "One year is 365 days."
+    },
+    {
+      "id": 311,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "三月三日",
+      "readingHiragana": "さんがつ みっか",
+      "translation": "March 3rd"
+    },
+    {
+      "id": 312,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "六月二十四日",
+      "readingHiragana": "ろくがつ にじゅうよっか",
+      "translation": "June 24th"
+    },
+    {
+      "id": 313,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "一九八五年",
+      "readingHiragana": "せんきゅうひゃくはちじゅうごねん",
+      "translation": "1985"
+    },
+    {
+      "id": 314,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "〇三－三四六九－八二五一",
+      "readingHiragana": "ぜろさん の さんよんろくきゅう の はちにいごいち",
+      "translation": "03-3469-8251 (phone number)"
+    },
+    {
+      "id": 315,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "きょうは九月九日の水よう日です。",
+      "readingHiragana": "きょうは くがつ ここのかの すいようび です。",
+      "translation": "Today is Wednesday, September 9th."
+    },
+    {
+      "id": 316,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "五月五日は子どもの日です。",
+      "readingHiragana": "ごがつ いつかは こどものひ です。",
+      "translation": "May 5th is Children's Day."
+    },
+    {
+      "id": 317,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "このくにの人口は六千万人ぐらいです。",
+      "readingHiragana": "このくにの じんこうは ろくせんまんにん ぐらい です。",
+      "translation": "The population of this country is about 60 million."
+    },
+    {
+      "id": 318,
+      "level": "N5",
+      "lessonNumber": 3,
+      "sentenceWithKanji": "二月七日は金よう日ではありません。",
+      "readingHiragana": "にがつ なのかは きんようび では ありません。",
+      "translation": "February 7th is not Friday."
+    },
+    {
+      "id": 401,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "これは何の本ですか。日本語の本です。",
+      "readingHiragana": "これは なんの ほんですか。にほんごの ほんです。",
+      "translation": "What kind of book is this? It is a Japanese book."
+    },
+    {
+      "id": 402,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "山田さんの専門は力学ではありません。",
+      "readingHiragana": "やまださんの せんもんは りきがくでは ありません。",
+      "translation": "Mr. Yamada's specialty is not dynamics."
+    },
+    {
+      "id": 403,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "つくえの上にお金があります。",
+      "readingHiragana": "つくえの うえに おかねが あります。",
+      "translation": "There is some money on the desk."
+    },
+    {
+      "id": 404,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "車の中に小さいかばんがあります。",
+      "readingHiragana": "くるまの なかに ちいさい かばんが あります。",
+      "translation": "There is a small bag in the car."
+    },
+    {
+      "id": 405,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "大きいケーキを半分に分けました。",
+      "readingHiragana": "おおきい ケーキを はんぶんに わけました。",
+      "translation": "We divided a big cake in two."
+    },
+    {
+      "id": 406,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "あなたの生年月日は何年何月何日ですか。",
+      "readingHiragana": "あなたの せいねんがっぴは なんねん なんがつ なんにち ですか。",
+      "translation": "What is your date of birth (year, month, and day)?"
+    },
+    {
+      "id": 407,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "いま何時何分ですか。九時五十分です。",
+      "readingHiragana": "いま なんじ なんぷん ですか。くじ ごじゅっぷん です。",
+      "translation": "What time is it now? It is 9:50."
+    },
+    {
+      "id": 408,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "上りと下りの電車",
+      "readingHiragana": "のぼりと くだりの でんしゃ",
+      "translation": "upbound and downbound trains"
+    },
+    {
+      "id": 409,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "上がる",
+      "readingHiragana": "あがる",
+      "translation": "to go up, to rise"
+    },
+    {
+      "id": 410,
+      "level": "N5",
+      "lessonNumber": 4,
+      "sentenceWithKanji": "下がる",
+      "readingHiragana": "さがる",
+      "translation": "to go down"
+    }
+  ]
 }

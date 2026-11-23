@@ -83,7 +83,8 @@ sealed interface StoryKanjiLookupResult {
 
   data class StoryVocabHint(
     override val character: Char,
-    val vocab: KanjiStoryVocab
+    val vocab: KanjiStoryVocab,
+    val sourceLabel: String = "From this story · Full lesson coming soon"
   ) : StoryKanjiLookupResult
 }
 
@@ -94,13 +95,14 @@ internal fun isCjkKanji(ch: Char): Boolean {
 }
 
 /**
- * Dynamically builds a 2-layer lookup map for any story:
+ * Dynamically builds a multi-layer lookup map for any story or sentence reading screen:
  * 1. All built-in and Firebase-synced Kanji lessons (full meaning, readings, top 3 examples).
- * 2. Fallback to the current story's vocabulary list for Kanji whose full lesson is not uploaded yet.
+ * 2. Fallback to the active story's vocabulary list (when reading a story).
+ * 3. Fallback to uploaded lesson vocabulary examples (e.g. 専 via 専門 in Lesson 1).
  */
 fun buildStoryKanjiIndex(
   allLessons: List<KanjiLesson>,
-  story: KanjiStory
+  story: KanjiStory? = null
 ): Map<Char, StoryKanjiLookupResult> {
   val result = LinkedHashMap<Char, StoryKanjiLookupResult>()
 
@@ -122,13 +124,43 @@ fun buildStoryKanjiIndex(
   }
 
   // Layer 2: Story vocabulary fallback for future-lesson Kanji
-  for (vocab in story.vocabulary) {
-    for (ch in vocab.wordWithReading) {
-      if (isCjkKanji(ch) && !result.containsKey(ch)) {
-        result[ch] = StoryKanjiLookupResult.StoryVocabHint(
-          character = ch,
-          vocab = vocab
-        )
+  if (story != null) {
+    for (vocab in story.vocabulary) {
+      for (ch in vocab.wordWithReading) {
+        if (isCjkKanji(ch) && !result.containsKey(ch)) {
+          result[ch] = StoryKanjiLookupResult.StoryVocabHint(
+            character = ch,
+            vocab = vocab,
+            sourceLabel = "From this story · Full lesson coming soon"
+          )
+        }
+      }
+    }
+  }
+
+  // Layer 3: Book vocabulary examples fallback for unlearned Kanji appearing in compound words
+  for (lesson in allLessons) {
+    for (kanji in lesson.kanjiList) {
+      val examples = KanjiRepository.getVocabularyForKanji(kanji.number)
+      for (vocab in examples) {
+        for (ch in vocab.word) {
+          if (isCjkKanji(ch) && !result.containsKey(ch)) {
+            val formatted = if (vocab.reading.isNotBlank()) {
+              "${vocab.word}（${vocab.reading}）"
+            } else {
+              vocab.word
+            }
+            result[ch] = StoryKanjiLookupResult.StoryVocabHint(
+              character = ch,
+              vocab = KanjiStoryVocab(
+                wordWithReading = formatted,
+                meaning = vocab.meaning,
+                audioText = vocab.reading.ifBlank { vocab.word }
+              ),
+              sourceLabel = "Book vocabulary · Full lesson coming soon"
+            )
+          }
+        }
       }
     }
   }
@@ -642,7 +674,7 @@ private fun StoryVocabHintSheetContent(
         color = BrandPurpleLight
       ) {
         Text(
-          text = "From this story · Full lesson coming soon",
+          text = result.sourceLabel,
           fontSize = 11.sp,
           fontWeight = FontWeight.Bold,
           color = BrandPurpleDark,

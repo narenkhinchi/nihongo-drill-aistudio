@@ -104,15 +104,19 @@ private val QuizOrange = Color(0xFFFF9900)
 fun KanjiReadingScreen(
   selectedLevel: String,
   lessonsForLevel: List<KanjiLesson>,
+  contentVersion: Int = 0,
   onBack: () -> Unit,
   onPlayAudio: (String) -> Unit,
   modifier: Modifier = Modifier
 ) {
-  val readingLessons = remember(selectedLevel, lessonsForLevel) {
+  val readingLessons = remember(selectedLevel, lessonsForLevel, contentVersion) {
     KanjiRepository.getReadingLessonsForLevel(selectedLevel)
   }
-  val storiesInLevel = remember(selectedLevel) {
+  val storiesInLevel = remember(selectedLevel, readingLessons, contentVersion) {
     KanjiRepository.getStoriesForLevel(selectedLevel)
+  }
+  val exercisesInLevel = remember(selectedLevel, readingLessons, contentVersion) {
+    KanjiRepository.getReadingExercisesForLevel(selectedLevel)
   }
 
   // Step 1: Lesson Selection state (user can pick 1 lesson, multiple lessons, or All Lessons)
@@ -243,11 +247,19 @@ fun KanjiReadingScreen(
         ) {
           // 1. "All Lessons" Selection Card
           item {
-            val allSubtitle = if (storiesInLevel.isNotEmpty()) {
-              val storyLabel = if (storiesInLevel.size == 1) "1 story" else "${storiesInLevel.size} stories"
-              "Read stories & sentences from $selectedLevel ($storyLabel)"
-            } else {
-              "Select lessons from $selectedLevel for reading"
+            val allSubtitle = buildList {
+              if (storiesInLevel.isNotEmpty()) {
+                add(if (storiesInLevel.size == 1) "1 story" else "${storiesInLevel.size} stories")
+              }
+              if (exercisesInLevel.isNotEmpty()) {
+                add(if (exercisesInLevel.size == 1) "1 sentence" else "${exercisesInLevel.size} sentences")
+              }
+            }.let { parts ->
+              if (parts.isNotEmpty()) {
+                "Read from $selectedLevel (${parts.joinToString(" · ")})"
+              } else {
+                "Select lessons from $selectedLevel for reading"
+              }
             }
             Card(
               modifier = Modifier
@@ -371,9 +383,18 @@ fun KanjiReadingScreen(
           items(readingLessons, key = { it.id }) { lesson ->
             val isLessonSelected = selectedLessonIds.contains(lesson.id)
             val lessonStories = storiesInLevel.filter { it.lessonNumber == lesson.lessonNumber }
+            val lessonExercises = exercisesInLevel.filter { it.lessonNumber == lesson.lessonNumber }
             val badgeText = when {
+              lessonStories.isNotEmpty() && lessonExercises.isNotEmpty() -> {
+                val sLabel = if (lessonStories.size == 1) "1 story" else "${lessonStories.size} stories"
+                val eLabel = if (lessonExercises.size == 1) "1 sentence" else "${lessonExercises.size} sentences"
+                "$sLabel · $eLabel"
+              }
               lessonStories.isNotEmpty() -> {
                 if (lessonStories.size == 1) "1 story" else "${lessonStories.size} stories"
+              }
+              lessonExercises.isNotEmpty() -> {
+                if (lessonExercises.size == 1) "1 sentence" else "${lessonExercises.size} sentences"
               }
               lesson.kanjiList.isNotEmpty() -> "${lesson.kanjiList.size} kanji"
               else -> "Reading"
@@ -500,16 +521,30 @@ fun KanjiReadingScreen(
     return
   }
 
-  // Step 2 UI: Two buttons at top ("Story Reading" and "Sentence") switching between Story Reading UI & Sentence UI
-  var readingMode by remember { mutableStateOf("Story") } // "Story" or "Sentence"
-
+  // Step 2 UI: Two buttons at top ("Story Reading" and "Sentence") with smart auto-tab routing:
+  // If selected lesson(s) have a Story (or both), open "Story" first; if only Sentences exist, open "Sentence" directly.
   val selectedLessonNumbers = remember(selectedLessons) {
     selectedLessons.map { it.lessonNumber }.toSet()
   }
-  val storiesForSelection = remember(selectedLevel, selectedLessonNumbers) {
+  val storiesForSelection = remember(selectedLevel, selectedLessonNumbers, contentVersion) {
     KanjiRepository.getStoriesForLevel(selectedLevel)
       .filter { selectedLessonNumbers.contains(it.lessonNumber) }
   }
+  val exercises = remember(selectedLevel, selectedLessonNumbers, contentVersion) {
+    KanjiRepository.getReadingExercisesForLevel(selectedLevel)
+      .filter { selectedLessonNumbers.contains(it.lessonNumber) }
+  }
+  val defaultReadingMode = remember(storiesForSelection, exercises) {
+    when {
+      storiesForSelection.isNotEmpty() -> "Story"
+      exercises.isNotEmpty() -> "Sentence"
+      else -> "Story"
+    }
+  }
+  var readingMode by remember(selectedLessonIds, defaultReadingMode) {
+    mutableStateOf(defaultReadingMode)
+  }
+
   val currentStory = storiesForSelection.firstOrNull()
   var currentPageIndex by remember(currentStory?.id) { mutableIntStateOf(0) }
   val totalPages = currentStory?.pages?.size?.coerceAtLeast(1) ?: 0
@@ -518,24 +553,18 @@ fun KanjiReadingScreen(
   }
 
   var showTranslation by remember(currentStory?.id) { mutableStateOf(false) }
+  var showSentenceTranslation by remember(selectedLessonIds) { mutableStateOf(false) }
   var isVocabExpanded by remember(currentStory?.id) { mutableStateOf(false) }
   var isKanjiPopupEnabled by rememberSaveable { mutableStateOf(true) }
   var selectedKanjiLookup by remember { mutableStateOf<StoryKanjiLookupResult?>(null) }
   var selectedParagraphIndex by remember { mutableStateOf<Int?>(null) }
   var selectedCharIndex by remember { mutableStateOf<Int?>(null) }
 
-  LaunchedEffect(currentStory?.id, currentPageIndex, showTranslation, readingMode) {
+  LaunchedEffect(currentStory?.id, currentPageIndex, showTranslation, showSentenceTranslation, readingMode, selectedLessonIds) {
     selectedKanjiLookup = null
     selectedParagraphIndex = null
     selectedCharIndex = null
   }
-
-  val exercises = remember(selectedLevel, selectedLessonNumbers) {
-    KanjiRepository.getReadingExercisesForLevel(selectedLevel)
-      .filter { selectedLessonNumbers.contains(it.lessonNumber) }
-  }
-  val revealedMap = remember(selectedLessonIds) { mutableStateMapOf<Int, Boolean>() }
-  var showAllReadings by remember(selectedLessonIds) { mutableStateOf(false) }
 
   Scaffold(
     modifier = modifier
@@ -1170,132 +1199,386 @@ fun KanjiReadingScreen(
             }
           }
         } else {
-          Row(
-            modifier = Modifier
-              .fillMaxWidth()
-              .padding(horizontal = 16.dp, vertical = 4.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-          ) {
-            Text(
-              text = "${exercises.size} Book Sentences",
-              fontSize = 13.5.sp,
-              fontWeight = FontWeight.SemiBold,
-              color = BrandPurple
-            )
-
-            OutlinedButton(
-              onClick = { showAllReadings = !showAllReadings },
-              shape = RoundedCornerShape(20.dp),
-              border = BorderStroke(1.dp, BorderOutline),
-              colors = ButtonDefaults.outlinedButtonColors(
-                containerColor = CardSurface,
-                contentColor = BrandPurple
-              )
-            ) {
-              Icon(
-                imageVector = if (showAllReadings) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                contentDescription = null,
-                modifier = Modifier.size(16.dp)
-              )
-              Spacer(modifier = Modifier.width(6.dp))
-              Text(
-                text = if (showAllReadings) "Hide All" else "Show All",
-                fontSize = 12.5.sp,
-                fontWeight = FontWeight.SemiBold
-              )
-            }
+          // SENTENCE READING VIEW — unified clean Story-style card with interactive Kanji popup, Eye toggle, and all translations grouped below
+          val sentenceScrollState = rememberScrollState()
+          LaunchedEffect(selectedLessonIds) {
+            sentenceScrollState.scrollTo(0)
           }
 
-          LazyColumn(
+          val allLessonsForSentenceLookup = KanjiRepository.allLessons
+          val sentenceKanjiIndex = remember(selectedLessonIds, allLessonsForSentenceLookup) {
+            buildStoryKanjiIndex(allLessonsForSentenceLookup, story = null)
+          }
+
+          val distinctLessonNumbers = remember(exercises) {
+            exercises.map { it.lessonNumber }.distinct().sorted()
+          }
+          val sentenceHeaderTitle = when {
+            distinctLessonNumbers.size == 1 -> "Lesson ${distinctLessonNumbers.first()} · Sentences"
+            distinctLessonNumbers.size <= 3 -> "Lessons ${distinctLessonNumbers.joinToString(", ")} · Sentences"
+            else -> "$selectedLevel Reading Sentences"
+          }
+
+          Column(
             modifier = Modifier
               .fillMaxSize()
-              .padding(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-            contentPadding = PaddingValues(top = 8.dp, bottom = 28.dp)
+              .verticalScroll(sentenceScrollState)
+              .navigationBarsPadding()
+              .padding(horizontal = 16.dp, vertical = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
           ) {
-            itemsIndexed(exercises, key = { _, item -> item.id }) { index, exercise ->
-              val isRevealed = showAllReadings || (revealedMap[exercise.id] == true)
-
-              Card(
-                modifier = Modifier
-                  .fillMaxWidth()
-                  .clickable {
-                    revealedMap[exercise.id] = !(revealedMap[exercise.id] ?: false)
+            Card(
+              modifier = Modifier
+                .fillMaxWidth()
+                .testTag("sentence_reading_card"),
+              shape = RoundedCornerShape(20.dp),
+              colors = CardDefaults.cardColors(containerColor = CardSurface),
+              border = BorderStroke(1.dp, SoftPurpleBorder)
+            ) {
+              Column(modifier = Modifier.fillMaxWidth()) {
+                // Lavender Title Strip matching Story Reading card
+                Row(
+                  modifier = Modifier
+                    .fillMaxWidth()
+                    .background(BrandPurpleVeryLight)
+                    .padding(horizontal = 18.dp, vertical = 14.dp),
+                  verticalAlignment = Alignment.CenterVertically
+                ) {
+                  Icon(
+                    Icons.AutoMirrored.Filled.MenuBook,
+                    contentDescription = null,
+                    tint = PrimaryText,
+                    modifier = Modifier.size(22.dp)
+                  )
+                  Spacer(modifier = Modifier.width(10.dp))
+                  Text(
+                    text = sentenceHeaderTitle,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    color = PrimaryText,
+                    modifier = Modifier.weight(1f),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                  )
+                  Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = BrandPurpleLight
+                  ) {
+                    Text(
+                      text = "${exercises.size}",
+                      fontSize = 12.sp,
+                      fontWeight = FontWeight.Bold,
+                      color = BrandPurple,
+                      modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                    )
                   }
-                  .testTag("reading_card_${exercise.id}"),
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.cardColors(containerColor = CardSurface),
-                border = BorderStroke(1.dp, BorderOutline)
-              ) {
+                }
+
+                HorizontalDivider(color = SoftPurpleBorder, thickness = 1.dp)
+
+                // Sentences Content Area
                 Column(
                   modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp),
-                  verticalArrangement = Arrangement.spacedBy(8.dp)
+                    .padding(horizontal = 18.dp, vertical = 18.dp),
+                  verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
-                  Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                  ) {
-                    Surface(
-                      shape = RoundedCornerShape(8.dp),
-                      color = BrandPurpleLight
-                    ) {
+                  exercises.forEachIndexed { idx, exercise ->
+                    if (distinctLessonNumbers.size > 1 && (idx == 0 || exercises[idx - 1].lessonNumber != exercise.lessonNumber)) {
+                      if (idx > 0) {
+                        HorizontalDivider(
+                          color = BorderOutline,
+                          thickness = 0.8.dp,
+                          modifier = Modifier.padding(vertical = 2.dp)
+                        )
+                      }
                       Text(
-                        text = "Lesson ${exercise.lessonNumber} · #${index + 1}",
-                        fontSize = 11.5.sp,
+                        text = "Lesson ${exercise.lessonNumber}",
+                        fontSize = 12.5.sp,
                         fontWeight = FontWeight.Bold,
-                        color = BrandPurple,
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        color = BrandPurple
                       )
                     }
 
-                    IconButton(
-                      onClick = {
-                        onPlayAudio(exercise.readingHiragana.ifBlank { exercise.sentenceWithKanji })
-                      },
-                      modifier = Modifier.size(36.dp)
+                    Row(
+                      modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("reading_sentence_row_${exercise.id}"),
+                      verticalAlignment = Alignment.Top
                     ) {
-                      Icon(
-                        Icons.AutoMirrored.Filled.VolumeUp,
-                        contentDescription = "Listen",
-                        tint = BrandPurple,
-                        modifier = Modifier.size(20.dp)
+                      Text(
+                        text = "${idx + 1}.",
+                        fontSize = 15.5.sp,
+                        lineHeight = 28.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = BrandPurple,
+                        modifier = Modifier.width(28.dp)
+                      )
+                      InteractiveStoryParagraph(
+                        text = exercise.sentenceWithKanji,
+                        kanjiIndex = sentenceKanjiIndex,
+                        isKanjiPopupEnabled = isKanjiPopupEnabled,
+                        selectedCharIndex = if (selectedParagraphIndex == idx) selectedCharIndex else null,
+                        onKanjiTap = { charIndex, lookup ->
+                          selectedParagraphIndex = idx
+                          selectedCharIndex = charIndex
+                          selectedKanjiLookup = lookup
+                        },
+                        modifier = Modifier.weight(1f)
                       )
                     }
                   }
 
-                  Text(
-                    text = exercise.sentenceWithKanji,
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = PrimaryText
-                  )
+                  Spacer(modifier = Modifier.height(2.dp))
 
-                  if (isRevealed) {
+                  // Bottom Action Row matching Story Reading: [ 文A えいごの いみを みる ] + [ 👁 Eye Toggle ]
+                  Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                  ) {
+                    Surface(
+                      onClick = { showSentenceTranslation = !showSentenceTranslation },
+                      modifier = Modifier
+                        .weight(1f)
+                        .height(48.dp)
+                        .testTag("toggle_sentence_translation_button"),
+                      shape = RoundedCornerShape(24.dp),
+                      color = if (showSentenceTranslation) BrandPurple else CardSurface,
+                      border = BorderStroke(
+                        1.2.dp,
+                        if (showSentenceTranslation) BrandPurple else BrandPurple.copy(alpha = 0.65f)
+                      )
+                    ) {
+                      Row(
+                        modifier = Modifier
+                          .fillMaxSize()
+                          .padding(horizontal = 14.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                      ) {
+                        if (showSentenceTranslation) {
+                          Icon(
+                            Icons.AutoMirrored.Filled.MenuBook,
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(16.dp)
+                          )
+                        } else {
+                          Text(
+                            text = "文A",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = BrandPurple
+                          )
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                          text = if (showSentenceTranslation) "えいごの いみ" else "えいごの いみを みる",
+                          fontSize = 13.5.sp,
+                          fontWeight = FontWeight.Bold,
+                          color = if (showSentenceTranslation) Color.White else BrandPurple,
+                          maxLines = 1,
+                          overflow = TextOverflow.Ellipsis
+                        )
+                      }
+                    }
+
+                    // Eye Toggle Button: turns tap-to-inspect Kanji popup ON / OFF
+                    Surface(
+                      onClick = {
+                        isKanjiPopupEnabled = !isKanjiPopupEnabled
+                        if (!isKanjiPopupEnabled) {
+                          selectedKanjiLookup = null
+                          selectedParagraphIndex = null
+                          selectedCharIndex = null
+                        }
+                      },
+                      modifier = Modifier
+                        .size(48.dp)
+                        .testTag("sentence_kanji_popup_eye_toggle"),
+                      shape = CircleShape,
+                      color = if (isKanjiPopupEnabled) BrandPurpleVeryLight else CardSurface,
+                      border = BorderStroke(
+                        1.2.dp,
+                        if (isKanjiPopupEnabled) BrandPurple.copy(alpha = 0.65f) else BorderOutline
+                      )
+                    ) {
+                      Box(contentAlignment = Alignment.Center) {
+                        Icon(
+                          imageVector = if (isKanjiPopupEnabled) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                          contentDescription = if (isKanjiPopupEnabled) {
+                            "Turn Kanji popup off"
+                          } else {
+                            "Turn Kanji popup on"
+                          },
+                          tint = if (isKanjiPopupEnabled) BrandPurple else SecondaryText,
+                          modifier = Modifier.size(22.dp)
+                        )
+                      }
+                    }
+                  }
+
+                  // All English Translations Together Down Below (shown when showSentenceTranslation == true)
+                  if (showSentenceTranslation) {
+                    Column(
+                      modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(BrandPurpleLight)
+                        .padding(16.dp)
+                        .testTag("sentence_translations_box"),
+                      verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                      exercises.forEachIndexed { idx, exercise ->
+                        Row(
+                          modifier = Modifier.fillMaxWidth(),
+                          verticalAlignment = Alignment.Top
+                        ) {
+                          Text(
+                            text = "${idx + 1}.",
+                            fontSize = 13.5.sp,
+                            lineHeight = 20.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = BrandPurple,
+                            modifier = Modifier.width(24.dp)
+                          )
+                          Text(
+                            text = exercise.translation,
+                            fontSize = 14.sp,
+                            lineHeight = 20.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = PrimaryText,
+                            modifier = Modifier.weight(1f)
+                          )
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            // Previous / Next Lesson Navigation below the Sentence card
+            val currentLessonNumber = if (distinctLessonNumbers.size == 1) distinctLessonNumbers.first() else null
+            val lessonsWithReading = remember(readingLessons, storiesInLevel, exercisesInLevel) {
+              readingLessons.filter { lesson ->
+                storiesInLevel.any { it.lessonNumber == lesson.lessonNumber } ||
+                  exercisesInLevel.any { it.lessonNumber == lesson.lessonNumber }
+              }
+            }
+            val currentReadingPos = if (currentLessonNumber != null) {
+              lessonsWithReading.indexOfFirst { it.lessonNumber == currentLessonNumber }
+            } else {
+              -1
+            }
+            val previousReadingLesson = if (currentReadingPos > 0) {
+              lessonsWithReading[currentReadingPos - 1]
+            } else {
+              null
+            }
+            val nextReadingLesson = if (currentReadingPos in 0 until lessonsWithReading.lastIndex) {
+              lessonsWithReading[currentReadingPos + 1]
+            } else {
+              null
+            }
+
+            if (previousReadingLesson != null || nextReadingLesson != null) {
+              Row(
+                modifier = Modifier
+                  .fillMaxWidth()
+                  .padding(top = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                verticalAlignment = Alignment.CenterVertically
+              ) {
+                if (previousReadingLesson != null) {
+                  Surface(
+                    onClick = { selectedLessonIds = setOf(previousReadingLesson.id) },
+                    shape = RoundedCornerShape(26.dp),
+                    color = SoftPurplePillBg,
+                    border = BorderStroke(1.dp, SoftPurpleBorder),
+                    modifier = Modifier
+                      .weight(if (nextReadingLesson != null) 0.9f else 1f)
+                      .height(50.dp)
+                      .testTag("sentence_previous_lesson_button")
+                  ) {
+                    Row(
+                      modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = 14.dp),
+                      horizontalArrangement = Arrangement.Center,
+                      verticalAlignment = Alignment.CenterVertically
+                    ) {
+                      Icon(
+                        imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
+                        contentDescription = null,
+                        tint = BrandPurple,
+                        modifier = Modifier.size(20.dp)
+                      )
+                      Spacer(modifier = Modifier.width(2.dp))
+                      Text(
+                        text = if (nextReadingLesson != null) {
+                          previousReadingLesson.title
+                        } else {
+                          "Previous · ${previousReadingLesson.title}"
+                        },
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = BrandPurple,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                      )
+                    }
+                  }
+                }
+
+                if (nextReadingLesson != null) {
+                  Button(
+                    onClick = { selectedLessonIds = setOf(nextReadingLesson.id) },
+                    modifier = Modifier
+                      .weight(if (previousReadingLesson != null) 1.35f else 1f)
+                      .height(50.dp)
+                      .testTag("sentence_next_lesson_button"),
+                    shape = RoundedCornerShape(26.dp),
+                    colors = ButtonDefaults.buttonColors(
+                      containerColor = BrandPurple,
+                      contentColor = Color.White
+                    ),
+                    elevation = ButtonDefaults.buttonElevation(defaultElevation = 2.dp),
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 0.dp)
+                  ) {
                     Text(
-                      text = exercise.readingHiragana,
-                      fontSize = 15.sp,
-                      fontWeight = FontWeight.SemiBold,
-                      color = BrandPurple
+                      text = "Next Lesson · ${nextReadingLesson.title}",
+                      fontSize = 14.5.sp,
+                      fontWeight = FontWeight.Bold,
+                      maxLines = 1,
+                      overflow = TextOverflow.Ellipsis
                     )
-                    Text(
-                      text = exercise.translation,
-                      fontSize = 13.5.sp,
-                      color = SecondaryText
-                    )
-                  } else {
-                    Text(
-                      text = "Tap to reveal reading & meaning",
-                      fontSize = 12.5.sp,
-                      color = SecondaryText
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Icon(
+                      imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                      contentDescription = null,
+                      modifier = Modifier.size(20.dp)
                     )
                   }
                 }
               }
             }
+
+            // Compact Kanji Inspector Bottom Sheet
+            val activeLookup = selectedKanjiLookup
+            if (isKanjiPopupEnabled && activeLookup != null) {
+              StoryKanjiBottomSheet(
+                lookupResult = activeLookup,
+                onDismiss = {
+                  selectedKanjiLookup = null
+                  selectedParagraphIndex = null
+                  selectedCharIndex = null
+                }
+              )
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
           }
         }
       }

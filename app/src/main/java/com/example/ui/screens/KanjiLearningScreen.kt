@@ -171,6 +171,7 @@ fun KanjiLearningScreen(
     KanjiReadingScreen(
       selectedLevel = uiState.selectedLevel,
       lessonsForLevel = uiState.lessonsForSelectedLevel,
+      contentVersion = uiState.contentVersion,
       onBack = { viewModel.closeReadingScreen() },
       onPlayAudio = { text -> viewModel.playAudio(text) }
     )

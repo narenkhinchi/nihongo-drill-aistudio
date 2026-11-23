@@ -408,53 +408,58 @@ object KanjiRepository {
   )
 
   val lesson3Kanji: List<Kanji> = listOf(
-    Kanji(21, "一", "One", "N5", listOf("ひと・つ"), listOf("イチ", "イツ"), listOf("いち", "いつ"), 1),
-    Kanji(22, "二", "Two", "N5", listOf("ふた・つ"), listOf("ニ"), listOf("に"), 2),
-    Kanji(23, "三", "Three", "N5", listOf("みっ・つ"), listOf("サン"), listOf("さん"), 3),
-    Kanji(24, "四", "Four", "N5", listOf("よっ・つ", "よん"), listOf("シ"), listOf("し"), 5),
-    Kanji(25, "五", "Five", "N5", listOf("いつ・つ"), listOf("ゴ"), listOf("ご"), 4),
-    Kanji(26, "六", "Six", "N5", listOf("むっ・つ"), listOf("ロク"), listOf("ろく"), 4),
-    Kanji(27, "七", "Seven", "N5", listOf("なな・つ"), listOf("シチ"), listOf("しち"), 2),
-    Kanji(28, "八", "Eight", "N5", listOf("やっ・つ"), listOf("ハチ"), listOf("はち"), 2),
-    Kanji(29, "九", "Nine", "N5", listOf("ここの・つ"), listOf("キュウ", "ク"), listOf("きゅう", "く"), 2),
-    Kanji(30, "十", "Ten", "N5", listOf("とお", "と"), listOf("ジュウ"), listOf("じゅう"), 2)
+    Kanji(21, "一", "One", "N5", listOf("ひと-つ"), listOf("イチ"), listOf("いち"), 1),
+    Kanji(22, "二", "Two", "N5", listOf("ふた-つ"), listOf("ニ"), listOf("に"), 2),
+    Kanji(23, "三", "Three", "N5", listOf("みっ-つ"), listOf("サン"), listOf("さん"), 3),
+    Kanji(24, "四", "Four", "N5", listOf("よっ-つ", "よん", "よ"), listOf("シ"), listOf("し"), 5),
+    Kanji(25, "五", "Five", "N5", listOf("いつ-つ"), listOf("ゴ"), listOf("ご"), 4),
+    Kanji(26, "六", "Six", "N5", listOf("むっ-つ"), listOf("ロク"), listOf("ろく"), 4),
+    Kanji(27, "七", "Seven", "N5", listOf("なな-つ"), listOf("シチ"), listOf("しち"), 2),
+    Kanji(28, "八", "Eight", "N5", listOf("やっ-つ"), listOf("ハチ"), listOf("はち"), 2),
+    Kanji(29, "九", "Nine", "N5", listOf("ここの-つ"), listOf("キュウ", "ク"), listOf("きゅう", "く"), 2),
+    Kanji(30, "十", "Ten", "N5", listOf("とお"), listOf("ジュウ"), listOf("じゅう"), 2),
+    Kanji(31, "百", "Hundred", "N5", emptyList(), listOf("ヒャク", "-ビャク", "-ピャク"), listOf("ひゃく", "-びゃく", "-ぴゃく"), 6),
+    Kanji(32, "千", "Thousand", "N5", listOf("ち"), listOf("セン", "-ゼン"), listOf("せん", "-ぜん"), 3),
+    Kanji(33, "万", "Ten thousand; All, Every", "N5", emptyList(), listOf("マン", "バン"), listOf("まん", "ばん"), 3),
+    Kanji(34, "円", "Circle; Yen", "N5", emptyList(), listOf("エン"), listOf("えん"), 4),
+    Kanji(35, "年", "Year; Age", "N5", listOf("とし"), listOf("ネン"), listOf("ねん"), 6)
   )
 
   val n4Lesson1Kanji: List<Kanji> = listOf(
-    Kanji(31, "春", "Spring", "N4", listOf("はる"), listOf("シュン"), listOf("しゅん"), 9),
-    Kanji(32, "夏", "Summer", "N4", listOf("なつ"), listOf("カ", "ゲ"), listOf("か", "げ"), 10),
-    Kanji(33, "秋", "Autumn · Fall", "N4", listOf("あき"), listOf("シュウ"), listOf("しゅう"), 9),
-    Kanji(34, "冬", "Winter", "N4", listOf("ふゆ"), listOf("トウ"), listOf("とう"), 5),
-    Kanji(35, "朝", "Morning", "N4", listOf("あさ"), listOf("チョウ"), listOf("ちょう"), 12),
-    Kanji(36, "昼", "Daytime · Noon", "N4", listOf("ひる"), listOf("チュウ"), listOf("ちゅう"), 9),
-    Kanji(37, "夕", "Evening", "N4", listOf("ゆう"), listOf("セキ"), listOf("せき"), 3),
-    Kanji(38, "夜", "Night", "N4", listOf("よる", "よ"), listOf("ヤ"), listOf("や"), 8),
-    Kanji(39, "週", "Week", "N4", listOf(), listOf("シュウ"), listOf("しゅう"), 11),
-    Kanji(40, "曜", "Day of the week", "N4", listOf(), listOf("ヨウ"), listOf("よう"), 18)
+    Kanji(1001, "春", "Spring", "N4", listOf("はる"), listOf("シュン"), listOf("しゅん"), 9),
+    Kanji(1002, "夏", "Summer", "N4", listOf("なつ"), listOf("カ", "ゲ"), listOf("か", "げ"), 10),
+    Kanji(1003, "秋", "Autumn · Fall", "N4", listOf("あき"), listOf("シュウ"), listOf("しゅう"), 9),
+    Kanji(1004, "冬", "Winter", "N4", listOf("ふゆ"), listOf("トウ"), listOf("とう"), 5),
+    Kanji(1005, "朝", "Morning", "N4", listOf("あさ"), listOf("チョウ"), listOf("ちょう"), 12),
+    Kanji(1006, "昼", "Daytime · Noon", "N4", listOf("ひる"), listOf("チュウ"), listOf("ちゅう"), 9),
+    Kanji(1007, "夕", "Evening", "N4", listOf("ゆう"), listOf("セキ"), listOf("せき"), 3),
+    Kanji(1008, "夜", "Night", "N4", listOf("よる", "よ"), listOf("ヤ"), listOf("や"), 8),
+    Kanji(1009, "週", "Week", "N4", listOf(), listOf("シュウ"), listOf("しゅう"), 11),
+    Kanji(1010, "曜", "Day of the week", "N4", listOf(), listOf("ヨウ"), listOf("よう"), 18)
   )
 
   val n3Lesson1Kanji: List<Kanji> = listOf(
-    Kanji(41, "政", "Politics · Rule", "N3", listOf("まつりごと"), listOf("セイ", "ショウ"), listOf("せい", "しょう"), 9),
-    Kanji(42, "経", "Pass through · Manage", "N3", listOf("へ・る"), listOf("ケイ", "キョウ"), listOf("けい", "きょう"), 11),
-    Kanji(43, "済", "Settle · Finish", "N3", listOf("す・む"), listOf("サイ"), listOf("さい"), 11),
-    Kanji(44, "議", "Deliberation · Discuss", "N3", listOf(), listOf("ギ"), listOf("ぎ"), 20),
-    Kanji(45, "民", "People · Citizens", "N3", listOf("たみ"), listOf("ミン"), listOf("みん"), 5)
+    Kanji(2001, "政", "Politics · Rule", "N3", listOf("まつりごと"), listOf("セイ", "ショウ"), listOf("せい", "しょう"), 9),
+    Kanji(2002, "経", "Pass through · Manage", "N3", listOf("へ・る"), listOf("ケイ", "キョウ"), listOf("けい", "きょう"), 11),
+    Kanji(2003, "済", "Settle · Finish", "N3", listOf("す・む"), listOf("サイ"), listOf("さい"), 11),
+    Kanji(2004, "議", "Deliberation · Discuss", "N3", listOf(), listOf("ギ"), listOf("ぎ"), 20),
+    Kanji(2005, "民", "People · Citizens", "N3", listOf("たみ"), listOf("ミン"), listOf("みん"), 5)
   )
 
   val n2Lesson1Kanji: List<Kanji> = listOf(
-    Kanji(46, "届", "Deliver · Reach", "N2", listOf("とど・ける", "とど・く"), listOf("カイ"), listOf("かい"), 8),
-    Kanji(47, "層", "Layer · Stratum", "N2", listOf(), listOf("ソウ"), listOf("そう"), 14),
-    Kanji(48, "庁", "Government Office", "N2", listOf(), listOf("チョウ"), listOf("ちょう"), 5),
-    Kanji(49, "録", "Record · Copy", "N2", listOf(), listOf("ロク"), listOf("ろく"), 16),
-    Kanji(50, "省", "Ministry · Omit · Reflect", "N2", listOf("かえり・みる", "はぶ・く"), listOf("ショウ", "セイ"), listOf("しょう", "せい"), 9)
+    Kanji(3001, "届", "Deliver · Reach", "N2", listOf("とど・ける", "とど・く"), listOf("カイ"), listOf("かい"), 8),
+    Kanji(3002, "層", "Layer · Stratum", "N2", listOf(), listOf("ソウ"), listOf("そう"), 14),
+    Kanji(3003, "庁", "Government Office", "N2", listOf(), listOf("チョウ"), listOf("ちょう"), 5),
+    Kanji(3004, "録", "Record · Copy", "N2", listOf(), listOf("ロク"), listOf("ろく"), 16),
+    Kanji(3005, "省", "Ministry · Omit · Reflect", "N2", listOf("かえり・みる", "はぶ・く"), listOf("ショウ", "セイ"), listOf("しょう", "せい"), 9)
   )
 
   val n1Lesson1Kanji: List<Kanji> = listOf(
-    Kanji(51, "憲", "Constitution · Law", "N1", listOf(), listOf("ケン"), listOf("けん"), 16),
-    Kanji(52, "批", "Criticize · Compare", "N1", listOf(), listOf("ヒ"), listOf("ひ"), 7),
-    Kanji(53, "盟", "Alliance · Oath", "N1", listOf(), listOf("メイ"), listOf("めい"), 13),
-    Kanji(54, "閣", "Cabinet · Tower", "N1", listOf(), listOf("カク"), listOf("かく"), 14),
-    Kanji(55, "譲", "Yield · Hand over", "N1", listOf("ゆず・る"), listOf("ジョウ"), listOf("じょう"), 20)
+    Kanji(4001, "憲", "Constitution · Law", "N1", listOf(), listOf("ケン"), listOf("けん"), 16),
+    Kanji(4002, "批", "Criticize · Compare", "N1", listOf(), listOf("ヒ"), listOf("ひ"), 7),
+    Kanji(4003, "盟", "Alliance · Oath", "N1", listOf(), listOf("メイ"), listOf("めい"), 13),
+    Kanji(4004, "閣", "Cabinet · Tower", "N1", listOf(), listOf("カク"), listOf("かく"), 14),
+    Kanji(4005, "譲", "Yield · Hand over", "N1", listOf("ゆず・る"), listOf("ジョウ"), listOf("じょう"), 20)
   )
 
   private val builtInLessons: List<KanjiLesson> = listOf(
@@ -691,7 +696,21 @@ object KanjiRepository {
     Vocabulary(27, "七つ", "なな・つ", "seven things"),
     Vocabulary(28, "八つ", "やっ・つ", "eight things"),
     Vocabulary(29, "九つ", "ここの・つ", "nine things"),
-    Vocabulary(30, "十", "とお", "ten")
+    Vocabulary(30, "十", "とお", "ten"),
+    Vocabulary(31, "二百", "に・ひゃく", "200"),
+    Vocabulary(31, "三百", "さん・びゃく", "300"),
+    Vocabulary(31, "六百", "ろっ・ぴゃく", "600"),
+    Vocabulary(32, "千円", "せん・えん", "a thousand yen"),
+    Vocabulary(32, "千葉", "ち・ば", "Chiba Prefecture"),
+    Vocabulary(32, "三千", "さん・ぜん", "3,000"),
+    Vocabulary(33, "一万円", "いち・まん・えん", "ten thousand yen"),
+    Vocabulary(33, "万国", "ばん・こく", "all countries"),
+    Vocabulary(34, "円", "えん", "yen, a circle"),
+    Vocabulary(34, "百円", "ひゃく・えん", "100 yen"),
+    Vocabulary(34, "五千円", "ご・せん・えん", "5,000 yen"),
+    Vocabulary(35, "年上", "とし・うえ", "older person"),
+    Vocabulary(35, "来年", "らい・ねん", "next year"),
+    Vocabulary(35, "去年", "きょ・ねん", "last year")
   )
 
   fun getVocabularyForKanji(kanjiNumber: Int): List<Vocabulary> {
@@ -708,11 +727,340 @@ object KanjiRepository {
     return allLessons.filter { it.level == level }
   }
 
-  // Sentence reading material will be added later when provided by the user (or synced via Firebase Hosting)
-  private val builtInReadingExercises: List<KanjiReadingExercise> = emptyList()
+  // Authentic book reading sentences (Basic Kanji Book) — remote Firebase Hosting sync overrides when populated
+  private val builtInReadingExercises: List<KanjiReadingExercise> = listOf(
+    KanjiReadingExercise(
+      id = 101,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "きょうは３月１５日です。",
+      readingHiragana = "きょうは さんがつ じゅうごにち です。",
+      translation = "Today is the 15th of March."
+    ),
+    KanjiReadingExercise(
+      id = 102,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "あの人は山川さんです。",
+      readingHiragana = "あのひとは やまかわさん です。",
+      translation = "That man over there is Mr. Yamakawa."
+    ),
+    KanjiReadingExercise(
+      id = 103,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "山川さんは日本人です。",
+      readingHiragana = "やまかわさんは にほんじん です。",
+      translation = "Mr. Yamakawa is a Japanese."
+    ),
+    KanjiReadingExercise(
+      id = 104,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "あの山は筑波山です。",
+      readingHiragana = "あのやまは つくばさん です。",
+      translation = "That mountain over there is Mt. Tsukuba."
+    ),
+    KanjiReadingExercise(
+      id = 105,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "この川は利根川です。",
+      readingHiragana = "このかわは とねがわ です。",
+      translation = "This river is the Tone River."
+    ),
+    KanjiReadingExercise(
+      id = 106,
+      level = "N5",
+      lessonNumber = 1,
+      sentenceWithKanji = "川田さんの専門は車です。",
+      readingHiragana = "かわださんの せんもんは くるま です。",
+      translation = "Mr. Kawada's specialty is cars."
+    ),
+    KanjiReadingExercise(
+      id = 201,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "これは山川さんのお金です。",
+      readingHiragana = "これは やまかわさんの おかね です。",
+      translation = "This is Mr. Yamakawa's money."
+    ),
+    KanjiReadingExercise(
+      id = 202,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "すみません。水をください。",
+      readingHiragana = "すみません。みずを ください。",
+      translation = "Excuse me. Please give me some water."
+    ),
+    KanjiReadingExercise(
+      id = 203,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "あの女の人は学生です。",
+      readingHiragana = "あの おんなのひとは がくせい です。",
+      translation = "That woman over there is a student."
+    ),
+    KanjiReadingExercise(
+      id = 204,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "私は先生ではありません。",
+      readingHiragana = "わたしは せんせい では ありません。",
+      translation = "I am not a teacher."
+    ),
+    KanjiReadingExercise(
+      id = 205,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "金田さんは大学の先生です。",
+      readingHiragana = "かねださんは だいがくの せんせい です。",
+      translation = "Mr. Kaneda is a university teacher."
+    ),
+    KanjiReadingExercise(
+      id = 206,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "あの女子学生は２１です。",
+      readingHiragana = "あの じょしがくせいは にじゅういち です。",
+      translation = "That girl student is 21 years old."
+    ),
+    KanjiReadingExercise(
+      id = 207,
+      level = "N5",
+      lessonNumber = 2,
+      sentenceWithKanji = "私の生年月日は１９６０年３月１１日です。",
+      readingHiragana = "わたしの せいねんがっぴは せんきゅうひゃくろくじゅうねん さんがつ じゅういちにち です。",
+      translation = "My date of birth is the 11th of March 1960."
+    ),
+    KanjiReadingExercise(
+      id = 301,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "百円",
+      readingHiragana = "ひゃくえん",
+      translation = "100 yen"
+    ),
+    KanjiReadingExercise(
+      id = 302,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "六千九百円",
+      readingHiragana = "ろくせん きゅうひゃくえん",
+      translation = "6,900 yen"
+    ),
+    KanjiReadingExercise(
+      id = 303,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "六百円",
+      readingHiragana = "ろっぴゃくえん",
+      translation = "600 yen"
+    ),
+    KanjiReadingExercise(
+      id = 304,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "一万七千円",
+      readingHiragana = "いちまん ななせんえん",
+      translation = "17,000 yen"
+    ),
+    KanjiReadingExercise(
+      id = 305,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "四か月",
+      readingHiragana = "よんかげつ",
+      translation = "4 months"
+    ),
+    KanjiReadingExercise(
+      id = 306,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "八年",
+      readingHiragana = "はちねん",
+      translation = "8 years"
+    ),
+    KanjiReadingExercise(
+      id = 307,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "山田先生の年は四十九です。",
+      readingHiragana = "やまだせんせいの としは よんじゅうきゅう です。",
+      translation = "Mr. Yamada is 49 years old."
+    ),
+    KanjiReadingExercise(
+      id = 308,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "この車は四十五万円です。",
+      readingHiragana = "この くるまは よんじゅうごまんえん です。",
+      translation = "This car is 450,000 yen."
+    ),
+    KanjiReadingExercise(
+      id = 309,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "あの山は二千メートルです。",
+      readingHiragana = "あの やまは にせん メートル です。",
+      translation = "That mountain is 2,000 meters high."
+    ),
+    KanjiReadingExercise(
+      id = 310,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "一年は三百六十五日です。",
+      readingHiragana = "いちねんは さんびゃくろくじゅうごにち です。",
+      translation = "One year is 365 days."
+    ),
+    KanjiReadingExercise(
+      id = 311,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "三月三日",
+      readingHiragana = "さんがつ みっか",
+      translation = "March 3rd"
+    ),
+    KanjiReadingExercise(
+      id = 312,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "六月二十四日",
+      readingHiragana = "ろくがつ にじゅうよっか",
+      translation = "June 24th"
+    ),
+    KanjiReadingExercise(
+      id = 313,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "一九八五年",
+      readingHiragana = "せんきゅうひゃくはちじゅうごねん",
+      translation = "1985"
+    ),
+    KanjiReadingExercise(
+      id = 314,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "〇三－三四六九－八二五一",
+      readingHiragana = "ぜろさん の さんよんろくきゅう の はちにいごいち",
+      translation = "03-3469-8251 (phone number)"
+    ),
+    KanjiReadingExercise(
+      id = 315,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "きょうは九月九日の水よう日です。",
+      readingHiragana = "きょうは くがつ ここのかの すいようび です。",
+      translation = "Today is Wednesday, September 9th."
+    ),
+    KanjiReadingExercise(
+      id = 316,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "五月五日は子どもの日です。",
+      readingHiragana = "ごがつ いつかは こどものひ です。",
+      translation = "May 5th is Children's Day."
+    ),
+    KanjiReadingExercise(
+      id = 317,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "このくにの人口は六千万人ぐらいです。",
+      readingHiragana = "このくにの じんこうは ろくせんまんにん ぐらい です。",
+      translation = "The population of this country is about 60 million."
+    ),
+    KanjiReadingExercise(
+      id = 318,
+      level = "N5",
+      lessonNumber = 3,
+      sentenceWithKanji = "二月七日は金よう日ではありません。",
+      readingHiragana = "にがつ なのかは きんようび では ありません。",
+      translation = "February 7th is not Friday."
+    ),
+    KanjiReadingExercise(
+      id = 401,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "これは何の本ですか。日本語の本です。",
+      readingHiragana = "これは なんの ほんですか。にほんごの ほんです。",
+      translation = "What kind of book is this? It is a Japanese book."
+    ),
+    KanjiReadingExercise(
+      id = 402,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "山田さんの専門は力学ではありません。",
+      readingHiragana = "やまださんの せんもんは りきがくでは ありません。",
+      translation = "Mr. Yamada's specialty is not dynamics."
+    ),
+    KanjiReadingExercise(
+      id = 403,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "つくえの上にお金があります。",
+      readingHiragana = "つくえの うえに おかねが あります。",
+      translation = "There is some money on the desk."
+    ),
+    KanjiReadingExercise(
+      id = 404,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "車の中に小さいかばんがあります。",
+      readingHiragana = "くるまの なかに ちいさい かばんが あります。",
+      translation = "There is a small bag in the car."
+    ),
+    KanjiReadingExercise(
+      id = 405,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "大きいケーキを半分に分けました。",
+      readingHiragana = "おおきい ケーキを はんぶんに わけました。",
+      translation = "We divided a big cake in two."
+    ),
+    KanjiReadingExercise(
+      id = 406,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "あなたの生年月日は何年何月何日ですか。",
+      readingHiragana = "あなたの せいねんがっぴは なんねん なんがつ なんにち ですか。",
+      translation = "What is your date of birth (year, month, and day)?"
+    ),
+    KanjiReadingExercise(
+      id = 407,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "いま何時何分ですか。九時五十分です。",
+      readingHiragana = "いま なんじ なんぷん ですか。くじ ごじゅっぷん です。",
+      translation = "What time is it now? It is 9:50."
+    ),
+    KanjiReadingExercise(
+      id = 408,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "上りと下りの電車",
+      readingHiragana = "のぼりと くだりの でんしゃ",
+      translation = "upbound and downbound trains"
+    ),
+    KanjiReadingExercise(
+      id = 409,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "上がる",
+      readingHiragana = "あがる",
+      translation = "to go up, to rise"
+    ),
+    KanjiReadingExercise(
+      id = 410,
+      level = "N5",
+      lessonNumber = 4,
+      sentenceWithKanji = "下がる",
+      readingHiragana = "さがる",
+      translation = "to go down"
+    )
+  )
 
   val readingExercises: List<KanjiReadingExercise>
-    get() = remoteReadingExercises ?: builtInReadingExercises
+    get() = remoteReadingExercises?.takeIf { it.isNotEmpty() } ?: builtInReadingExercises
 
   // Authentic book story from Basic Kanji Book Lesson 5: プラニーさんのはなし
   private val builtInStories: List<KanjiStory> = listOf(

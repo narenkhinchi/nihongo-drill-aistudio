@@ -196,10 +196,18 @@ object KanjiRemoteSync {
         syncedLessonCount = lessons.size
       )
 
+      val sentenceCount = exercises?.size ?: 0
+      val storyCount = stories?.size ?: 0
+      val summaryParts = buildList {
+        add("${lessons.size} lessons")
+        if (storyCount > 0) add(if (storyCount == 1) "1 story" else "$storyCount stories")
+        if (sentenceCount > 0) add("$sentenceCount sentences")
+      }
+
       KanjiSyncResult(
         success = true,
         snapshot = snapshot,
-        message = "Synced ${lessons.size} Kanji lessons from server"
+        message = "Synced ${summaryParts.joinToString(", ")} from server"
       )
     } catch (_: Exception) {
       val cached = loadCached(context)
@@ -219,6 +227,8 @@ object KanjiRemoteSync {
       connection.readTimeout = 15_000
       connection.instanceFollowRedirects = false
       connection.useCaches = false
+      connection.setRequestProperty("Cache-Control", "no-cache")
+      connection.setRequestProperty("Pragma", "no-cache")
       require(connection.responseCode == HttpURLConnection.HTTP_OK) {
         "HTTP ${connection.responseCode}"
       }
