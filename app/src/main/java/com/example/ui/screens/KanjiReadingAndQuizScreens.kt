@@ -64,6 +64,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -78,6 +79,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.KanjiLesson
 import com.example.data.KanjiRepository
+import com.example.ui.components.InteractiveStoryParagraph
+import com.example.ui.components.StoryKanjiBottomSheet
+import com.example.ui.components.StoryKanjiLookupResult
+import com.example.ui.components.buildStoryKanjiIndex
 import com.example.ui.theme.BorderOutline
 import com.example.ui.theme.BrandPurple
 import com.example.ui.theme.BrandPurpleLight
@@ -514,6 +519,16 @@ fun KanjiReadingScreen(
 
   var showTranslation by remember(currentStory?.id) { mutableStateOf(false) }
   var isVocabExpanded by remember(currentStory?.id) { mutableStateOf(false) }
+  var isKanjiPopupEnabled by rememberSaveable { mutableStateOf(true) }
+  var selectedKanjiLookup by remember { mutableStateOf<StoryKanjiLookupResult?>(null) }
+  var selectedParagraphIndex by remember { mutableStateOf<Int?>(null) }
+  var selectedCharIndex by remember { mutableStateOf<Int?>(null) }
+
+  LaunchedEffect(currentStory?.id, currentPageIndex, showTranslation, readingMode) {
+    selectedKanjiLookup = null
+    selectedParagraphIndex = null
+    selectedCharIndex = null
+  }
 
   val exercises = remember(selectedLevel, selectedLessonNumbers) {
     KanjiRepository.getReadingExercisesForLevel(selectedLevel)
@@ -716,6 +731,11 @@ fun KanjiReadingScreen(
             storyScrollState.scrollTo(0)
           }
 
+          val allLessonsForLookup = KanjiRepository.allLessons
+          val storyKanjiIndex = remember(currentStory.id, allLessonsForLookup) {
+            buildStoryKanjiIndex(allLessonsForLookup, currentStory)
+          }
+
           Column(
             modifier = Modifier
               .fillMaxSize()
@@ -771,63 +791,107 @@ fun KanjiReadingScreen(
                     currentPage.plainParagraphs
                   }
 
-                  paragraphsToShow.forEach { paragraph ->
-                    Text(
+                  paragraphsToShow.forEachIndexed { paragraphIndex, paragraph ->
+                    InteractiveStoryParagraph(
                       text = paragraph,
-                      fontSize = 16.5.sp,
-                      lineHeight = 27.sp,
-                      fontWeight = FontWeight.Medium,
-                      color = PrimaryText
+                      kanjiIndex = storyKanjiIndex,
+                      isKanjiPopupEnabled = isKanjiPopupEnabled,
+                      selectedCharIndex = if (selectedParagraphIndex == paragraphIndex) selectedCharIndex else null,
+                      onKanjiTap = { charIndex, lookup ->
+                        selectedParagraphIndex = paragraphIndex
+                        selectedCharIndex = charIndex
+                        selectedKanjiLookup = lookup
+                      }
                     )
                   }
 
                   Spacer(modifier = Modifier.height(2.dp))
 
-                  // English meaning toggle button: [ 文A えいごの いみを みる ] / [ 📖 えいごの いみ ]
-                  Surface(
-                    onClick = { showTranslation = !showTranslation },
-                    modifier = Modifier
-                      .fillMaxWidth()
-                      .height(44.dp)
-                      .testTag("toggle_translation_button"),
-                    shape = RoundedCornerShape(22.dp),
-                    color = if (showTranslation) BrandPurple else CardSurface,
-                    border = BorderStroke(
-                      1.2.dp,
-                      if (showTranslation) BrandPurple else BrandPurple.copy(alpha = 0.65f)
-                    )
+                  // Bottom action row: [ 文A えいごの いみを みる ] + [ 👁 Eye Toggle ]
+                  Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically
                   ) {
-                    Row(
+                    Surface(
+                      onClick = { showTranslation = !showTranslation },
                       modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 14.dp),
-                      horizontalArrangement = Arrangement.Center,
-                      verticalAlignment = Alignment.CenterVertically
+                        .weight(1f)
+                        .height(48.dp)
+                        .testTag("toggle_translation_button"),
+                      shape = RoundedCornerShape(24.dp),
+                      color = if (showTranslation) BrandPurple else CardSurface,
+                      border = BorderStroke(
+                        1.2.dp,
+                        if (showTranslation) BrandPurple else BrandPurple.copy(alpha = 0.65f)
+                      )
                     ) {
-                      if (showTranslation) {
-                        Icon(
-                          Icons.AutoMirrored.Filled.MenuBook,
-                          contentDescription = null,
-                          tint = Color.White,
-                          modifier = Modifier.size(16.dp)
-                        )
-                      } else {
+                      Row(
+                        modifier = Modifier
+                          .fillMaxSize()
+                          .padding(horizontal = 14.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                      ) {
+                        if (showTranslation) {
+                          Icon(
+                            Icons.AutoMirrored.Filled.MenuBook,
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(16.dp)
+                          )
+                        } else {
+                          Text(
+                            text = "文A",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.ExtraBold,
+                            color = BrandPurple
+                          )
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                          text = "文A",
-                          fontSize = 13.sp,
-                          fontWeight = FontWeight.ExtraBold,
-                          color = BrandPurple
+                          text = if (showTranslation) "えいごの いみ" else "えいごの いみを みる",
+                          fontSize = 13.5.sp,
+                          fontWeight = FontWeight.Bold,
+                          color = if (showTranslation) Color.White else BrandPurple,
+                          maxLines = 1,
+                          overflow = TextOverflow.Ellipsis
                         )
                       }
-                      Spacer(modifier = Modifier.width(8.dp))
-                      Text(
-                        text = if (showTranslation) "えいごの いみ" else "えいごの いみを みる",
-                        fontSize = 13.5.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = if (showTranslation) Color.White else BrandPurple,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
+                    }
+
+                    // Eye Toggle Button: turns tap-to-inspect Kanji popup ON / OFF
+                    Surface(
+                      onClick = {
+                        isKanjiPopupEnabled = !isKanjiPopupEnabled
+                        if (!isKanjiPopupEnabled) {
+                          selectedKanjiLookup = null
+                          selectedParagraphIndex = null
+                          selectedCharIndex = null
+                        }
+                      },
+                      modifier = Modifier
+                        .size(48.dp)
+                        .testTag("story_kanji_popup_eye_toggle"),
+                      shape = CircleShape,
+                      color = if (isKanjiPopupEnabled) BrandPurpleVeryLight else CardSurface,
+                      border = BorderStroke(
+                        1.2.dp,
+                        if (isKanjiPopupEnabled) BrandPurple.copy(alpha = 0.65f) else BorderOutline
                       )
+                    ) {
+                      Box(contentAlignment = Alignment.Center) {
+                        Icon(
+                          imageVector = if (isKanjiPopupEnabled) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                          contentDescription = if (isKanjiPopupEnabled) {
+                            "Turn Kanji popup off"
+                          } else {
+                            "Turn Kanji popup on"
+                          },
+                          tint = if (isKanjiPopupEnabled) BrandPurple else SecondaryText,
+                          modifier = Modifier.size(22.dp)
+                        )
+                      }
                     }
                   }
 
@@ -851,6 +915,19 @@ fun KanjiReadingScreen(
                   }
                 }
               }
+            }
+
+            // Compact Kanji Inspector Bottom Sheet
+            val activeLookup = selectedKanjiLookup
+            if (isKanjiPopupEnabled && activeLookup != null) {
+              StoryKanjiBottomSheet(
+                lookupResult = activeLookup,
+                onDismiss = {
+                  selectedKanjiLookup = null
+                  selectedParagraphIndex = null
+                  selectedCharIndex = null
+                }
+              )
             }
 
             // 2. Collapsible Story Vocabulary Card: 📖 このはなしの たんご (Vocabulary)
